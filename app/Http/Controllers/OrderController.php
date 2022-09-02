@@ -20,8 +20,8 @@ class OrderController extends Controller
         ]);
 
         
-        return view('order-list')->with([
-                   'orders'=> Order::where($request->id)->get(),
+        return response ('order-list')->with([
+                   'order'=> Order::where('id', $request->id)->get(),
                     'index'=> 1,
                  ]);
         

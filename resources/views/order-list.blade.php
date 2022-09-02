@@ -17,20 +17,16 @@
     </div>
 </section>
 
-{{-- <div class="col-md-8-pt-4-mt-4">
-    <div class="row">
-        <button  type="button" class="btn btn-primary" id="orderBtn">Order List</button>
-    </div>
-</div> --}}
+
 <section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top: 10px;padding-bottom: 10px">
     <div class="container">
         <div class="row no-gutters">
-            <div class="text-dark">
+            <div class="text-dark text-center">
                 <h4>List of Orders</h4>
             </div>
             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-info">
-                <table class="table table-striped table table-responsive{-sm|-md|-lg|-xl}" id="Table">
-                    <thead>
+                <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}" id="Table">
+                    <thead class="thead-light">
                         <tr>
                         <th>sn</th>
                         <th>name</th>

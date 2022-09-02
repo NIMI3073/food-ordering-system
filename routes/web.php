@@ -29,7 +29,4 @@ Route::get('/contact', fn()=>view('contact'));
 Route::get('/reservation', fn()=>view('reservation'));
 
 
-// Route::post('order',[OrderController::class,'store']);
 
-
-// Route::get('/indexs', fn()=>view('indexs'));
