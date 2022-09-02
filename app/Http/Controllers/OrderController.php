@@ -12,8 +12,18 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $request->validate([
+            'id'=>'integer|exists:order,id',
+            // 'created_at'=>'timestamp|exists:order'
+        ]);
+
+        
+        return view('order-list')->with([
+                   'orders'=> Order::where($request->id)->get(),
+                    'index'=> 1,
+                 ]);
         
     }
 
@@ -94,4 +104,23 @@ class OrderController extends Controller
     {
         //
     }
+
+    
+// public function listOfOrders(Request $request){ 
+//     $request->validate([
+//         'id' => 'string|required|exists:order,id'
+//     ]);
+//     return view('order-list')->with([
+//         'orders'=> Order::where($request->id)->get(),
+//         'index'=> 1,
+//     ]);
+// }
+
+
+// public function orders($id)
+// {
+// Order::where('id', $id)->get();
+    
+// }
+
 }
