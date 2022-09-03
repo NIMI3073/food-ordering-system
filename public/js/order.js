@@ -36,28 +36,28 @@ form.addEventListener("submit",($event)=>{
 
 
 
-    // axios.get("http://127.0.0.1:8000/api/order").then((response) => {
-    //     let getOrderList = response.data;
-    //     console.log(response);
-    //     let tableBody = document.querySelector("tbody");
-    //     tableBody.innerHTML=''
+    axios.get("http://127.0.0.1:8000/api/order").then((response) => {
+        let getOrderList = response.data;
+        console.log(response);
+        let tableBody = document.querySelector("tbody");
+        tableBody.innerHTML=''
     
-    //     getOrderList.data.forEach((order,index) => {
-    //         tableBody.innerHTML += `            
-    //       <tr>
-    //       <td>${index+1}</td>
-    //       <td>${order.name}</td>
-    //       <td>${order.email}</td>
-    //       <td>${order.phone_number}</td> 
-    //       <td>${order.address}</td>
-    //       <td>${order.no_of_packages}</td>
+        getOrderList.data.forEach((order,index) => {
+            tableBody.innerHTML += `            
+          <tr>
+          <td>${index+1}</td>
+          <td>${order.name}</td>
+          <td>${order.email}</td>
+          <td>${order.phone_number}</td> 
+          <td>${order.address}</td>
+          <td>${order.no_of_packages}</td>
          
       
-    //   </tr>`
+      </tr>`
     
-    //     });
-    // });
+        });
+    });
    
-// }
+
 
 

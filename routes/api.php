@@ -15,8 +15,8 @@ use App\Http\Controllers\OrderController;
 |
 */
 
-Route::middleware('auth:sanctum')->group( function () {
+
     Route::post('/order', [OrderController::class, 'store']);
     Route::get('/order-list', [OrderController::class, 'index']);
 
- });
+

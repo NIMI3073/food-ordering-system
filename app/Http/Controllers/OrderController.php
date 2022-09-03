@@ -15,13 +15,13 @@ class OrderController extends Controller
     public function index(Request $request)
     {
         $request->validate([
-            'id'=>'integer|exists:order,id',
+            'email'=>'string|exists:order,email',
             // 'created_at'=>'timestamp|exists:order'
         ]);
 
-        
-        return response ('order-list')->with([
-                   'order'=> Order::where('id', $request->id)->get(),
+        $order =Order::where('email', $request->email)->get();
+        return response([
+                   'order'=> $order,
                     'index'=> 1,
                  ]);
         
