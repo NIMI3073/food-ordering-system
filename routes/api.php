@@ -17,6 +17,6 @@ use App\Http\Controllers\OrderController;
 
 
     Route::post('/order', [OrderController::class, 'store']);
-    Route::get('/order-list', [OrderController::class, 'index']);
+    Route::get('/order', [OrderController::class, 'index']);
 
 

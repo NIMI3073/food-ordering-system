@@ -1,6 +1,6 @@
-axios.get("http://127.0.0.1:8000/api/order-list").then((response) => {
+axios.get("http://127.0.0.1:8000/api/order").then((response) => {
         let getOrderList = response.data;
-        console.log(response.data);
+        console.log(response);
         let tableBody = document.querySelector("tbody");
 
         getOrderList.data.forEach((order,index) => {
@@ -18,6 +18,7 @@ axios.get("http://127.0.0.1:8000/api/order-list").then((response) => {
     
         });
     });
+
 
  
 
