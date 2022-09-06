@@ -38,12 +38,12 @@
                     </thead>
                     <tbody>
                         <tr>
-                        <td>7</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr> 
                     </tbody>
                    

@@ -20,6 +20,6 @@ use App\Models\User;
 
     Route::post('/order', [OrderController::class, 'store']);
     Route::post('/register',[UserController::class,'store']);
-    // Route::get('/order-list', [OrderController::class, 'index']);
+    Route::get('/order', [OrderController::class, 'index']);
 
 

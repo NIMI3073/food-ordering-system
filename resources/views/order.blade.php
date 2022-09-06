@@ -17,7 +17,7 @@
     </div>
 </section>
 
-
+{{-- 
 
 <section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top: 10px;padding-bottom: 10px" id="myForm">
     <div class="container">
@@ -70,13 +70,13 @@
                         <button type="submit"  id="button"  class="btn btn-white py-3 px-4">Submit to Make Order</button>
            
                     </div>
-                              {{-- <script>
+                              <script>
                                      function toggleRemove() {
                                          var hide = document.getElementById("myForm");
                                          hide.style.display = "none"
 
                                      }
-                                 </script> --}}
+                                 </script>
                 </form>
                 
             </div>
@@ -84,14 +84,14 @@
         </div>
     </div>
 
-    {{-- @if (isset($message))
+    @if (isset($message))
                 <div style="color: green; margin-left:30px">
                     {{ $message }}
                 </div>
-            @endif --}}
-</section >
+            @endif
+</section > --}}
 
-{{-- <section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top: 10px;padding-bottom: 10px">
+<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top: 10px;padding-bottom: 10px">
     <div class="container">
         <div class="row no-gutters">
             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-info">
@@ -152,7 +152,7 @@
                     {{ $message }}
                 </div>
             @endif
-</section > --}}
+</section >
 
  
 

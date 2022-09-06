@@ -65,11 +65,15 @@
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
-                </div>
+
+
                     <div class="row justify-content-center">
-                        <button type="submit"  id="button"  class="btn btn-white py-3 px-4">Submit to Make Order</button>
-           
+                      
+                        <button type="submit"  id="btn" class="btn btn-white py-3 px-4">Submit</button>
+                      
                     </div>
+                </div>
+                    
                               {{-- <script>
                                      function toggleRemove() {
                                          var hide = document.getElementById("myForm");

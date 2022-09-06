@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Order;
 use Illuminate\Http\Request;
 
@@ -9,17 +10,18 @@ class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+    
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
     {
-        $request->validate([
-            'email'=>'string|exists:order,email',
-            // 'created_at'=>'timestamp|exists:order'
-        ]);
 
-        $order =Order::where('email', $request->email)->get();
+        $request->validate([
+            'id'=>'string|exists:order,id',
+         
+        ]);
+        // $orders = Order::where('id', $request->id)->withCount(['orders'])->get();
+        $order = Order::where('id', $request->id)->get();
         return response([
                    'order'=> $order,
                     'index'=> 1,
