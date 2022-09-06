@@ -39,6 +39,7 @@
 					<li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
 					<li class="nav-item"><a href="order-list" class="nav-link">Order-list</a></li>
 					<li class="nav-item"><a href="reservation" class="nav-link">Reservation</a></li>
+					<li class="nav-item"><a href="register" class="nav-link">Register</a></li>
 					<li class="nav-item"><a href="order" class="nav-link"> Make Order</a></li>
 				
 

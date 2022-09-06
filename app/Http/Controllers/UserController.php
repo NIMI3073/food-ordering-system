@@ -37,19 +37,22 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+     $validated = $request->validate([
 
             'name'=>'string|required',
             'email' =>'string|required',
-            'phone'=>'integer|required',
+            'phone'=>'string|required',
             'password'=>'string|required|confirmed|min:6'
 
         ]);
-        $request = Hash::make($request['password']);
-        User::create($request);
-        return view('index')->with([
+        $validated['password'] = Hash::make($validated['password']);
+        // $request = Hash::make($request['password']);
+        User::create($validated);
+        return response([
             'message'=>'successful'
         ]);
+
+       
 
     }
 

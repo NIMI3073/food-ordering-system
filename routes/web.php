@@ -27,6 +27,10 @@ Route::get('/order-list', fn()=>view('order-list'));
 Route::get('/menu', fn()=>view('menu'));
 Route::get('/contact', fn()=>view('contact'));
 Route::get('/reservation', fn()=>view('reservation'));
+Route::get('/register',fn()=>view('register'));
 
+
+
+// Route::get('/order',[OrderController::class,'index']);
 
 

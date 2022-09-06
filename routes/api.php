@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UserController;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,7 @@ use App\Http\Controllers\OrderController;
 
 
     Route::post('/order', [OrderController::class, 'store']);
-    Route::get('/order', [OrderController::class, 'index']);
+    Route::post('/register',[UserController::class,'store']);
+    // Route::get('/order-list', [OrderController::class, 'index']);
 
 
