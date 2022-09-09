@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ContactController;
 use App\Models\Order;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,8 @@ Route::get('/menu', fn()=>view('menu'));
 Route::get('/contact', fn()=>view('contact'));
 Route::get('/reservation', fn()=>view('reservation'));
 Route::get('/register',fn()=>view('register'));
+Route::post('/register',[UserController::class,'store']);
+Route::post('/contact',[ContactController::class,'store']);
 
 
 

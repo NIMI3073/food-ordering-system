@@ -50,16 +50,17 @@
    <div class="col-md-6 p-5 order-md-last">
     <h2 class="h4 mb-5 font-weight-bold">Contact Us</h2>
 
-    <form action = @submit.prevent="contactHandler" method="POST" id="form-group" name="contactForm">
+    <form @submit.prevent="contactHandler" method="POST" id="form-group" name="contactForm">
+      @csrf
       <div class="form-group">
-        <input type="text" class="form-control" name="name" placeholder="Your Name">
+        <input type="text" class="form-control" name="name" v-model="contactData.name" placeholder="Your Name">
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" name="email" placeholder="Your Email">
+        <input type="text" class="form-control" name="email" v-model="contactData.email" placeholder="Your Email">
       </div>
       
       <div class="form-group">
-        <textarea name="message" id="" cols="30" rows="4" class="form-control" placeholder="Message"></textarea>
+        <textarea name="message" id="" cols="30" rows="4" v-model="contactData.message" class="form-control" placeholder="Message"></textarea>
       </div>
       <div class="form-group">
         <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">

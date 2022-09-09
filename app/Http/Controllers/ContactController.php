@@ -36,7 +36,7 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+      $validate =  $request->validate([
             'name'=> 'string|required',
             'email'=>'string|required',
             'message'=>'string|required',
@@ -44,7 +44,7 @@ class ContactController extends Controller
 
      
 
-        $message =  Contact::create($request);
+        $message =  Contact::create($validate);
        if($message){
         return response([
             'data'=> $message,
