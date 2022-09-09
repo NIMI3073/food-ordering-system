@@ -3,7 +3,7 @@
 </x-header>
 <!-- END nav -->
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');" data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');" data-stellar-background-ratio="0.5" id="app">
   <div class="overlay"></div>
   <div class="container">
     <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -44,23 +44,22 @@
    </div>
  </div>
 </section>
-<section class="ftco-section ftco-no-pt contact-section ">
+<section class="ftco-section ftco-no-pt contact-section " >
  <div class="container">
   <div class="row d-flex no-gutters align-items-end justify-content-center">
    <div class="col-md-6 p-5 order-md-last">
     <h2 class="h4 mb-5 font-weight-bold">Contact Us</h2>
-    <form action="#">
+
+    <form action = @submit.prevent="contactHandler" method="POST" id="form-group" name="contactForm">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Your Name">
+        <input type="text" class="form-control" name="name" placeholder="Your Name">
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Your Email">
+        <input type="text" class="form-control" name="email" placeholder="Your Email">
       </div>
+      
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Subject">
-      </div>
-      <div class="form-group">
-        <textarea name="" id="" cols="30" rows="4" class="form-control" placeholder="Message"></textarea>
+        <textarea name="message" id="" cols="30" rows="4" class="form-control" placeholder="Message"></textarea>
       </div>
       <div class="form-group">
         <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
@@ -78,3 +77,36 @@
 
 </body>
 </html>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    const {
+        createApp
+    } = Vue
+
+    createApp({
+            data() {
+                return {
+                    ContactData: {
+                        name: null,
+                        email: null,
+                        message: null,
+                      
+                    },
+                    errorMessage: null
+                }
+            },
+            methods: {
+                contactHandler() {
+                    return axios.post('http://localhost:8000/api/contact', this.contactData).then(response => {
+                        console.log(response);
+                        alert(response.data.message)
+                    }).catch(error => {
+                        this.errorMessage = error.response.data.message
+                        console.log(error.response)
+                    })
+                }
+            },
+        })
+        .mount("#app")
+</script>

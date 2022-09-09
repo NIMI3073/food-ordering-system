@@ -2,31 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Models\Order;
+use App\Models\Contact;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\AssignOp\Concat;
 
-class OrderController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
-    
+     *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-
-        $request->validate([
-            'id'=>'integer|exists:order,id',
-        ]);
-       
-        $order = Order::all();
-        return response([
-                    'index'=> 1,
-                    'order'=> $order,
-                    
-                 ]);
-        
+        //
     }
 
     /**
@@ -36,7 +25,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-     return view('order');
+        //
     }
 
     /**
@@ -47,19 +36,27 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-       $validated = $request->validate([
-            'name'=>'string|required',
+        $request->validate([
+            'name'=> 'string|required',
             'email'=>'string|required',
-            'phone_number'=>'string|required',
-            'address'=>'string|required',
-            'no_of_package'=> 'string|required',
+            'message'=>'string|required',
+        ]);
 
+     
+
+        $message =  Contact::create($request);
+       if($message){
+        return response([
+            'data'=> $message,
+            'message'=> 'message sent successfully'
         ]);
-        Order::create($validated);
-       return response ([
-            'message' => 'successful'
+       }else{
+        return response([
+            'data'=> null,
+            'message' => 'Unknown error occurred'
         ]);
-      
+       }
+
     }
 
     /**
@@ -106,23 +103,4 @@ class OrderController extends Controller
     {
         //
     }
-
-    
-// public function listOfOrders(Request $request){ 
-//     $request->validate([
-//         'id' => 'string|required|exists:order,id'
-//     ]);
-//     return view('order-list')->with([
-//         'orders'=> Order::where($request->id)->get(),
-//         'index'=> 1,
-//     ]);
-// }
-
-
-// public function orders($id)
-// {
-// Order::where('id', $id)->get();
-    
-// }
-
 }

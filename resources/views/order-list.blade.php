@@ -33,7 +33,7 @@
                         <th>email</th>
                         <th>phone</th>
                         <th>address</th>
-                        <th>package(s) order</th>
+                        <th>package(s)order</th>
                     </tr>
                     </thead>
                     <tbody>

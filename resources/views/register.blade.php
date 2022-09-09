@@ -25,7 +25,7 @@
             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-info">
                 <form action="/register" class="appointment-form" method="POST" id="registrationForm">
                     @csrf
-                    <h3 class="mb-3 text-center">Make your Order</h3>
+                    <h3 class="mb-3 text-center">Sign Up Now</h3>
                     <div class="row justify-content-center">
 
                         <div class="form-group">

@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ContactController;
 use App\Models\User;
 
 /*
@@ -20,6 +21,7 @@ use App\Models\User;
 
     Route::post('/order', [OrderController::class, 'store']);
     Route::post('/register',[UserController::class,'store']);
+    Route::post('/contact',[ContactController::class,'store']);
     Route::get('/order', [OrderController::class, 'index']);
 
 

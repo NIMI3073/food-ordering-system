@@ -39,8 +39,12 @@
 					<li class="nav-item"><a href="about" class="nav-link">About</a></li>
 					<li class="nav-item"><a href="menu" class="nav-link">Menu</a></li>
 					<li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+					@if (auth()->user() === 'super_admin')
 					<li class="nav-item"><a href="order-list" class="nav-link">Order-list</a></li>
+					@endif
 					<li class="nav-item"><a href="reservation" class="nav-link">Reservation</a></li>
+					<li class="nav-item"><a href="register" class="nav-link">Register</a></li>
+
 					<li class="nav-item"><a href="order" class="nav-link"> Make Order</a></li>
 				
 
