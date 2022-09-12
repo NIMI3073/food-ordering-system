@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -46,11 +47,18 @@ class UserController extends Controller
 
         ]);
         $validated['password'] = Hash::make($validated['password']);
-        // $request = Hash::make($request['password']);
-        User::create($validated);
-        return response([
-            'message'=>'successful'
-        ]);
+        $user = User::create($validated);
+        if($user){
+             return response([
+           'data'=> $user,
+           'message'=> 'Registration complete'
+         ]);
+        }else{
+            return response([
+                'data'=> null,
+                'message' => 'Unknown error occurred'
+            ], Response::HTTP_UNAUTHORIZED);
+        }
 
        
 
