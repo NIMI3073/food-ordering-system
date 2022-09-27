@@ -3,7 +3,7 @@
 </x-header>
 
 
- <section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');">
+ <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -19,13 +19,13 @@
 
 
 
-<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top: 10px;padding-bottom: 10px" id="myForm">
+<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top: 10px;padding-bottom: 10px;" id="myForm">
     <div class="container">
         <div class="row no-gutters">
-            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-info">
+            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-warning">
                 <form action="/register" class="appointment-form" method="POST" id="registrationForm">
                     @csrf
-                    <h3 class="mb-3 text-center">Sign Up Now</h3>
+                    <h3 class="mb-3 text-center">Sign Up Now!</h3>
                     <div class="row justify-content-center">
 
                         <div class="form-group">
@@ -42,9 +42,9 @@
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                         <div class="form-group">
-                            <input type="text" name="phone_number" class="form-control text-center " id="phone_number" placeholder="Phone Number">
+                            <input type="text" name="phone" class="form-control text-center " id="phone" placeholder="Phone Number">
                         </div>
-                        @error('phone_number')
+                        @error('phone')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
 
@@ -56,27 +56,30 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
-                    </div>
 
 
+                        
                     <div class="form-group">
                         <input type="password" name="password_confirmation" class="form-control text-center " id="new-password" placeholder="confirm password">
                       
                     </div>
+                    </div>
+
+
 
 
                     <div class="row justify-content-center">
                       
-                        <button type="submit"  id="btn" class="btn btn-white py-3 px-4">Submit</button>
+                        <button type="submit"  id="btn" class="btn btn-primary py-3 px-4">Submit</button>
                       
                     </div>
                 </div>
-   
+{{--    
                                  @if (isset($message))
 
                                  <div class="alert alert-success">{{ $message }}</div>
                                      
-                                 @endif
+                                 @endif --}}
                 </form>
                 
             </div>
@@ -103,3 +106,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script src="{{ asset('js/register.js') }}"></script>
+

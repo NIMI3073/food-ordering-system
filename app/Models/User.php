@@ -22,12 +22,13 @@ class User extends Authenticatable
 
      protected  $guarded = [];
 
-     protected $table = 'user';
+     protected $table = 'users';
 
 
     protected $fillable = [
         'name',
         'email',
+        'phone',
         'password',
     ];
 

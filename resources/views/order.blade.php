@@ -17,79 +17,7 @@
     </div>
 </section>
 
-{{-- 
 
-<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top: 10px;padding-bottom: 10px" id="myForm">
-    <div class="container">
-        <div class="row no-gutters">
-            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-info">
-                <form action="/register" class="appointment-form" method="POST" id="orderForm">
-                    @csrf
-                    <h3 class="mb-3 text-center">Make your Order</h3>
-                    <div class="row justify-content-center">
-
-                        <div class="form-group">
-                            <input type="name" name="name"class="form-control text-center" id="name" placeholder="Name">
-                        </div>
-                        @error('name')
-                        <div class="alert alert-danger ">{{ $message }}</div>
-                        @enderror
-
-                        <div class="form-group">
-                            <input type="email" name="email" class="form-control text-center" id="email" placeholder="Email">
-                        </div>
-                        @error('email')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                        <div class="form-group">
-                            <input type="text" name="phone_number" class="form-control text-center " id="phone_number" placeholder="Phone Number">
-                        </div>
-                        @error('phone_number')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-
-                        
-
-                        <div class="form-group">
-                            <input type="password" name="password" class="form-control text-center " id="password" placeholder="password">
-                            @error('password')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-                    </div>
-
-
-                    <div class="form-group">
-                        <input type="password" name="password_confirmation" class="form-control text-center " id="password" placeholder="password-confirmation">
-                        @error('password')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-                    <div class="row justify-content-center">
-                        <button type="submit"  id="button"  class="btn btn-white py-3 px-4">Submit to Make Order</button>
-           
-                    </div>
-                              <script>
-                                     function toggleRemove() {
-                                         var hide = document.getElementById("myForm");
-                                         hide.style.display = "none"
-
-                                     }
-                                 </script>
-                </form>
-                
-            </div>
-
-        </div>
-    </div>
-
-    @if (isset($message))
-                <div style="color: green; margin-left:30px">
-                    {{ $message }}
-                </div>
-            @endif
-</section > --}}
 
 <section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top: 10px;padding-bottom: 10px">
     <div class="container">

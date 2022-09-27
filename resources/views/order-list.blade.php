@@ -8,10 +8,10 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate text-center mb-5">
-                <h1 class="mb-2 bread">Make Order Now!!</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="index">Home <i
+                <h1 class="mb-2 bread">List Of Orders!</h1>
+                {{-- <p class="breadcrumbs"><span class="mr-2"><a href="index">Home <i
                                 class="fa fa-chevron-right"></i></a></span> <span> List of Order <i
-                            class="fa fa-chevron-right"></i></span></p>
+                            class="fa fa-chevron-right"></i></span></p> --}}
             </div>
         </div>
     </div>
@@ -29,11 +29,11 @@
                     <thead class="thead-light">
                         <tr>
                         <th>sn</th>
-                        <th>name</th>
-                        <th>email</th>
-                        <th>phone</th>
-                        <th>address</th>
-                        <th>package(s)order</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Package(s)order</th>
                     </tr>
                     </thead>
                     <tbody>

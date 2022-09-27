@@ -48,6 +48,11 @@ class UserController extends Controller
         ]);
         $validated['password'] = Hash::make($validated['password']);
         $user = User::create($validated);
+
+        // return view('register')->with([
+        //     'data'=>$user,
+        //     'message'=>'successful'
+        // ]);
         if($user){
              return response([
            'data'=> $user,

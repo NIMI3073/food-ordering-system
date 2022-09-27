@@ -3,7 +3,7 @@
 </x-header>
 
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');">
+<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
     <div class="overlay"></div>
     <div class="container">
         {{-- <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -22,7 +22,7 @@
 <section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top: 10px;padding-bottom: 10px" id="myForm">
     <div class="container">
         <div class="row no-gutters">
-            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-info">
+            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-danger">
                 <form action="/payment" class="appointment-form" method="POST">
                     @csrf
                     <h3 class="mb-3 text-center">Make payment!!</h3>
@@ -59,9 +59,7 @@
                             <label class="text-center text-white">Expiration (MM/YYYY)</label>
                             <input type="text" name="exp_month" size="2" class="form-control text-center card-expiry-month"  placeholder="Expiry month">
                             <input type="text" name="exp_year" size="4" class="form-control text-center card-expiry-year" placeholder="Expiry year">
-                            {{-- @error()
-                            <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror --}}
+                         
                         </div>
                     </div>
 
