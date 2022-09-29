@@ -115,9 +115,6 @@ class UserController extends Controller
         //
     }
 
-    
-
-
 
     public function listOfUsers(Request $request){ 
     $request->validate([
@@ -128,5 +125,7 @@ class UserController extends Controller
         'index'=> 1,
     ]);
 }
+
+
     }
 
