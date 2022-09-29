@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
+use PhpParser\Node\Expr\FuncCall;
 
 class UserController extends Controller
 {
@@ -113,4 +114,19 @@ class UserController extends Controller
     {
         //
     }
-}
+
+    public function listOfUser(Request $request)
+    {
+        $validated =$request->validate([
+            'name'=>'string|required',
+            'phone'=> 'string|required',
+            'email'=>'string|required',
+        ]);
+
+        return view('order-user')->with([
+                    'users'=> User::where($request->id)->get(),
+                    'index'=> 1,
+                ]);
+            }
+    }
+
