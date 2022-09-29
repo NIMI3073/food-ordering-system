@@ -9,9 +9,9 @@
         <div class="row no-gutters slider-text align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate text-center mb-5">
                 <h1 class="mb-2 bread">List Of Orders!</h1>
-                {{-- <p class="breadcrumbs"><span class="mr-2"><a href="index">Home <i
+            <p class="breadcrumbs"><span class="mr-2"><a href="index">Home <i
                                 class="fa fa-chevron-right"></i></a></span> <span> List of users <i
-                            class="fa fa-chevron-right"></i></span></p> --}}
+                            class="fa fa-chevron-right"></i></span></p> 
             </div>
         </div>
     </div>
