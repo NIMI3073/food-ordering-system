@@ -33,10 +33,6 @@ Route::get('/payment',fn()=>view('payment'));
 Route::get('/order-user',fn()=>view('order-user'));
 Route::post('/register',[UserController::class,'store']);
 Route::post('/contact',[ContactController::class,'store']);
-// Route::get('/order-user', [UserController::class,'listOfUser']);
-
-
-
-// Route::get('/order',[OrderController::class,'index']);
+Route::get('/order-user', [UserController::class,'listOfUsers']);
 
 

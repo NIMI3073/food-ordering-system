@@ -1,7 +1,7 @@
 <x-header>
 
 </x-header>
-<!-- END nav -->
+
 
 <section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');">
     <div class="overlay"></div>
