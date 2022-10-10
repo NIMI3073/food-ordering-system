@@ -24,6 +24,8 @@ class User extends Authenticatable
 
      protected $table = 'users';
 
+     protected $with = ['order'];
+
 
     // protected $fillable = [
     //     'name',

@@ -139,17 +139,18 @@ class UserController extends Controller
 
 
     public function listOfUsers(Request $request){ 
-        $request->validate([
-               'id' => 'string|required|exists:users,id',
-            //    'email'=>'string|required'
-             ]);
+    
+        // $request->validate([
+        //        'id' => 'string|required|exists:users,id',
+        //        'email'=>'string|required'
+        //      ]);
              
-             $user = User::where('id',$request->id)->get();
+        //      $user = User::with(['order'])->where('email',$request->email)->get();
         
-        return view('order-user')->with([
-            'users' =>$user,
-            'index' => 1,
-        ]);
+        // return view('user')->with([
+        //     'users' =>$user,
+        //     'index' => 1,
+        // ]);
   
 
 
