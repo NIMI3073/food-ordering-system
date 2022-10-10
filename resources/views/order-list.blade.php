@@ -1,7 +1,7 @@
 <x-header>
 
 </x-header>
-<!-- END nav -->
+
 
 <section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');">
     <div class="overlay"></div>
@@ -9,9 +9,7 @@
         <div class="row no-gutters slider-text align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate text-center mb-5">
                 <h1 class="mb-2 bread">List Of Orders!</h1>
-                {{-- <p class="breadcrumbs"><span class="mr-2"><a href="index">Home <i
-                                class="fa fa-chevron-right"></i></a></span> <span> List of Order <i
-                            class="fa fa-chevron-right"></i></span></p> --}}
+               
             </div>
         </div>
     </div>
@@ -52,7 +50,7 @@
         </div>
     </div>
                
-</section >
+</section>
 
  
 

@@ -17,11 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/',fn()=>view('index'));
 
-Route::get('/index', fn()=>view('index'));
 Route::get('/about', fn()=>view('about'));
 Route::get('/order', fn()=>view('order'));
 Route::get('/order-list', fn()=>view('order-list'));
@@ -30,7 +27,7 @@ Route::get('/contact', fn()=>view('contact'));
 Route::get('/reservation', fn()=>view('reservation'));
 Route::get('/register',fn()=>view('register'));
 Route::get('/payment',fn()=>view('payment'));
-Route::get('/order-user',fn()=>view('order-user'));
+// Route::get('/order-user',fn()=>view('order-user'));
 Route::post('/register',[UserController::class,'store']);
 Route::post('/contact',[ContactController::class,'store']);
 Route::get('/order-user', [UserController::class,'listOfUsers']);

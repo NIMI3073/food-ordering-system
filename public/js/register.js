@@ -34,6 +34,25 @@ myForm.addEventListener("submit",($event)=>{
 });
 
 
+// axios.get("http://127.0.0.1:8000/api/register").then((response) => {
+//     let getUsersList = response.data.register;
+//     console.log(getUsersList);
+//     let tableBody = document.querySelector("tbody");
+
+//     getOrderList.forEach((user,index) => {
+//        tableBody.innerHTML += `            
+//       <tr>
+//       <td>${index+1}</td>
+//       <td>${user.name}</td>
+//       <td>${user.email}</td>
+//       <td>${user.phone_number}</td> 
+      
+     
+//   </tr>`
+
+//     });
+// })
+
    
    
 

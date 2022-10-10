@@ -6,8 +6,9 @@ use App\Models\User;
 use Illuminate\Http\Request;
 
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rule;
 use PhpParser\Node\Expr\FuncCall;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -16,10 +17,32 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index( Request $request)
     {
-        //
-    }
+
+        //      $request->validate([
+        //             'id' => ['required', 'integer', Rule::exists('users', 'id')]
+        //      ]);
+        // $user = User::all();
+        // return response('/order-user')->with([
+        //     'index' => 1,
+        //     'users' => $user,
+        // ]);
+           
+        
+                //  $request->validate([
+                //     'id' => ['required', 'integer', Rule::exists('users', 'id')]
+                  
+                // ]);
+                // $user =  User::where($request->id)->get();
+                // return view('order-user')->with([
+                //     'user' => $user,
+                //     'index'=> 1,
+                // ]);
+            }
+
+          
+    
 
     /**
      * Show the form for creating a new resource.
@@ -50,11 +73,9 @@ class UserController extends Controller
         $validated['password'] = Hash::make($validated['password']);
         $user = User::create($validated);
 
-        // return view('register')->with([
-        //     'data'=>$user,
-        //     'message'=>'successful'
-        // ]);
+       
         if($user){
+           
              return response([
            'data'=> $user,
            'message'=> 'Registration complete'
@@ -114,18 +135,25 @@ class UserController extends Controller
     {
         //
     }
+    
 
 
     public function listOfUsers(Request $request){ 
-    $request->validate([
-        'id' => 'string|required|exists:user,id'
-    ]);
-    return view('order-list')->with([
-        'orders'=> User::where($request->id)->get(),
-        'index'=> 1,
-    ]);
-}
+        $request->validate([
+               'id' => 'string|required|exists:users,id',
+            //    'email'=>'string|required'
+             ]);
+             
+             $user = User::where('id',$request->id)->get();
+        
+        return view('order-user')->with([
+            'users' =>$user,
+            'index' => 1,
+        ]);
+  
 
 
     }
+
+}
 
