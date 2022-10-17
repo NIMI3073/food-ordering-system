@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 use Illuminate\Http\Response;
 use Illuminate\Validation\Rule;
-use PhpParser\Node\Expr\FuncCall;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -20,37 +19,7 @@ class UserController extends Controller
     public function index( Request $request)
     {
 
-        //      $request->validate([
-        //             'id' => ['required', 'integer', Rule::exists('users', 'id')]
-        //      ]);
-        // $user = User::all();
-        // return response('/order-user')->with([
-        //     'index' => 1,
-        //     'users' => $user,
-        // ]);
-           
-        
-                //  $request->validate([
-                //     'id' => ['required', 'integer', Rule::exists('users', 'id')]
-                  
-                // ]);
-                // $user =  User::where($request->id)->get();
-                // return view('order-user')->with([
-                //     'user' => $user,
-                //     'index'=> 1,
-                // ]);
-
-
-                $request->validate([
-                    'id'=>'integer|required|exists:users,id',
-                ]);
-               
-                $user = User::where('id', $request->id)->get();
-                return view('user-list')->with([
-                            'index'=> 1,
-                            'user'=> $user,
-                            
-                         ]);
+  
             }
 
           
@@ -150,22 +119,13 @@ class UserController extends Controller
     
 
 
-    public function userList (Request $request){ 
+    public function userList (Request $request){
     
-        $request->validate([
+       $users = User::all();
+        return response([
+            'users'=>$users,
             
-               'id' => 'integer|required|exists:users,id',
-             
-             ]);
-             $user = User::where('id',$request->id)->get();
-        
-        return view('user-list')->with([
-            'user' => $user,
-            'index' => 1,
         ]);
-  
-
-
     }
 
 }

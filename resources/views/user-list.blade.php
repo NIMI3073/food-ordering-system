@@ -33,20 +33,29 @@
                         
                     </tr>
                     </thead>
-                   @foreach ($users as $user)
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+
+                   {{-- @foreach ($users as $user)
                        
                  
                     <tbody>
 
                         <tr>
                         <td>{{ $index++ }}</td>
-                        <td>{{ $user->name }}</td>
-                        <td>{{ $user->email }}</td>
-                        <td>{{ $user->phone }}</td>
+                        <td>{{ $users->name }}</td>
+                        <td>{{ $users->email }}</td>
+                        <td>{{ $users->phone }}</td>
                       
                     </tr> 
                     </tbody>
-                    @endforeach
+                    @endforeach --}}
                 </table>
             </div>
         </div>
@@ -65,5 +74,6 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/vue@3"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{ asset('js/user.js') }}"></script>
 
 

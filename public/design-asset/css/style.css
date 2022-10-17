@@ -8634,6 +8634,20 @@ textarea.form-control {
     #map {
       height: 300px; } }
 
+
+      form{
+       margin-top: 100px;
+        width: 30%;
+        position: relative;
+        left: 40em;
+        background-color: gainsboro; 
+        border: 1px solid gray;
+        border-radius: 20px;
+        padding: 10px;
+        font-family:monospace;
+      
+      }
+
 @-webkit-keyframes pulse {
   0% {
     -webkit-box-shadow: 0 0 0 0 rgba(229, 43, 52, 0.4); }

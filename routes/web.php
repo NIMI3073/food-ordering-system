@@ -27,12 +27,15 @@ Route::get('/register',fn()=>view('register'));
 Route::get('/payment',fn()=>view('payment'));
 Route::post('/register',[UserController::class,'store']);
 Route::post('/contact',[ContactController::class,'store']);
-
+Route::get('/order-list', fn()=>view('order-list'));
+Route::get('user-list',fn()=>view('user-list'));
+Route::get('/dashboard',fn()=>view('dashboard'));
+Route::get('/login',fn()=>view('login'));
+// Route::get('/user-list', [UserController::class,'userList']);
 
 //dashboard routes//
 
 Route::prefix('admin')->group(function(){    
-Route::get('/order-list', fn()=>view('order-list'));
-Route::get('/user-list', [UserController::class,'userList']);
+
 
 });

@@ -23,6 +23,7 @@ use App\Models\User;
     Route::post('/register',[UserController::class,'store']);
     Route::post('/contact',[ContactController::class,'store']);
     Route::get('/order', [OrderController::class, 'index']);
+    Route::get('/user-list',[UserController::class, 'userList']);
    
     
 
