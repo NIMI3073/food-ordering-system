@@ -2,6 +2,7 @@ const Name = document.getElementById('name')
 const mail = document.getElementById('email')
 const phone = document.getElementById('phone')
 const address = document.getElementById('address')
+const typeOfMeal = document.getElementById('meal')
 const noOfPackage = document.getElementById('packages')
 const submitBtn  = document.getElementById('btn')
 const form = document.getElementById('orderForm')
@@ -15,6 +16,7 @@ form.addEventListener("submit",($event)=>{
         email: mail.value,
         phone_number: phone.value,
         address: address.value,
+        type_of_meal:typeOfMeal.value,
         no_of_package: noOfPackage.value,
     };
   

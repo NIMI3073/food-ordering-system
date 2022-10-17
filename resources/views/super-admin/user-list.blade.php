@@ -33,18 +33,20 @@
                         
                     </tr>
                     </thead>
-                    @foreach ($users as $user )
+                   @foreach ($users as $user)
+                       
+                 
                     <tbody>
 
                         <tr>
                         <td>{{ $index++ }}</td>
-                        <td>{{ $user->order->name }}</td>
-                        <td>{{ $user->order->email }}</td>
-                        <td>{{ $user->order->phone }}</td>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->phone }}</td>
                       
                     </tr> 
                     </tbody>
-                   @endforeach
+                    @endforeach
                 </table>
             </div>
         </div>

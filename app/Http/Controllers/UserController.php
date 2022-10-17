@@ -39,6 +39,18 @@ class UserController extends Controller
                 //     'user' => $user,
                 //     'index'=> 1,
                 // ]);
+
+
+                $request->validate([
+                    'id'=>'integer|required|exists:users,id',
+                ]);
+               
+                $user = User::where('id', $request->id)->get();
+                return view('user-list')->with([
+                            'index'=> 1,
+                            'user'=> $user,
+                            
+                         ]);
             }
 
           
@@ -138,19 +150,19 @@ class UserController extends Controller
     
 
 
-    public function listOfUsers(Request $request){ 
+    public function userList (Request $request){ 
     
-        // $request->validate([
-        //        'id' => 'string|required|exists:users,id',
-        //        'email'=>'string|required'
-        //      ]);
+        $request->validate([
+            
+               'id' => 'integer|required|exists:users,id',
              
-        //      $user = User::with(['order'])->where('email',$request->email)->get();
+             ]);
+             $user = User::where('id',$request->id)->get();
         
-        // return view('user')->with([
-        //     'users' =>$user,
-        //     'index' => 1,
-        // ]);
+        return view('user-list')->with([
+            'user' => $user,
+            'index' => 1,
+        ]);
   
 
 

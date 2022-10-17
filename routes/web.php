@@ -21,15 +21,21 @@ Route::get('/',fn()=>view('index'));
 
 Route::get('/about', fn()=>view('about'));
 Route::get('/order', fn()=>view('order'));
-Route::get('/order-list', fn()=>view('order-list'));
+
 Route::get('/menu', fn()=>view('menu'));
 Route::get('/contact', fn()=>view('contact'));
 Route::get('/reservation', fn()=>view('reservation'));
 Route::get('/register',fn()=>view('register'));
 Route::get('/payment',fn()=>view('payment'));
-
 Route::post('/register',[UserController::class,'store']);
 Route::post('/contact',[ContactController::class,'store']);
-Route::get('user-list', [UserController::class,'listOfUsers']);
 
 
+
+//dashboard routes//
+
+Route::prefix('admin')->group(function(){
+Route::get('/order-list', fn()=>view('order-list'));
+Route::get('/user-list', [UserController::class,'userList']);
+
+});

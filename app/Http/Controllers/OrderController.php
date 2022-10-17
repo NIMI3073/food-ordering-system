@@ -52,15 +52,43 @@ class OrderController extends Controller
             'email'=>'string|required',
             'phone_number'=>'string|required',
             'address'=>'string|required',
+            'type_of_meal' => 'string|required',
             'no_of_package'=> 'string|required',
+            
 
         ]);
         Order::create($validated);
        return response ([
-            'message' => 'successful'
+            'message' => 'successful',
+            'status' => 'submitted',
         ]);
+
+
+        // $submission = Submission::with(['assignment'])
+        // ->where('assignment_id', $request->assignment_id)
+        // ->where('user_id', auth()->user()->id)
+        // ->first();
+        // if ($submission) {
+        //     return response([
+        //       $submission->update(['answer' => $request->answer]), 
+        //       'alert'=> 'Assignment submitted successfully'
+        //     ]);
+            
+        // } else {
+        //     return response([
+        //       $submission =  Submission::create([
+        //         'assignment_id' => $request->assignment_id,
+        //         'answer' => $request->answer,
+        //         'score_obtained' => 0,
+        //         'status' => 'submitted',
+        //         'user_id'=> auth()->user()->id,
+        //         'alert' => 'Unknown error occurred'
+        //       ], Response::HTTP_UNAUTHORIZED) 
+        // ]);
+            
+        }
       
-    }
+    
 
     /**
      * Display the specified resource.
@@ -107,22 +135,5 @@ class OrderController extends Controller
         //
     }
 
-    
-// public function listOfOrders(Request $request){ 
-//     $request->validate([
-//         'id' => 'string|required|exists:order,id'
-//     ]);
-//     return view('order-list')->with([
-//         'orders'=> Order::where($request->id)->get(),
-//         'index'=> 1,
-//     ]);
-// }
-
-
-// public function orders($id)
-// {
-// Order::where('id', $id)->get();
-    
-// }
 
 }

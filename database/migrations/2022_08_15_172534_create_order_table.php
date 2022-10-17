@@ -19,7 +19,9 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone_number');
             $table->string('address');
+            $table->longText('type_of_meal');
             $table->string('no_of_package');
+            $table->enum('status',['ordered','sent','delivered']);
             $table->timestamps();
         });
     }

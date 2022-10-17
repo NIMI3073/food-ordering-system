@@ -225,8 +225,7 @@
                                 <div class="one-forth">
                                     <span class="price">#1,500</span>
                                 </div>
-                            </div>
-                            <p><span>Semovita</span>, <span>vegetable</span>/ <span>Egusi</span>, <span>Meat</span></p>
+                            </div> <p><span>Semovita</span>, <span>vegetable</span>/ <span>Egusi</span>, <span>Meat</span></p>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">

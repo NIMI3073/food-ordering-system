@@ -56,6 +56,13 @@
                         </div>
 
                         <div class="form-group">
+                            <textarea class="form-control text-center"  cols="30" rows="5" id="meal" name="type_of_meal" placeholder="Type of Meal You want to order!!"></textarea>
+                            @error('type_of_meal')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
                             <input type="number" name="no_of_package" class="form-control text-center " id="packages" placeholder="No of package(s)...">
                             @error('no_of_package')
                             <div class="alert alert-danger">{{ $message }}</div>
