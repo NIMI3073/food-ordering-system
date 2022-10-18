@@ -1,91 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Foodie</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Foodie</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="{{ asset('design-asset/css/animate.css') }}">
-	
-	<link rel="stylesheet" href="{{ asset('design-asset/css/owl.carousel.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('design-asset/css/owl.theme.default.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('design-asset/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css"
+        integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="{{ asset('design-asset/css/bootstrap-datepicker.css') }}">
-	<link rel="stylesheet" href="{{ asset('design-asset/css/jquery.timepicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('design-asset/css/animate.css') }}">
 
-	
-	<link rel="stylesheet" href="{{ asset('design-asset/css/flaticon.css') }}">
-	<link rel="stylesheet" href="{{ asset('design-asset/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('design-asset/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('design-asset/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('design-asset/css/magnific-popup.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('design-asset/css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('design-asset/css/jquery.timepicker.css') }}">
+
+
+    <link rel="stylesheet" href="{{ asset('design-asset/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('design-asset/css/style.css') }}">
 </head>
+
 <body>
 
-	
-	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light " id="ftco-navbar">
-		<div class="container">
-			<a class="navbar-brand" href="index">Food.<span class="text-info">ie</span></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
-			</button>
 
-			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a href="login" class="nav-link">Login</a></li>
-					<li class="nav-item"><a href="order-list" class="nav-link">Orders</a></li>
-					<li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
-					<li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
-				
-				
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light " id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index">Food.<span class="text-info">ie</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
 
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!-- END nav -->
-	
-	<section class="hero-wrap">
-		<div class="home-slider owl-carousel js-fullheight">
-			<div class="slider-item js-fullheight" style="background-image:url(images/section_bg03.png);">
-				<div class="overlay"></div>
-				<div class="container">
-					<div class="row no-gutters slider-text  align-items-center justify-content-center">
-						<div class="col-md-12 ftco-animate">
-							<div class="text w-100 mt-5 text-center">
-								<span class="subheading">Food.ie Restaurant</h2></span>
-								<h1>Cooking Since</h1>
-								<span class="subheading-2">2020</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="slider-item js-fullheight" style="background-image:url(images/section_bg04.png);">
-				<div class="overlay"></div>
-				<div class="container">
-					<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-						<div class="col-md-12 ftco-animate">
-							<div class="text w-100 mt-5 text-center">
-								<span class="subheading">Foodie.ie Restaurant</h2></span>
-								<h1>Best Quality</h1>
-								<span class="subheading-2 sub">Food</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    {{-- <li class="nav-item active"><a href="login" class="nav-link">Login</a></li> --}}
+                    <li class="nav-item"><a href="order-list" class="nav-link">Orders</a></li>
+                    <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
+                    <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
+                    <li class="nav-item"><a href="logout" class="nav-link btn btn-warning">Log Out</a> </li>
 
 
-	{{-- <section class="ftco-section ftco-no-pt ftco-no-pb">
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+    <section class="hero-wrap">
+        <div class="home-slider owl-carousel js-fullheight">
+            <div class="slider-item js-fullheight" style="background-image:url(images/section_bg03.png);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text  align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 mt-5 text-center">
+                                <span class="subheading">Food.ie Restaurant</h2></span>
+                                <h1>Cooking Since</h1>
+                                <span class="subheading-2">2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-item js-fullheight" style="background-image:url(images/section_bg04.png);">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                        <div class="col-md-12 ftco-animate">
+                            <div class="text w-100 mt-5 text-center">
+                                <span class="subheading">Foodie.ie Restaurant</h2></span>
+                                <h1>Best Quality</h1>
+                                <span class="subheading-2 sub">Food</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
 		<div class="container">
 			<div class="row d-flex">
 				<div class="col-md-6 d-flex">
@@ -106,7 +119,7 @@
 		</div>
 	</section>
 
-	<section class="ftco-section bg-light">
+	{{-- <section class="ftco-section bg-light">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-7 text-center heading-section ftco-animate">
@@ -180,10 +193,11 @@
 			</div>
 		</div>
 	</section> --}}
-<x-footer>
+    <x-footer>
 
 
-</x-footer>
-		
-	</body>
-	</html>
+    </x-footer>
+
+</body>
+
+</html>

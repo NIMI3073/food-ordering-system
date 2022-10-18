@@ -1,10 +1,13 @@
 <?php
 
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\ContactController;
 use App\Models\Order;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Redirect;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,15 +30,29 @@ Route::get('/register',fn()=>view('register'));
 Route::get('/payment',fn()=>view('payment'));
 Route::post('/register',[UserController::class,'store']);
 Route::post('/contact',[ContactController::class,'store']);
-Route::get('/order-list', fn()=>view('order-list'));
-Route::get('user-list',fn()=>view('user-list'));
 Route::get('/dashboard',fn()=>view('dashboard'));
-Route::get('/login',fn()=>view('login'));
-// Route::get('/user-list', [UserController::class,'userList']);
+Route::get('/login',[AuthController::class, 'loginForm'])->name('login');
+Route::post('/login',[AuthController::class,'login']);
+Route::get('/logout', function(){
+    Auth::logout();
+    return Redirect::to('login');
+ });
 
-//dashboard routes//
 
-Route::prefix('admin')->group(function(){    
+
+
+
+
+// Admin dashboard routes//
+
+Route::prefix('admin')->middleware(['auth:web'])->group(function(){    
+    Route::get('/user-list',fn()=>view('super-admin.user-list'));
+    Route::get('/order-list', fn()=>view('super-admin.order-list'));
+    // Route::get('/dashboard',fn()=>view('super-admin.dashboard'));
+
+
+
+    
 
 
 });

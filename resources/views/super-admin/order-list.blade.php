@@ -50,7 +50,7 @@
                     <li class="nav-item"><a href="order-list" class="nav-link">Orders</a></li>
                     <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
                     <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
-                    <li class="nav-item"><span class="glyphicon glyphicon-off"style="margin-top:17px"></span> </li>
+                    <li class="nav-item"><a href="" class="nav-link">Log Out</a> </li>
 
 
 
@@ -59,51 +59,67 @@
             </div>
         </div>
     </nav>
-<!-- END nav -->
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');"
-    data-stellar-background-ratio="0.5">
+
+<section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate text-center mb-5">
-                <h1 class="mb-2 bread">Menu</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
-                                class="fa fa-chevron-right"></i></a></span> <span>Menu <i
-                            class="fa fa-chevron-right"></i></span></p>
+                <h1 class="mb-2 bread">List Of Orders!</h1>
+               
             </div>
         </div>
     </div>
-</section>
+</section> 
 
-<section class="ftco-section">
+
+<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top: 10px;padding-bottom: 10px">
     <div class="container">
-        <div class="row justify-content-center mb-5 pb-2">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-                <span class="subheading">Specialties</span>
-                <h2 class="mb-4">Our Menu</h2>
+        <div class="row no-gutters">
+            <div class="text-dark">
+                <h4 class="text-center">List of Orders</h4>
+            </div>
+            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-info">
+                <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}" id="Table">
+                    <thead class="thead-light">
+                        <tr>
+                        <th>sn</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Package(s)order</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr> 
+                    </tbody>
+                   
+                </table>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <div class="menu-wrap">
-                    <div class="heading-menu text-center ftco-animate">
-
-                        
-
+    </div>
+               
 </section>
 
-
-<html>
-    <body>
-        
-    </body>
-</html>
+ 
 
 <x-footer>
 
 </x-footer>
-
 </body>
 
 </html>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="{{ asset('js/order-list.js') }}"></script>
