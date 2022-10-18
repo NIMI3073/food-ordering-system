@@ -8635,17 +8635,26 @@ textarea.form-control {
       height: 300px; } }
 
 
-      form{
+      .login{
        margin-top: 100px;
         width: 30%;
         position: relative;
-        left: 40em;
+        left: 50em;
         background-color: gainsboro; 
         border: 1px solid gray;
         border-radius: 20px;
         padding: 10px;
         font-family:monospace;
       
+      }
+
+      #food{
+         position: relative;
+         bottom:18em;
+          /* font-size: 30px; */
+         color: #007bff;
+         /* font-weight: 900; */
+         /* font-family: cursive; */
       }
 
 @-webkit-keyframes pulse {

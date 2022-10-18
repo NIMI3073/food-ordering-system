@@ -24,7 +24,7 @@
             </div>
             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-info">
                 <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}" id="Table">
-                    <thead class="thead-light">
+                    <thead class="thead-dark">
                         <tr>
                         <th>sn</th>
                         <th>Name</th>
