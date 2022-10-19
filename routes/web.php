@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\MenuController;
 use App\Models\Order;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Route;
@@ -32,10 +33,16 @@ Route::post('/contact',[ContactController::class,'store']);
 
 
 
+
+
 //dashboard routes//
 
+
 Route::prefix('admin')->group(function(){
-Route::get('/order-list', fn()=>view('order-list'));
-Route::get('/user-list', [UserController::class,'userList']);
+Route::get('/order-list', fn()=>view('super-admin.order-list'));
+Route::get('/order-list', fn()=>view('super-admin.user-list'));
+Route::get('/add-menu', fn()=>view('super-admin.add-menu'));
+Route::post('/add-menu',[MenuController::class,'store']);
+// Route::get('/user-list', [UserController::class,'userList']);
 
 });

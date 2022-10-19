@@ -18,6 +18,11 @@
     </div>
 </section>
 
+
+<div class="col-lg-10 lx-6">
+    <form action="/menu" method="POST">
+    </form>
+</div>
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
@@ -758,11 +763,6 @@
 </section>
 
 
-<html>
-    <body>
-        
-    </body>
-</html>
 
 <x-footer>
 
@@ -771,3 +771,4 @@
 </body>
 
 </html>
+<script src="{{ asset('js/menu.js') }}"
