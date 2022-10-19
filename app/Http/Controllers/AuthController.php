@@ -113,16 +113,16 @@ class AuthController extends Controller
             Auth::login($user);
             return redirect('dashboard');
         } else {
-            return view([
+            return view('login')->with([
                 'data' => null,
                 'message' => 'Wrong Input'
             ], Response::HTTP_UNAUTHORIZED);
         }
     }
 
-    public function logout()
-    {
-        Auth::logout();
-        return redirect('/login');
-    }
+    // public function logout()
+    // {
+    //     Auth::logout();
+    //     return redirect('/login');
+    // }
 }
