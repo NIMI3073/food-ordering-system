@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\MenuController;
 use App\Models\User;
 
 /*
@@ -23,7 +24,8 @@ use App\Models\User;
     Route::post('/register',[UserController::class,'store']);
     Route::post('/contact',[ContactController::class,'store']);
     Route::get('/order', [OrderController::class, 'index']);
-    Route::get('/menu',fn()=>view('menu'));
+    Route::get('/menu', [MenuController::class, 'menuList']);
+    // Route::get('/menu',fn()=>view('menu'));
    
     
 

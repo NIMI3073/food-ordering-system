@@ -44,9 +44,9 @@
                     <div class="row justify-content-center">
                         <div class="form-group">
                           <select class="form-control" name="type" id="menu">
-                            <option value="none" selected="" disabled="">--Select Menu--</option>
-                            <option class="text-dark">African Dishes</option>
-                            <option class="text-dark">Foregin Dishes</option>
+                            <option value="" selected="" disabled="">--Select Menu--</option>
+                            <option class="text-dark" value="african">African Dishes</option>
+                            <option class="text-dark" value="foregin">Foregin Dishes</option>
 
                         </select> 
                            </label>
@@ -54,8 +54,8 @@
                         </div>
                         
                         <div class="form-group">
-                            <input type="file"  name="file_path"class="form-control text-center" id="customFile" />
-                             @error('file_path')
+                            <input type="file"  name="file" class="form-control text-center" id="customFile" />
+                             @error('file')
                             <div class="alert alert-danger">{{ $message }}</div>   
                             @enderror      
                             </div>
@@ -72,7 +72,7 @@
 
                         <div class="form-group">
                             <input type="text" name="price" class="form-control" id="price"
-                                placeholder="Price">
+                                placeholder="Price tag">
 
                                 @error('price')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -110,3 +110,5 @@
 </body>
 
 </html>
+
+<script src="{{ asset('js/add-meun.js') }}"></script>

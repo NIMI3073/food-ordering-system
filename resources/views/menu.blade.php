@@ -17,13 +17,57 @@
         </div>
     </div>
 </section>
+{{-- 
+<section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+            <div class="col-md-9 ftco-animate text-center mb-5">
+                <h1 class="mb-2 bread">List Of Menu!</h1>
+               
+            </div>
+        </div>
+    </div>
+</section> --}}
 
 
-<div class="col-lg-10 lx-6">
-    <form action="/menu" method="POST">
-    </form>
-</div>
-<section class="ftco-section">
+<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top: 10px;padding-bottom: 10px">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="text-dark">
+                <h4 class="text-center">Our Menus</h4>
+            </div>
+            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-info">
+                <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}" id="Table">
+                    <thead class="thead-light">
+                        <tr>
+                        <th>sn</th>
+                        <th>Type of Menu</th>
+                        <th>Image</th>
+                        <th>Name of Menu</th>
+                        <th>Price</th>
+                        
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      
+                    </tr> 
+                    </tbody>
+                   
+                </table>
+            </div>
+        </div>
+    </div>
+               
+</section>
+
+{{-- <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-7 text-center heading-section ftco-animate">
@@ -760,7 +804,7 @@
         </div>
     </div>
 
-</section>
+</section> --}}
 
 
 
@@ -771,4 +815,4 @@
 </body>
 
 </html>
-<script src="{{ asset('js/menu.js') }}"
+<script src="{{ asset('js/menu.js') }}"></script>

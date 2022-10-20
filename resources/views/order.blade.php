@@ -82,11 +82,11 @@
         </div>
     </div>
 
-    @if (isset($message))
+    {{-- @if (isset($message))
                 <div style="color: green; margin-left:30px">
                     {{ $message }}
                 </div>
-            @endif
+            @endif --}}
 </section >
 
  

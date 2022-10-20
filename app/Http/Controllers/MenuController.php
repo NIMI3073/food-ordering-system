@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\File;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\Rule;
 use Symfony\Component\Console\Input\Input;
 
 class MenuController extends Controller
@@ -40,21 +41,20 @@ class MenuController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-
-            'type'=>['string','required'],
-            'file_path'=>['file','required','mimes:jpg,png,jpeg','max:2048'],
+            'type'=>['string','required', Rule::in(['african','foregin'])],
+            'file'=>['file','required','mimes:jpg,png,jpeg','max:2048'],
             'name_of_menu'=>['string','required'],
             'price'=>['string','required'],
            
         ]);
-        
-        $fileName = Str::slug(auth()->user()->name).".".$request->file->getClientOriginalExtension();
-        Storage::putFileAs("public/images", $request->file,$fileName);
- 
-        unset($validated['file']);
-        $validated['file_name'] = $fileName;
+
+      $validated['file'] = $request->file('file')->store('images');
+
+        // dd($validated);
+//    $validated['file'] = Storage::putFile('images', $request->file('public'));
+     
          Menu::create($validated);
-         return view('super-admin.add-menu')->with([
+         return response([
              "message" => '  Successful'
          ]);
 
@@ -111,5 +111,14 @@ class MenuController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function menuList(Request $request){
+        $menus = Menu::all();
+        return response([
+                    'index'=> 1,
+                    'menus'=> $menus,
+                    
+        ]);
     }
 }
