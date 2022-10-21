@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate text-center mb-5">
-                <h1 class="mb-2 bread">Menu</h1>
+                {{-- <h1 class="mb-2 bread">Menu</h1> --}}
                 <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
                                 class="fa fa-chevron-right"></i></a></span> <span>Menu <i
                             class="fa fa-chevron-right"></i></span></p>
@@ -24,15 +24,15 @@
     <div class="container">
         <div class="row no-gutters">
             <div class="text-dark text-center">
-                <h1 class="text-center text-info" style="margin-left: 400px"></strong>Our Menus!!</strong></h1>
+                <h1 class="text-center text-dark" style="margin-left: 370px"></strong>Menus Lists!!</strong></h1>
             </div>
             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-w" id="div">
                 <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl} " id="Table">
                     <thead class="thead-dark">
                         <tr class="text-center text-block text-dark">
-                        <th class="text">sn</th>
-                        <th class="text">Image</th>
-                        <th class="te">Type of Menu</th>
+                        <th>sn</th>
+                        <th>Image</th>
+                        <th>Type of Menu</th>
                         <th>Name of Menu</th>
                         <th >Price</th>
                         
@@ -40,11 +40,11 @@
                     </thead>
                     <tbody>
                         <tr>
-                        <td class=" menu-img img" ></td>
-                        <td class="bg-warning"></td>
-                        <td class="bg-primary"></td>
-                        <td class="bg-success"></td>
-                        <td class="bg-danger"></td>
+                        <td class="bg"></td>
+                        <td class="bg-warn"></td>
+                        <td class="bg-prim"></td>
+                        <td class="bg-succ"></td>
+                        <td class="bg-dang"></td>
                       
                     </tr> 
                     </tbody>

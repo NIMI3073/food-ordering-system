@@ -26,11 +26,7 @@
                 <h2 class="mb-4">Our Menu</h2>
             </div>
         </div>
-
-
-
 </section>
-
 
 
 <section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="padding-bottom: 40px;" id="menuForm">
@@ -49,6 +45,7 @@
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
+
                         <div class="form-group">
                             <strong> <select class="form-control text-white" name="type" id="menu">
                                 <option value="" selected="" disabled="">--Select Menu--</option>
@@ -56,11 +53,7 @@
                                 <option class="text-dark" value="foreign dish">Foregin Dishes</option>
 
                             </select></strong>
-                       
-
                         </div>
-
-
 
                         <div class="form-group">
                             <input type="text" name="name_of_menu"class="form-control" id="meal"
