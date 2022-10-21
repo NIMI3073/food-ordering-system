@@ -40,7 +40,8 @@
 					<li class="nav-item"><a href="reservation" class="nav-link">Reservation</a></li>
 					<li class="nav-item"><a href="register" class="nav-link">Sign up</a></li>
 					<li class="nav-item"><a href="order" class="nav-link"> Make Order</a></li>
-				
+					<li class="nav-item"><a href="menu-gallery" class="nav-link"> Menu gallery</a></li>
+					
 
 				</ul>
 			</div>

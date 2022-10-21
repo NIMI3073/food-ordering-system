@@ -24,6 +24,7 @@ Route::get('/about', fn()=>view('about'));
 Route::get('/order', fn()=>view('order'));
 
 Route::get('/menu', fn()=>view('menu'));
+Route::get('/menu-gallery', fn()=>view('menu-gallery'));
 Route::get('/contact', fn()=>view('contact'));
 Route::get('/reservation', fn()=>view('reservation'));
 Route::get('/register',fn()=>view('register'));

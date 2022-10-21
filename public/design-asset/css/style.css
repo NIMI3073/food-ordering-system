@@ -159,6 +159,10 @@ figure {
   margin: 0 0 1rem; }
 
 img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   vertical-align: middle;
   border-style: none; }
 
@@ -1502,12 +1506,12 @@ pre {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #fcfcfc; }
+  color: #000000; }
   .table th,
   .table td {
     padding: 0.75rem;
     vertical-align: top;
-    color: white;
+    color:black;
     border-top: 1px solid #dee2e6; }
   .table thead th {
     vertical-align: bottom;
@@ -9224,13 +9228,21 @@ textarea.form-control {
     stroke-dashoffset: -136px; } }
 
     #div{
-      border: 5px solid salmon;
-      border-radius: 15px;
-      border-style: groove;
       font-family: cursive;
-      font-size: large;
+      font-size: x-large;
       font-weight: 900;
     }
-
+    @media only screen and (max-width: 700px){
+      img {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+    
+    @media only screen and (max-width: 500px){
+      img{
+        width: 100%;
+      }
+    }
     
   
