@@ -9222,4 +9222,10 @@ textarea.form-control {
     stroke-dasharray: 45, 96;
     stroke-dashoffset: -136px; } }
 
+    #div{
+      border: 7px solid salmon;
+      border-radius: 15px;
+      border-style: groove;
+      font-family: cursive;
+    }
   

@@ -33,69 +33,69 @@
 
 
 
-<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="padding-bottom: 40px;"
-    id="menuForm">
+<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="padding-bottom: 40px;" id="menuForm">
     <div class="container">
         <div class="row no-gutters">
             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-warning">
-                <form action="/admin/add-menu" class="appointment-form" method="POST" id="" enctype="multipart/form-data">
+                <form action="/admin/add-menu" class="appointment-form text-center text-block" method="POST"
+                    id="" enctype="multipart/form-data">
                     @csrf
                     <h3 class="mb-3 text-center">Add New Menu</h3>
+
                     <div class="row justify-content-center">
                         <div class="form-group">
-                          <select class="form-control" name="type" id="menu">
-                            <option value="" selected="" disabled="">--Select Menu--</option>
-                            <option class="text-dark" value="african">African Dishes</option>
-                            <option class="text-dark" value="foregin">Foregin Dishes</option>
-
-                        </select> 
-                           </label>
-                       
+                            <input type="file" name="file" class="form-control text-center text-white" id="customFile" />
+                            @error('file')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
-                        
                         <div class="form-group">
-                            <input type="file"  name="file" class="form-control text-center" id="customFile" />
-                             @error('file')
-                            <div class="alert alert-danger">{{ $message }}</div>   
-                            @enderror      
-                            </div>
+                            <strong> <select class="form-control text-white" name="type" id="menu">
+                                <option value="" selected="" disabled="">--Select Menu--</option>
+                                <option class="text-dark" value="african dish">African Dishes</option>
+                                <option class="text-dark" value="foreign dish">Foregin Dishes</option>
+
+                            </select></strong>
+                       
+
+                        </div>
+
+
 
                         <div class="form-group">
                             <input type="text" name="name_of_menu"class="form-control" id="meal"
                                 placeholder="Name of Menu">
 
-                                @error('name_of_menu')
-                            <div class="alert alert-danger "> {{ $message }} </div>
-                        @enderror
+                            @error('name_of_menu')
+                                <div class="alert alert-danger "> {{ $message }} </div>
+                            @enderror
                         </div>
-                        
+
 
                         <div class="form-group">
                             <input type="text" name="price" class="form-control" id="price"
                                 placeholder="Price tag">
 
-                                @error('price')
+                            @error('price')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
-                    
+
                         <div class="row justify-content-center">
                             <button type="submit" id="btn" class="btn btn-primary py-3 px-4">Submit</button>
                         </div>
                     </div>
-   
+
                 </form>
 
             </div>
 
             @if (isset($message))
-
-            <div class="alert alert-success">{{ $message }}</div>
-                
+                <div class="alert alert-success">{{ $message }}</div>
             @endif
         </div>
     </div>
-   
+
 
 </section>
 
@@ -110,5 +110,7 @@
 </body>
 
 </html>
-
-<script src="{{ asset('js/add-meun.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{ asset('js/add-menu.js') }}"></script>

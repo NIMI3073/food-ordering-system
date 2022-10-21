@@ -41,31 +41,25 @@ class MenuController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'type'=>['string','required', Rule::in(['african','foregin'])],
             'file'=>['file','required','mimes:jpg,png,jpeg','max:2048'],
+            'type'=>['string','required', Rule::in(['african dish','foregin dish'])],
             'name_of_menu'=>['string','required'],
             'price'=>['string','required'],
            
         ]);
 
-      $validated['file'] = $request->file('file')->store('images');
-
+      $validated['file'] = $request->file('file')->store('public/images');
+     
         // dd($validated);
-//    $validated['file'] = Storage::putFile('images', $request->file('public'));
+
      
          Menu::create($validated);
          return response([
              "message" => '  Successful'
          ]);
 
-
-       
-            
-           
+      
     }
-
-
-    
 
 
     /**
@@ -114,9 +108,9 @@ class MenuController extends Controller
     }
 
     public function menuList(Request $request){
+
         $menus = Menu::all();
         return response([
-                    'index'=> 1,
                     'menus'=> $menus,
                     
         ]);

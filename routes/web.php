@@ -42,7 +42,6 @@ Route::prefix('admin')->group(function(){
 Route::get('/order-list', fn()=>view('super-admin.order-list'));
 Route::get('/order-list', fn()=>view('super-admin.user-list'));
 Route::get('/add-menu', fn()=>view('super-admin.add-menu'));
-Route::post('/add-menu',[MenuController::class,'store']);
-// Route::get('/user-list', [UserController::class,'userList']);
+
 
 });

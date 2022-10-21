@@ -34,16 +34,16 @@
 <section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top: 10px;padding-bottom: 10px">
     <div class="container">
         <div class="row no-gutters">
-            <div class="text-dark">
-                <h4 class="text-center">Our Menus</h4>
+            <div class="text-dark text-center">
+                <h1 class="text-center text-info" style="margin-left: 400px"></strong>Our Menus!!</strong></h1>
             </div>
-            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-info">
+            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-info" id="div">
                 <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}" id="Table">
-                    <thead class="thead-light">
-                        <tr>
+                    <thead class="thead-dark">
+                        <tr class="text-center text-block">
                         <th>sn</th>
-                        <th>Type of Menu</th>
                         <th>Image</th>
+                        <th>Type of Menu</th>
                         <th>Name of Menu</th>
                         <th>Price</th>
                         
@@ -51,7 +51,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                        <td></td>
+                        <td><</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -815,4 +815,8 @@
 </body>
 
 </html>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script src="{{ asset('js/menu.js') }}"></script>

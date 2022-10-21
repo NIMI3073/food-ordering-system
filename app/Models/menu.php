@@ -13,4 +13,8 @@ class menu extends Model
     protected $guarded= [];
 
     protected $table ='menu';
+
+    public function getFileAttribute($value){
+        return url("/storage/$value");
+    }
 }
