@@ -31,17 +31,14 @@ Route::get('/payment',fn()=>view('payment'));
 Route::post('/register',[UserController::class,'store']);
 Route::post('/contact',[ContactController::class,'store']);
 
-
-
-
-
 //dashboard routes//
-
 
 Route::prefix('admin')->group(function(){
 Route::get('/order-list', fn()=>view('super-admin.order-list'));
 Route::get('/order-list', fn()=>view('super-admin.user-list'));
 Route::get('/add-menu', fn()=>view('super-admin.add-menu'));
+Route::post('/add-menu',[MenuController::class,'store']);
+
 
 
 });

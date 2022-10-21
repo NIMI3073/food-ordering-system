@@ -43,7 +43,7 @@
                     <h3 class="mb-3 text-center">Add New Menu</h3>
 
                     <div class="row justify-content-center">
-                        <div class="form-group">
+                        <div class="form-group" >
                             <input type="file" name="file" class="form-control text-center text-white" id="customFile" />
                             @error('file')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -113,4 +113,4 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/vue@3"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="{{ asset('js/add-menu.js') }}"></script>
+{{-- <script src="{{ asset('js/add-menu.js') }}"></script> --}}

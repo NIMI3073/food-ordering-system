@@ -47,8 +47,10 @@ class MenuController extends Controller
             'price'=>['string','required'],
            
         ]);
-
-      $validated['file'] = $request->file('file')->store('public/images');
+        
+      $upload = $request->file('file')->store('public/images');
+        $full_path =explode("/", $upload);
+      $validated['file'] = end($full_path);
      
         // dd($validated);
 

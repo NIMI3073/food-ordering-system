@@ -8,7 +8,7 @@ axios.get("http://127.0.0.1:8000/api/menu").then((response) => {
            tableBody.innerHTML += `            
           <tr>
           <td>${index+1}</td>
-          <td><img src="${menu.file}" /></td>
+          <td><img src="${menu.file}" class="img-fluid rounded-circle" alt="Responsive image" style="width:50%;height:auto"  /></td>
           <td>${menu.type}</td>
           <td>${menu.name_of_menu}</td> 
           <td>${menu.price}</td>

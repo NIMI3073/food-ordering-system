@@ -37,25 +37,25 @@
             <div class="text-dark text-center">
                 <h1 class="text-center text-info" style="margin-left: 400px"></strong>Our Menus!!</strong></h1>
             </div>
-            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-info" id="div">
-                <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}" id="Table">
+            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-i" id="div">
+                <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl} bg-dark" id="Table">
                     <thead class="thead-dark">
-                        <tr class="text-center text-block">
-                        <th>sn</th>
-                        <th>Image</th>
-                        <th>Type of Menu</th>
-                        <th>Name of Menu</th>
-                        <th>Price</th>
+                        <tr class="text-center text-block text-white">
+                        <th class="text-white">sn</th>
+                        <th class="text-white">Image</th>
+                        <th class="text-white">Type of Menu</th>
+                        <th class="text-white">Name of Menu</th>
+                        <th class="text-white">Price</th>
                         
                     </tr>
                     </thead>
                     <tbody>
                         <tr>
-                        <td><</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td class="bg-dark"></td>
+                        <td class="bg-warning"></td>
+                        <td class="bg-primary"></td>
+                        <td class="bg-success"></td>
+                        <td class="bg-danger"></td>
                       
                     </tr> 
                     </tbody>

@@ -1,4 +1,4 @@
-const file = document.getElementById('customFile')
+const files = document.getElementById('customFile')
 const menu = document.getElementById('menu')
 const nameOfMeal = document.getElementById('meal')
 const mealPrice= document.getElementById('price')
@@ -9,7 +9,7 @@ form.addEventListener("submit",($event)=>{
     $event.preventDefault();
 
     const menus = {
-        file: file.value,
+        file: files.value,
         type: menu.value,
         name_of_menu:nameOfMeal.value,
         price : mealPrice.value,
