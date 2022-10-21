@@ -23,8 +23,8 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-7 text-center heading-section ftco-animate">
-                <span class="subheading">Specialties</span>
-                <h2 class="mb-4">Our Menu</h2>
+                <div class="subheading">Specialties</div>
+                <h4 class="mb-6 mt-3"><i>In delicacy</i></h4>
             </div>
         </div>
         <div class="row">
@@ -197,7 +197,8 @@
                                     <span class="price">#1,500</span>
                                 </div>
                             </div>
-                            <p><span>Amala</span>, <span>Gbegiri & ewedu</span>, <span>Meat</span>or <span>Fish</span>
+                            <p><span>Amala</span>, <span>Gbegiri & ewedu</span>, <span>Meat</span><em>or
+                                </em><span>Fish</span>
                             </p>
                         </div>
                     </div>
@@ -226,7 +227,8 @@
                                 <div class="one-forth">
                                     <span class="price">#1,500</span>
                                 </div>
-                            </div> <p><span>Semovita</span>, <span>vegetable</span>/ <span>Egusi</span>, <span>Meat</span></p>
+                            </div>
+                            <p><span>Semovita</span>, <span>vegetable</span>/ <span>Egusi</span>, <span>Meat</span></p>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -255,7 +257,8 @@
                                 </div>
                             </div>
                             <p><span>Porridge</span>, <span>moimoi</span> or <span>plantain</span>,
-                                <span>meat/fish</span></p>
+                                <span>meat/fish</span>
+                            </p>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -270,7 +273,8 @@
                                 </div>
                             </div>
                             <p><span>vegetable</span> or <span>Egusi soup</span>, <span>stock-fish</span> or
-                                <span>Meat</span></p>
+                                <span>Meat</span>
+                            </p>
                         </div>
                     </div>
                     <div class="menus border-bottom-0 d-flex ftco-animate">
@@ -326,7 +330,8 @@
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
-                        <div class="menu-img img" style="background-image: url(images/Croissant-Bacon-Egg.png);"></div>
+                        <div class="menu-img img" style="background-image: url(images/Croissant-Bacon-Egg.png);">
+                        </div>
                         <div class="text">
                             <div class="d-flex">
                                 <div class="one-half">
@@ -336,7 +341,8 @@
                                     <span class="price">#1,200</span>
                                 </div>
                             </div>
-                            <p><span>Sausage,egg &cheese Croissant</span>, <span>ice-cream</span> Or <span>Youghurt</span></p>
+                            <p><span>Sausage,egg &cheese Croissant</span>, <span>ice-cream</span> Or
+                                <span>Youghurt</span></p>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -350,7 +356,8 @@
                                     <span class="price">#1,700</span>
                                 </div>
                             </div>
-                            <p><span>Spagetti</span>, <span>plantain</span>, <span>Chicken</span> or <span>Turkey</span></p>
+                            <p><span>Spagetti</span>, <span>plantain</span>, <span>Chicken</span> or <span>Turkey</span>
+                            </p>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -364,7 +371,8 @@
                                     <span class="price">#1,800</span>
                                 </div>
                             </div>
-                            <p><span>Spagetti</span>, <span>Beef stew</span>, <span>Meat</span> or <span>Chicken</span></p>
+                            <p><span>Spagetti</span>, <span>Beef stew</span>, <span>Meat</span> or <span>Chicken</span>
+                            </p>
                         </div>
                     </div>
                     <div class="menus border-bottom-0 d-flex ftco-animate">
@@ -378,12 +386,13 @@
                                     <span class="price">#1,500</span>
                                 </div>
                             </div>
-                            <p><span>Ekuru</span>, <span>fried stew with dried fish</span> or <span>Meat</span>, <span>Eko</span></p>
+                            <p><span>Ekuru</span>, <span>fried stew with dried fish</span> or <span>Meat</span>,
+                                <span>Eko</span></p>
                         </div>
                     </div>
 
 
-					<div class="menus border-bottom-0 d-flex ftco-animate">
+                    <div class="menus border-bottom-0 d-flex ftco-animate">
                         <div class="menu-img img" style="background-image: url(images/plantain.jpg);"></div>
                         <div class="text">
                             <div class="d-flex">
@@ -394,7 +403,8 @@
                                     <span class="price">#1,300</span>
                                 </div>
                             </div>
-                            <p><span>Plantain</span>, <span>fried stew with fish</span> or <span>Fried egg</span>, <span>Meat</span></p>
+                            <p><span>Plantain</span>, <span>fried stew with fish</span> or <span>Fried egg</span>,
+                                <span>Meat</span></p>
                         </div>
                     </div>
                     <span class="flat flaticon-omelette" style="left: 0;"></span>
@@ -410,7 +420,7 @@
         <div class="row justify-content-center mb-2 pb-2">
             <div class="col-md-3 text-center heading-section ftco-animate">
                 <span class="subheading">Specialties</span>
-                <h3 class="mb-2">Our Menu(Snacks & Drinks)</h3>
+                <h4 class="mb-2 mt-3" style="font-family:cursive"><I>(Snack, Wine & drinks)</I></h4>
             </div>
         </div>
         <div class="row">
@@ -430,7 +440,7 @@
                                     <span class="price">#700</span>
                                 </div>
                             </div>
-                            <p><span>Meat-pie</span> </p>
+
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -444,7 +454,7 @@
                                     <span class="price">#700</span>
                                 </div>
                             </div>
-                            <p><span>chin-chin</span></p>
+
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -458,7 +468,7 @@
                                     <span class="price">#700</span>
                                 </div>
                             </div>
-                            <p><span>Peanut</span> </p>
+
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -472,7 +482,7 @@
                                     <span class="price">#1000</span>
                                 </div>
                             </div>
-                            <p><span>Shawarma</span></p>
+
                         </div>
                     </div>
                     <div class="menus border-bottom-0 d-flex ftco-animate">
@@ -486,11 +496,11 @@
                                     <span class="price">#1,200</span>
                                 </div>
                             </div>
-                            <p><span>Pizza</span></p>
+
                         </div>
                     </div>
 
-					<div class="menus border-bottom-0 d-flex ftco-animate">
+                    <div class="menus border-bottom-0 d-flex ftco-animate">
                         <div class="menu-img img" style="background-image: url(images/Cold-Stone.jpg);"></div>
                         <div class="text">
                             <div class="d-flex">
@@ -505,7 +515,7 @@
                         </div>
                     </div>
 
-					<div class="menus border-bottom-0 d-flex ftco-animate">
+                    <div class="menus border-bottom-0 d-flex ftco-animate">
                         <div class="menu-img img" style="background-image: url(images/desert-5.jpg);"></div>
                         <div class="text">
                             <div class="d-flex">
@@ -540,7 +550,7 @@
                                     <span class="price">$29</span>
                                 </div>
                             </div>
-                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -554,7 +564,7 @@
                                     <span class="price">$29</span>
                                 </div>
                             </div>
-                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -568,7 +578,7 @@
                                     <span class="price">$29</span>
                                 </div>
                             </div>
-                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -582,7 +592,7 @@
                                     <span class="price">$29</span>
                                 </div>
                             </div>
-                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -596,7 +606,6 @@
                                     <span class="price">$29</span>
                                 </div>
                             </div>
-                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -610,7 +619,6 @@
                                     <span class="price">$29</span>
                                 </div>
                             </div>
-                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -624,10 +632,10 @@
                                     <span class="price">$29</span>
                                 </div>
                             </div>
-                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+
                         </div>
                     </div>
-                    <div class="menus border-bottom-0 d-flex ftco-animate">
+                    {{-- <div class="menus border-bottom-0 d-flex ftco-animate">
                         <div class="menu-img img" style="background-image: url(images/wine-8.jpg);"></div>
                         <div class="text">
                             <div class="d-flex">
@@ -640,7 +648,7 @@
                             </div>
                             <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
                         </div>
-                    </div>
+                    </div> --}}
                     <span class="flat flaticon-wine" style="left: 0;"></span>
                     <span class="flat flaticon-wine-1" style="right: 0;"></span>
                 </div>
@@ -662,7 +670,7 @@
                                     <span class="price">#500</span>
                                 </div>
                             </div>
-                            <p><span>Juice</span></p>
+                           
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -676,7 +684,7 @@
                                     <span class="price">#700</span>
                                 </div>
                             </div>
-                            <p><span>Juice</span></p>
+                      
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -690,7 +698,7 @@
                                     <span class="price">#700</span>
                                 </div>
                             </div>
-                            <p><span>Juice</span></p>
+                            
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -701,10 +709,10 @@
                                     <h3></h3>
                                 </div>
                                 <div class="one-forth">
-                                    <span class="price">$29</span>
+                                    <span class="price">#1000</span>
                                 </div>
                             </div>
-                            <p><span>Meat</span></p>
+                           
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -712,13 +720,13 @@
                         <div class="text">
                             <div class="d-flex">
                                 <div class="one-half">
-                                    <h3>Jucie</h3>
+                                    <h3>Juice</h3>
                                 </div>
                                 <div class="one-forth">
                                     <span class="price">#700</span>
                                 </div>
                             </div>
-                            <p><span>Juice</span></p>
+                           
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -732,7 +740,7 @@
                                     <span class="price">#700</span>
                                 </div>
                             </div>
-                            <p><span>Juice</span></p>
+                           
                         </div>
                     </div>
                     <div class="menus border-bottom-0 d-flex ftco-animate">
@@ -746,7 +754,7 @@
                                     <span class="price">#700</span>
                                 </div>
                             </div>
-                            <p><span>Juice</span></p>
+                            
                         </div>
                     </div>
                     <span class="flat flaticon-wine" style="left: 0;"></span>

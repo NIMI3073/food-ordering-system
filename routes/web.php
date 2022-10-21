@@ -29,6 +29,7 @@ Route::get('/contact', fn()=>view('contact'));
 Route::get('/reservation', fn()=>view('reservation'));
 Route::get('/register',fn()=>view('register'));
 Route::get('/payment',fn()=>view('payment'));
+Route::get('/order',fn()=>view('order'));
 Route::post('/register',[UserController::class,'store']);
 Route::post('/contact',[ContactController::class,'store']);
 

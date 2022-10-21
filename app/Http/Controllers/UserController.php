@@ -9,6 +9,7 @@ use Illuminate\Http\Response;
 use Illuminate\Validation\Rule;
 use PhpParser\Node\Expr\FuncCall;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
@@ -83,21 +84,24 @@ class UserController extends Controller
 
         ]);
         $validated['password'] = Hash::make($validated['password']);
-        $user = User::create($validated);
+         User::create($validated);
 
+        return redirect()
+        ->to(route('order'))
+        ->with('message', 'The post has been added successfully!');
        
-        if($user){
+        // if($user){
            
-             return response([
-           'data'=> $user,
-           'message'=> 'Registration complete'
-         ]);
-        }else{
-            return response([
-                'data'=> null,
-                'message' => 'Unknown error occurred'
-            ], Response::HTTP_UNAUTHORIZED);
-        }
+        //      return response([
+        //    'data'=> $user,
+        //    'message'=> 'Registration complete'
+        //  ]);
+        // }else{
+        //     return response([
+        //         'data'=> null,
+        //         'message' => 'Unknown error occurred'
+        //     ], Response::HTTP_UNAUTHORIZED);
+        // }
 
        
 

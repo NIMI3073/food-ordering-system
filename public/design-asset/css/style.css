@@ -9232,6 +9232,12 @@ textarea.form-control {
       font-size: x-large;
       font-weight: 900;
     }
+    #myImg{
+      -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    }
     @media only screen and (max-width: 700px){
       img {
         width: 49.99999%;

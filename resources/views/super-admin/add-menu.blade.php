@@ -43,7 +43,7 @@
                     <h3 class="mb-3 text-center">Add New Menu</h3>
 
                     <div class="row justify-content-center">
-                        <div class="form-group" >
+                        <div class="form-group">
                             <input type="file" name="file" class="form-control text-center text-white" id="customFile" />
                             @error('file')
                                 <div class="alert alert-danger">{{ $message }}</div>

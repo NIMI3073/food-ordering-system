@@ -40,7 +40,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                        <td class="bg-dark"></td>
+                        <td class=" menu-img img" ></td>
                         <td class="bg-warning"></td>
                         <td class="bg-primary"></td>
                         <td class="bg-success"></td>
