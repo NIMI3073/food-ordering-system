@@ -26,7 +26,7 @@
             <div class="text-dark text-center">
                 <h1 class="text-center text-dark" style="margin-left: 370px"></strong>Menus Lists!!</strong></h1>
             </div>
-            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-w" id="div">
+            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-info" id="div">
                 <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl} " id="Table">
                     <thead class="thead-dark">
                         <tr class="text-center text-block text-dark">
