@@ -23,27 +23,32 @@
         <div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-7 text-center heading-section ftco-animate">
                 <span class="subheading">Specialties</span>
-                <h2 class="mb-4">Our Menu</h2>
+                <h2 class="mt-4" style="font-family: cursive">Our Menu</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 col-lg-4">
                 <div class="menu-wrap">
                     <div class="heading-menu text-center ftco-animate">
-                        <h3>Breakfast</h3>
+                        <p style="font-family: cursive; font-weight:900;font-size:xx-large;color:black">Breakfast</p>
                     </div>
                     <div class="menus d-flex ftco-animate">
-                        <div class="menu-img img" style="background-image: url(images/akara-pap.jpg);"></div>
+                        <div class="menu-img img" style="background-image: url(images/akara-pap.jpg);" name="image"></div>
                         <div class="text">
                             <div class="d-flex">
-                                <div class="one-half">
+                                <div class="one-half" name="name">
                                     <h3>Akara with pap</h3>
                                 </div>
-                                <div class="one-forth">
+                                <div class="one-forth" name="price">
                                     <span class="price">#700</span>
                                 </div>
                             </div>
                             <p><span>Pap (ogi)</span>, <span>akara(beans cake)</span></p>
+                            <span name="quantity"></span>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -59,6 +64,10 @@
                             </div>
                             <p><span>Yam with egg</span>, <span>Yam with fish stew</span>, <span>Yam with fried
                                     Plaintain </span></p>
+                                    <div class="col-sm-md-6 mt-4">
+                                        <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                        <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                                    </div>
                         </div>
                     </div>
                     <div class="menus border-bottom-0 d-flex ftco-animate">
@@ -73,6 +82,10 @@
                                 </div>
                             </div>
                             <p><span>Tea</span>, <span>cake & biscuits</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -87,6 +100,10 @@
                                 </div>
                             </div>
                             <p><span>Coffee</span>, <span>Pie</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -101,6 +118,10 @@
                                 </div>
                             </div>
                             <p><span>Indomie</span>, <span>boiled egg</span>, <span>plantain</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -115,6 +136,10 @@
                                 </div>
                             </div>
                             <p><span>Pancake</span>, <span>Coffee</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -130,6 +155,10 @@
                                 </div>
                             </div>
                             <p><span>Spinach</span>, <span>Ginger tea</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus border-bottom-0 d-flex ftco-animate">
@@ -144,6 +173,10 @@
                                 </div>
                             </div>
                             <p><span>Coffee tea</span>&<span>Cake</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
 
@@ -159,6 +192,10 @@
                                 </div>
                             </div>
                             <p><span>Coffee tea</span>&<span>Snacks</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <span class="flat flaticon-bread" style="left: 0;"></span>
@@ -169,7 +206,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="menu-wrap">
                     <div class="heading-menu text-center ftco-animate">
-                        <h3>Lunch</h3>
+                        <p  style="font-family: cursive; font-weight:900;font-size:xx-large;color:black">Lunch</p>
                     </div>
                     <div class="menus d-flex ftco-animate">
                         <div class="menu-img img" style="background-image: url(images/eba.jpg);"></div>
@@ -183,6 +220,10 @@
                                 </div>
                             </div>
                             <p><span>Eba</span>, <span>okra-soup</span>, <span>fish</span>or<span>Meat</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -197,6 +238,10 @@
                                 </div>
                             </div>
                             <p><span>Amala</span>, <span>Gbegiri & ewedu</span>, <span>Meat</span>or <span>Fish</span>
+                                <div class="col-sm-md-6 mt-4">
+                                    <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                    <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                                </div>
                             </p>
                         </div>
                     </div>
@@ -213,6 +258,10 @@
                             </div>
                             <p><span>Poundo</span>, <span>vegetable</span>or <span>Egusi soup</span>, <span>meat</span>
                             </p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="{{('order') }}#id" class="text-white">Order now</a></button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="{{ ('cart/cart') }}" class="text-white">Add to Cart</a></button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -226,6 +275,10 @@
                                     <span class="price">#1,500</span>
                                 </div>
                             </div> <p><span>Semovita</span>, <span>vegetable</span>/ <span>Egusi</span>, <span>Meat</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -240,6 +293,10 @@
                                 </div>
                             </div>
                             <p><span>Beans</span>, <span>Bread</span> or <span>plantain</span>, <span>Meat</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -255,6 +312,10 @@
                             </div>
                             <p><span>Porridge</span>, <span>moimoi</span> or <span>plantain</span>,
                                 <span>meat/fish</span></p>
+                                <div class="col-sm-md-6 mt-4">
+                                    <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                    <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                                </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -270,6 +331,10 @@
                             </div>
                             <p><span>vegetable</span> or <span>Egusi soup</span>, <span>stock-fish</span> or
                                 <span>Meat</span></p>
+                                <div class="col-sm-md-6 mt-4">
+                                    <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                    <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                                </div>
                         </div>
                     </div>
                     <div class="menus border-bottom-0 d-flex ftco-animate">
@@ -284,6 +349,10 @@
                                 </div>
                             </div>
                             <p><span>fufu</span>, <span>Egusi</span>, <span>meat</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <span class="flat flaticon-pizza" style="left: 0;"></span>
@@ -294,7 +363,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="menu-wrap">
                     <div class="heading-menu text-center ftco-animate">
-                        <h3>Dinner</h3>
+                        <p style="font-family: cursive; font-weight:900;font-size:xx-large;color:black">Dinner</p>
                     </div>
                     <div class="menus d-flex ftco-animate">
                         <div class="menu-img img" style="background-image: url(images/fried-rice.jpg);"></div>
@@ -308,6 +377,10 @@
                                 </div>
                             </div>
                             <p><span>Rice</span>, <span>Salad</span>, <span>Chicken</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -322,6 +395,10 @@
                                 </div>
                             </div>
                             <p><span>Rice</span>, <span>Salad</span>, <span>Chicken</span>,<span>Plantain</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -336,6 +413,10 @@
                                 </div>
                             </div>
                             <p><span>Sausage,egg &cheese Croissant</span>, <span>ice-cream</span> Or <span>Youghurt</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -350,6 +431,10 @@
                                 </div>
                             </div>
                             <p><span>Spagetti</span>, <span>plantain</span>, <span>Chicken</span> or <span>Turkey</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -364,6 +449,10 @@
                                 </div>
                             </div>
                             <p><span>Spagetti</span>, <span>Beef stew</span>, <span>Meat</span> or <span>Chicken</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus border-bottom-0 d-flex ftco-animate">
@@ -378,6 +467,10 @@
                                 </div>
                             </div>
                             <p><span>Ekuru</span>, <span>fried stew with dried fish</span> or <span>Meat</span>, <span>Eko</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
 
@@ -394,6 +487,10 @@
                                 </div>
                             </div>
                             <p><span>Plantain</span>, <span>fried stew with fish</span> or <span>Fried egg</span>, <span>Meat</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <span class="flat flaticon-omelette" style="left: 0;"></span>
@@ -409,7 +506,7 @@
         <div class="row justify-content-center mb-2 pb-2">
             <div class="col-md-3 text-center heading-section ftco-animate">
                 <span class="subheading">Specialties</span>
-                <h3 class="mb-2">Our Menu(Snacks & Drinks)</h3>
+                <h3 class="mt-4" style="font-family: cursive">Our Menu(Snacks & Drinks)</h3>
             </div>
         </div>
         <div class="row">
@@ -430,6 +527,10 @@
                                 </div>
                             </div>
                             <p><span>Meat-pie</span> </p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -444,6 +545,10 @@
                                 </div>
                             </div>
                             <p><span>chin-chin</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -458,6 +563,10 @@
                                 </div>
                             </div>
                             <p><span>Peanut</span> </p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -472,6 +581,10 @@
                                 </div>
                             </div>
                             <p><span>Shawarma</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus border-bottom-0 d-flex ftco-animate">
@@ -486,6 +599,10 @@
                                 </div>
                             </div>
                             <p><span>Pizza</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
 
@@ -501,6 +618,10 @@
                                 </div>
                             </div>
                             <p><span>Chocolate</span>, <span>Vanilla</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
 
@@ -516,6 +637,10 @@
                                 </div>
                             </div>
                             <p><span>Cream with chocolate</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <span class="flat flaticon-cupcake" style="left: 0;"></span>
@@ -537,9 +662,14 @@
                                 </div>
                                 <div class="one-forth">
                                     <span class="price">$29</span>
+                                    
                                 </div>
                             </div>
-                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
+                            {{-- <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p> --}}
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -550,10 +680,15 @@
                                     <h3>Beef Roast Source</h3>
                                 </div>
                                 <div class="one-forth">
-                                    <span class="price">$29</span>
+                                   
                                 </div>
                             </div>
-                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                            <span class="price">$29</span>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
+                            {{-- <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p> --}}
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -565,9 +700,14 @@
                                 </div>
                                 <div class="one-forth">
                                     <span class="price">$29</span>
+                                   
                                 </div>
                             </div>
-                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
+                            {{-- <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p> --}}
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -579,9 +719,14 @@
                                 </div>
                                 <div class="one-forth">
                                     <span class="price">$29</span>
+                                    
                                 </div>
                             </div>
-                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
+                            {{-- <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p> --}}
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -593,9 +738,14 @@
                                 </div>
                                 <div class="one-forth">
                                     <span class="price">$29</span>
+                                    
                                 </div>
                             </div>
-                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
+                            {{-- <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p> --}}
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -607,9 +757,14 @@
                                 </div>
                                 <div class="one-forth">
                                     <span class="price">$29</span>
+                                   
                                 </div>
                             </div>
-                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
+                            {{-- <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p> --}}
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -623,7 +778,11 @@
                                     <span class="price">$29</span>
                                 </div>
                             </div>
-                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
+                            {{-- <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p> --}}
                         </div>
                     </div>
                     <div class="menus border-bottom-0 d-flex ftco-animate">
@@ -637,7 +796,11 @@
                                     <span class="price">$29</span>
                                 </div>
                             </div>
-                            <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p>
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
+                            {{-- <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span>, <span>Tomatoe</span></p> --}}
                         </div>
                     </div>
                     <span class="flat flaticon-wine" style="left: 0;"></span>
@@ -661,7 +824,11 @@
                                     <span class="price">#500</span>
                                 </div>
                             </div>
-                            <p><span>Juice</span></p>
+                            {{-- <p><span>Juice</span></p> --}}
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -675,7 +842,11 @@
                                     <span class="price">#700</span>
                                 </div>
                             </div>
-                            <p><span>Juice</span></p>
+                            {{-- <p><span>Juice</span></p> --}}
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -689,7 +860,11 @@
                                     <span class="price">#700</span>
                                 </div>
                             </div>
-                            <p><span>Juice</span></p>
+                            {{-- <p><span>Juice</span></p> --}}
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -703,7 +878,11 @@
                                     <span class="price">$29</span>
                                 </div>
                             </div>
-                            <p><span>Meat</span></p>
+                            {{-- <p><span>Meat</span></p> --}}
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -717,7 +896,11 @@
                                     <span class="price">#700</span>
                                 </div>
                             </div>
-                            <p><span>Juice</span></p>
+                            {{-- <p><span>Juice</span></p> --}}
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus d-flex ftco-animate">
@@ -731,7 +914,11 @@
                                     <span class="price">#700</span>
                                 </div>
                             </div>
-                            <p><span>Juice</span></p>
+                            {{-- <p><span>Juice</span></p> --}}
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menus border-bottom-0 d-flex ftco-animate">
@@ -745,7 +932,11 @@
                                     <span class="price">#700</span>
                                 </div>
                             </div>
-                            <p><span>Juice</span></p>
+                            {{-- <p><span>Juice</span></p> --}}
+                            <div class="col-sm-md-6 mt-4">
+                                <button type="button" class="btn btn-sm btn-danger"><a href="order"></a>Order now</button>
+                                <button type="button" class="btn btn-sm btn-warning"> <a href="cart/cart"></a>Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <span class="flat flaticon-wine" style="left: 0;"></span>
