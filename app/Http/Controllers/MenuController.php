@@ -2,31 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Models\Order;
+use App\Models\menu;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules\File;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\Rule;
+use Symfony\Component\Console\Input\Input;
 
-class OrderController extends Controller
+class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
-    
+     *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-
-        $request->validate([
-            'id'=>'integer|exists:order,id',
-        ]);
-       
-        $order = Order::all();
-        return response([
-                    'index'=> 1,
-                    'order'=> $order,
-                    
-                 ]);
-        
+        //
     }
 
     /**
@@ -36,7 +29,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-     return view('order');
+        //
     }
 
     /**
@@ -47,26 +40,29 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-       $validated = $request->validate([
-            'name'=>'string|required',
-            'email'=>'string|required',
-            'phone_number'=>'string|required',
-            'address'=>'string|required',
-            'type_of_meal' => 'string|required',
-            'no_of_package'=> 'string|required',
-            
-
+        $validated = $request->validate([
+            'file'=>['file','required','mimes:jpg,png,jpeg','max:2048'],
+            'type'=>['string','required', Rule::in(['african dish','foregin dish'])],
+            'name_of_menu'=>['string','required'],
+            'price'=>['string','required'],
+           
         ]);
-        Order::create($validated);
-       return response ([
-            'message' => 'successful',
-            'status' => 'submitted',
-        ]);
+        
+      $upload = $request->file('file')->store('public/images');
+        $full_path =explode("/", $upload);
+      $validated['file'] = end($full_path);
+     
+        // dd($validated);
 
-            
-        }
+     
+         Menu::create($validated);
+         return response([
+             "message" => '  Successful'
+         ]);
+
       
-    
+    }
+
 
     /**
      * Display the specified resource.
@@ -113,5 +109,12 @@ class OrderController extends Controller
         //
     }
 
+    public function menuList(Request $request){
 
+        $menus = Menu::all();
+        return response([
+                    'menus'=> $menus,
+                    
+        ]);
+    }
 }
