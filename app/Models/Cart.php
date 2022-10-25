@@ -11,5 +11,13 @@ class Cart extends Model
     protected $guarded =[];
 
     protected $table ='cart';
+
+
+    protected $fillable = [
+        'image',
+        'name',
+        'price',
+        'description',
+    ];
     
 }

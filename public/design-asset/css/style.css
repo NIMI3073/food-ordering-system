@@ -9275,3 +9275,54 @@ textarea.form-control {
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         background: linear-gradient(to right, rgba(123, 17, 100, 1), rgba(37, 117, 249, 1))
         }
+
+        
+img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  border-style: none; }
+
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #fcfcfc; 
+  color: #000000;
+} 
+  .table th,
+  .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    color: white;
+    color:black;
+    border-top: 1px solid #dee2e6; }
+  .table thead th {
+    vertical-align: bottom;
+
+    stroke-dashoffset: -136px; } 
+
+    #div{
+      border: 5px solid salmon;
+      border-radius: 15px;
+      border-style: groove;
+      font-family: cursive;
+      font-size: large;
+      font-size: x-large;
+      font-weight: 900;
+    }
+
+    @media only screen and (max-width: 700px){
+      img {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+
+    @media only screen and (max-width: 500px){
+      img{
+        width: 100%;
+      }
+    }

@@ -83,23 +83,25 @@ class CartController extends Controller
         //
     }
 
+
+  
     
 
     public function addToCart(Request $request)
     {
-        Cart::add([
-            'id' => $request->id,
-            'name' => $request->name,
-            'price' => $request->price,
-            'quantity' => $request->quantity,
-            'attributes' => array(
-                'image' => $request->image,
-            )
+         $request->validate([
+            'product_id'=>'integer|required|exists:cart,id'
+            
         ]);
-        session()->flash('success', 'Product is Added to Cart Successfully !');
 
-        return redirect()->route('cart.list');
+        Cart::where('product_id',$request->product_id)
+        ->where('user_id', auth()->user()->id)
+        ->first();
+        return redirect()->route('menu');
     
 }
+
+
+
 
 }

@@ -64,27 +64,6 @@ class OrderController extends Controller
         ]);
 
 
-        // $submission = Submission::with(['assignment'])
-        // ->where('assignment_id', $request->assignment_id)
-        // ->where('user_id', auth()->user()->id)
-        // ->first();
-        // if ($submission) {
-        //     return response([
-        //       $submission->update(['answer' => $request->answer]), 
-        //       'alert'=> 'Assignment submitted successfully'
-        //     ]);
-            
-        // } else {
-        //     return response([
-        //       $submission =  Submission::create([
-        //         'assignment_id' => $request->assignment_id,
-        //         'answer' => $request->answer,
-        //         'score_obtained' => 0,
-        //         'status' => 'submitted',
-        //         'user_id'=> auth()->user()->id,
-        //         'alert' => 'Unknown error occurred'
-        //       ], Response::HTTP_UNAUTHORIZED) 
-        // ]);
             
         }
       

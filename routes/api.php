@@ -1,10 +1,12 @@
 <?php
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CartController;
 use App\Models\User;
 
 /*
@@ -23,6 +25,7 @@ use App\Models\User;
     Route::post('/register',[UserController::class,'store']);
     Route::post('/contact',[ContactController::class,'store']);
     Route::get('/order', [OrderController::class, 'index']);
+    Route::post('/menu',[CartController::class,'addToCart']);
    
     
 
