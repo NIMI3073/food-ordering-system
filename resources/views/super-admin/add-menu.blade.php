@@ -34,7 +34,7 @@
         <div class="row no-gutters">
             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-warning">
                 <form action="/admin/add-menu" class="appointment-form text-center text-block" method="POST"
-                    id="" enctype="multipart/form-data">
+                    id="menuForm" enctype="multipart/form-data">
                     @csrf
                     <h3 class="mb-3 text-center">Add New Menu</h3>
 
@@ -49,8 +49,9 @@
                         <div class="form-group">
                             <strong> <select class="form-control text-white" name="type" id="menu">
                                 <option value="" selected="" disabled="">--Select Menu--</option>
-                                <option class="text-dark" value="african dish">African Dishes</option>
-                                <option class="text-dark" value="foreign dish">Foregin Dishes</option>
+                                <option class="text-dark" value="Breakfast">Breakfast</option>
+                                <option class="text-dark" value="Lunch">Lunch</option>
+                                <option class="text-dark" value="Dinner">Dinner</option>
 
                             </select></strong>
                         </div>
@@ -83,9 +84,9 @@
 
             </div>
 
-            @if (isset($message))
+            {{-- @if (isset($message))
                 <div class="alert alert-success">{{ $message }}</div>
-            @endif
+            @endif --}}
         </div>
     </div>
 
@@ -106,4 +107,4 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/vue@3"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-{{-- <script src="{{ asset('js/add-menu.js') }}"></script> --}}
+<script src="{{ asset('js/add-menu.js') }}"></script>

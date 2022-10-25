@@ -26,7 +26,7 @@ use App\Models\User;
     Route::post('/contact',[ContactController::class,'store']);
     Route::get('/order', [OrderController::class, 'index']);
     Route::get('/menu', [MenuController::class, 'menuList']);
-    // Route::post('/add-menu',[MenuController::class,'store']);
+    Route::post('/add-menu',[MenuController::class,'store']);
     
     // Route::get('/menu',fn()=>view('menu'));
    

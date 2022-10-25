@@ -41,20 +41,16 @@ class MenuController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'file'=>['file','required','mimes:jpg,png,jpeg','max:2048'],
-            'type'=>['string','required', Rule::in(['african dish','foregin dish'])],
+            'file'=>['required','mimes:jpg,png,jpeg','max:2048'],
+            'type'=>['string','required', Rule::in(['Breakfast','Lunch','Dinner'])],
             'name_of_menu'=>['string','required'],
             'price'=>['string','required'],
            
         ]);
-        
+
       $upload = $request->file('file')->store('public/images');
         $full_path =explode("/", $upload);
       $validated['file'] = end($full_path);
-     
-        // dd($validated);
-
-     
          Menu::create($validated);
          return response([
              "message" => '  Successful'

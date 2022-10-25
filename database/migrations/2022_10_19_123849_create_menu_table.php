@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('menu', function (Blueprint $table) {
             $table->id();
             $table->string('file');
-            $table->enum('type',['african dish','foreign dish']);
+            $table->enum('type',['Breakfast','Lunch','Dinner']);
             $table->string('name_of_menu');
             $table->string('price');
             $table->timestamps();
