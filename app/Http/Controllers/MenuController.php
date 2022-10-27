@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\menu;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rules\File;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Validation\Rule;
 use Symfony\Component\Console\Input\Input;
 
 class MenuController extends Controller
@@ -42,15 +44,17 @@ class MenuController extends Controller
     {
         $validated = $request->validate([
             'file'=>['required','mimes:jpg,png,jpeg','max:2048'],
-            'type'=>['string','required', Rule::in(['Breakfast','Lunch','Dinner'])],
+            'type'=>['string','required', Rule::in(['Breakfast','Lunch','Dinner','snacks','wine','drink'])],
             'name_of_menu'=>['string','required'],
-            'price'=>['string','required'],
+            'description' =>['string','required'],
+            'price'=>['integer','required'],
            
         ]);
-
+      
       $upload = $request->file('file')->store('public/images');
         $full_path =explode("/", $upload);
       $validated['file'] = end($full_path);
+      
          Menu::create($validated);
          return response([
              "message" => '  Successful'
@@ -111,6 +115,28 @@ class MenuController extends Controller
         return response([
                     'menus'=> $menus,
                     
+        ]); 
+    }
+
+
+
+    public function menuGallery(Request $request){
+        $breakfast= Menu::where('type','Breakfast')->get();
+        $lunch = Menu::where('type','Lunch')->get();
+        $dinner = Menu::where('type','Dinner')->get();
+        $snacks = Menu::where('type','snacks')->get();
+        $wine = Menu::where('type','wine')->get();
+        $drinks = Menu::where('type','drinks')->get();
+        return view('menu-gallery')->with([
+            'breakfast'=>$breakfast,
+            'lunch'=>$lunch,
+            'dinner' =>$dinner,
+            'snack' =>$snacks,
+            'wine'=> $wine,
+            'drink'=>$drinks
         ]);
     }
+
+
+   
 }

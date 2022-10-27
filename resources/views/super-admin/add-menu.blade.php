@@ -52,6 +52,9 @@
                                 <option class="text-dark" value="Breakfast">Breakfast</option>
                                 <option class="text-dark" value="Lunch">Lunch</option>
                                 <option class="text-dark" value="Dinner">Dinner</option>
+                                <option class="text-dark" value="snacks">Snacks</option>
+                                <option class="text-dark" value="wine">Wine</option>
+                                <option class="text-dark" value="drinks">Drinks</option>
 
                             </select></strong>
                         </div>
@@ -65,6 +68,16 @@
                             @enderror
                         </div>
 
+                      
+                          
+                        <div class="form-group">
+                            <input type="text" name="description" class="form-control" id="description"
+                                placeholder="Food description">
+
+                            @error('description')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
 
                         <div class="form-group">
                             <input type="text" name="price" class="form-control" id="price"

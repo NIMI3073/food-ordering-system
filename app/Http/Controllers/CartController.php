@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\menu;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -27,16 +28,7 @@ class CartController extends Controller
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+
 
     /**
      * Display the specified resource.
@@ -80,28 +72,78 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $deleteItem = Cart::where('id', $id)->first();
+        $deleteItem->delete();
     }
 
 
-  
-    
-
-    public function addToCart(Request $request)
+    public function store(Request $request)
     {
-         $request->validate([
-            'product_id'=>'integer|required|exists:cart,id'
-            
+       $validated = $request->validate([
+            'menu_id'=>'string|exists:menu,id'
         ]);
 
-        Cart::where('product_id',$request->product_id)
-        ->where('user_id', auth()->user()->id)
-        ->first();
-        return redirect()->route('menu');
-    
+      $cartItem =  Cart::where([
+        'user_id' => 2,
+        'menu_id' => $request->menu_id,
+      ])->first();
+
+      if($cartItem){
+        $cartItem->units++;
+        $cartItem->save();
+      }else{
+        $cartItem = Cart::create([
+            'user_id' => 2,
+            'menu_id' => $request->menu_id,
+        ]);
+      }
+        return response()->json($cartItem);
+      
 }
 
 
+//   public function cartItem(Request $request){
+//         $cartItems = Cart::all();
+//         return view('cart-dashboard/cart')->with([
+//                     'items'=> $cartItems,
+                    
+//         ]);
+//     }
 
+
+    public function cartItems(Request $request){
+       
+    $cartItems = Cart::with(['menu'])->where('user_id', 2)->get();
+
+    return view('cart-dashboard/cart')->with([
+        'cartItems'=> $cartItems,
+    ]);
+
+    }
+
+
+    
+public function deleteItem(Request $request){
+  
+    $request->validate([
+        'id' => 'required|integer|exists:carts,id'
+    ]);
+   
+    $deleteItem = Cart::where('menu_id',$request->id)->first();
+    $menuId = $deleteItem->menu_id;
+ if($deleteItem){
+    
+    Menu::where('menu_id',$deleteItem->id)->delete();
+
+   $deleteItem->delete(); 
+ }
+    
+ return view('cart-dashboard.cart')->with([
+    'items' => Cart::where('menu_id',$menuId)->get(),
+    'message'=>'item deleted Successfully',
+
+]);
+
+}
 
 }

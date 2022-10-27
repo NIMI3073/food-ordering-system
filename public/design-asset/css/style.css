@@ -9294,5 +9294,23 @@ textarea.form-control {
         width: 100%;
       }
     }
+  
     
+    @media (min-width: 1025px) {
+      .h-custom {
+      height: 100vh !important;
+      }
+      }
+      
+      .gradient-custom {
+        /* fallback for old browsers */
+        background: #6a11cb;
+        font-family: cursive;
+        
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to right, rgba(123, 17, 100, 1), rgba(37, 117, 249, 1));
+        
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, rgba(123, 17, 100, 1), rgba(37, 117, 249, 1))
+        }
   

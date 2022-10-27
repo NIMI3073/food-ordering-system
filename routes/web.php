@@ -26,7 +26,7 @@ Route::get('/about', fn()=>view('about'));
 Route::get('/order', fn()=>view('order'));
 
 Route::get('/menu', fn()=>view('menu'));
-Route::get('/menu-gallery', fn()=>view('menu-gallery'));
+// Route::get('/menu-gallery', fn()=>view('menu-gallery'));
 Route::get('/contact', fn()=>view('contact'));
 Route::get('/reservation', fn()=>view('reservation'));
 Route::get('/register',fn()=>view('register'));
@@ -34,7 +34,7 @@ Route::get('/payment',fn()=>view('payment'));
 Route::get('/order',fn()=>view('order'));
 Route::post('/register',[UserController::class,'store']);
 Route::post('/contact',[ContactController::class,'store']);
-
+Route::get('/menu-gallery',[MenuController::class,'menuGallery']);
 //dashboard routes//
 
 Route::prefix('admin')->group(function(){
@@ -43,14 +43,12 @@ Route::get('/order-list', fn()=>view('super-admin.user-list'));
 Route::get('/add-menu', fn()=>view('super-admin.add-menu'));
 Route::get('/login',fn()=>view('login'));
 Route::post('/add-menu',[MenuController::class,'store']);
-
-
-
 });
 
 // __ cart dashboard||
 
 Route::prefix('cart')->group(function(){
-    Route::get('cart',fn()=>view('cart-dashboard.cart'));
-
+    // Route::get('cart',fn()=>view('cart-dashboard.cart'));
+    Route::get('cart',[CartController::class,'cartItems'])->name('cart-items');
+    Route::get('/delete-item',[CartController::class,'destroy'])->name('delete-item');
 });

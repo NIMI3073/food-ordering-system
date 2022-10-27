@@ -1,31 +1,22 @@
-const image = document.getElementById('img')
-const Name = document.getElementById('nameOfFood')
-const price = document.getElementById('price')
-const description = document.getElementById('description')
-const submitBtn  = document.getElementById('btn')
+// axios.get("http://127.0.0.1:8000/api/cart").then((response) => {
+//     console.log(response.data)
+//         let getMenusList = response.data.menus;
+//         console.log(getMenusList);
+//         let tableBody = document.querySelector("tbody");
 
-
-    const carts = {
-        image: image.value,
-        name: Name.value,
-        price: price.value,
-        description: description.value,
-    };
-  
-   
-
-    console.log(carts);
-
-    axios.post("http://127.0.0.1:8000/api/menu", carts)
-    .then((response) => {
-        console.log(response);
-        alert(response.data.message)
-     
-    })
-    .catch((error) => {
-        console.log(error.response);
-        alert(error?.response?.data?.message);
-    });
+//         getMenusList.forEach((menu,index) => {
+//            tableBody.innerHTML += `            
+//           <tr>
+//           <td>${index+1}</td>
+//           <td><img src="${menu.file}" class="img-fluid rounded-circle" alt="Responsive image" style="width:120px" /></td>
+//           <td>${menu.type}</td>
+//           <td>${menu.name_of_menu}</td> 
+//           <td>${menu.price}</td>
+         
+//       </tr>`
+    
+//         });
+//     });
 
 
 

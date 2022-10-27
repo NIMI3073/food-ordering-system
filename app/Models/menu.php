@@ -14,6 +14,9 @@ class menu extends Model
 
     protected $table ='menu';
 
+
+
+    
     public function getFileAttribute($value){
         return url("/storage/images/$value");
     }

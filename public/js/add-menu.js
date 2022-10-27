@@ -1,6 +1,7 @@
 const file = document.getElementById('customFile')
 const menu = document.getElementById('menu')
 const nameOfMeal = document.getElementById('meal')
+const menuDescription = document.getElementById('description')
 const mealPrice= document.getElementById('price')
 const submitBtn  = document.getElementById('btn')
 const form = document.getElementById('menuForm')
@@ -12,6 +13,7 @@ form.addEventListener("submit",($event)=>{
     menusV2.append('file', file.files[0]),
     menusV2.append('type', menu.value),
     menusV2.append('name_of_menu',nameOfMeal.value),
+    menusV2.append('description',menuDescription.value),
     menusV2.append('price',mealPrice.value),
   
     console.log(menusV2);

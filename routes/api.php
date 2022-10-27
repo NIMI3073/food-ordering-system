@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\CartController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrderController;
@@ -27,8 +27,12 @@ use App\Models\User;
     Route::get('/order', [OrderController::class, 'index']);
     Route::get('/menu', [MenuController::class, 'menuList']);
     Route::post('/add-menu',[MenuController::class,'store']);
+    // Route::post('menu-gallery',[MenuController::class,'postCart'])->name('post-cart');
+    Route::post('carts', [CartController::class, 'store'])->name('cart.store');
+   
+
     
-    // Route::get('/menu',fn()=>view('menu'));
+   
    
     
 
