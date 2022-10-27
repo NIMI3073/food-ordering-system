@@ -48,7 +48,7 @@ Route::post('/add-menu',[MenuController::class,'store']);
 // __ cart dashboard||
 
 Route::prefix('cart')->group(function(){
-    // Route::get('cart',fn()=>view('cart-dashboard.cart'));
+    // Route::get('/cart', [CartController::class, 'deleteItem']);
     Route::get('cart',[CartController::class,'cartItems'])->name('cart-items');
-    Route::get('/delete-item',[CartController::class,'destroy'])->name('delete-item');
+    Route::get('/delete-item',[CartController::class,'deleteItem'])->name('delete-item');
 });

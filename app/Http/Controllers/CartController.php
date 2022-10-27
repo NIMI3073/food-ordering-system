@@ -70,10 +70,11 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+   
+    public function destroy() 
     {
-        $deleteItem = Cart::where('id', $id)->first();
-        $deleteItem->delete();
+        Cart::where('menu_id', request()->menu_id)->first()->delete();
+       return $this->cartItems();
     }
 
 
@@ -83,7 +84,7 @@ class CartController extends Controller
             'menu_id'=>'string|exists:menu,id'
         ]);
 
-      $cartItem =  Cart::where([
+      $cartItem = Cart::where([
         'user_id' => 2,
         'menu_id' => $request->menu_id,
       ])->first();
@@ -102,16 +103,7 @@ class CartController extends Controller
 }
 
 
-//   public function cartItem(Request $request){
-//         $cartItems = Cart::all();
-//         return view('cart-dashboard/cart')->with([
-//                     'items'=> $cartItems,
-                    
-//         ]);
-//     }
-
-
-    public function cartItems(Request $request){
+    public function cartItems(){
        
     $cartItems = Cart::with(['menu'])->where('user_id', 2)->get();
 
@@ -124,16 +116,12 @@ class CartController extends Controller
 
     
 public function deleteItem(Request $request){
-  
-    $request->validate([
-        'id' => 'required|integer|exists:carts,id'
-    ]);
    
     $deleteItem = Cart::where('menu_id',$request->id)->first();
     $menuId = $deleteItem->menu_id;
  if($deleteItem){
-    
-    Menu::where('menu_id',$deleteItem->id)->delete();
+
+    Cart::where('menu_id',$deleteItem->id)->delete();
 
    $deleteItem->delete(); 
  }

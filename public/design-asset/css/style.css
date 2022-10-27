@@ -9301,6 +9301,16 @@ textarea.form-control {
       height: 100vh !important;
       }
       }
+      svg{
+
+        /* background: #6a11cb; */
+        font-family: cursive;
+        
+  
+        background: -webkit-linear-gradient(to right, rgba(101, 23, 00), rgba(37, 112, 240, 1));
+        
+        background: linear-gradient(to right, rgba(190, 24, 00), rgba(37, 112, 240, 1))
+      }
       
       .gradient-custom {
         /* fallback for old browsers */
