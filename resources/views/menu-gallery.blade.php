@@ -85,7 +85,7 @@
                             <button type="button" class="btn btn-sm btn-danger" style="font-family: cursive"
                             onclick="window.location.href='order'">Order now</button>
                         <button type="button" class="btn btn-sm btn-warning" style="font-family: cursive"
-                            onclick="window.location.href='cart/cart'"> Add to Cart</button>
+                     onclick="addToCart('{{ $menu->id }}')" id="btn"> Add to Cart</button>
                         </div>
                     </div>
                     @endforeach
@@ -109,14 +109,14 @@
                                     <h3>{{ $menu->name_of_menu }}</h3>
                                 </div>
                                 <div class="one-forth">
-                                    <span class="price">{{ $menu->price }}</span>
+                                    <span class="price">#{{ $menu->price }}</span>
                                 </div>
                             </div>
                             <p>{{ $menu->description }}<span></span> <span></p>
                                 <button type="button" class="btn btn-sm btn-danger" style="font-family: cursive"
                             onclick="window.location.href='order'">Order now</button>
                         <button type="button" class="btn btn-sm btn-warning" style="font-family: cursive"
-                            onclick="window.location.href='cart/cart'"> Add to Cart</button>
+                        onclick="addToCart('{{ $menu->id }}')" id="btn"> Add to Cart</button>
                         </div>
                     </div>
                   @endforeach
@@ -155,11 +155,11 @@
                                     <span class="price">#{{ $snacks->price }}</span>
                                 </div>
                             </div>
-                            <p>{{ $menu->description }}<span></span> <span></p>
+                            <p>{{ $snacks->description }}<span></span> <span></p>
                                 <button type="button" class="btn btn-sm btn-danger" style="font-family: cursive"
                             onclick="window.location.href='order'">Order now</button>
                         <button type="button" class="btn btn-sm btn-warning" style="font-family: cursive"
-                            onclick="window.location.href='cart/cart'"> Add to Cart</button>
+                        onclick="addToCart('{{ $snacks->id }}')" id="btn"> Add to Cart</button>
                         </div>
                     </div>
                     @endforeach
@@ -189,7 +189,7 @@
                                 <button type="button" class="btn btn-sm btn-danger" style="font-family: cursive"
                             onclick="window.location.href='order'">Order now</button>
                         <button type="button" class="btn btn-sm btn-warning" style="font-family: cursive"
-                            onclick="window.location.href='cart/cart'"> Add to Cart</button>
+                        onclick="addToCart('{{ $wines->id }}')" id="btn"> Add to Cart</button>
                         </div>
                     </div>
                  @endforeach
@@ -219,7 +219,7 @@
                                 <button type="button" class="btn btn-sm btn-danger" style="font-family: cursive"
                             onclick="window.location.href='order'">Order now</button>
                         <button type="button" class="btn btn-sm btn-warning" style="font-family: cursive"
-                            onclick="window.location.href='cart/cart'" onclick="addtocart('{{ $drink->id }}')"> Add to Cart</button>
+                           onclick="addtocart('{{ $drink->id }}')"> Add to Cart</button>
                         </div>
                     </div>
                     @endforeach
