@@ -1,9 +1,8 @@
 <?php
 
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MenuController;
 use App\Models\Order;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
@@ -21,10 +20,8 @@ use App\Http\Controllers\CartController;
 */
 
 Route::get('/',fn()=>view('index'));
-
 Route::get('/about', fn()=>view('about'));
 Route::get('/order', fn()=>view('order'));
-
 Route::get('/menu', fn()=>view('menu'));
 // Route::get('/menu-gallery', fn()=>view('menu-gallery'));
 Route::get('/contact', fn()=>view('contact'));
@@ -46,6 +43,7 @@ Route::post('/add-menu',[MenuController::class,'store']);
 });
 
 // __ cart dashboard||
+//dashboard routes//
 
 Route::prefix('cart')->group(function(){
     // Route::get('/cart', [CartController::class, 'deleteItem']);
