@@ -1,11 +1,14 @@
 <?php
 
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MenuController;
 use App\Models\Order;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Redirect;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +22,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',fn()=>view('index'));
-
 Route::get('/about', fn()=>view('about'));
 Route::get('/order', fn()=>view('order'));
-
 Route::get('/menu', fn()=>view('menu'));
 Route::get('/menu-gallery', fn()=>view('menu-gallery'));
 Route::get('/contact', fn()=>view('contact'));
@@ -32,6 +33,14 @@ Route::get('/payment',fn()=>view('payment'));
 Route::get('/order',fn()=>view('order'));
 Route::post('/register',[UserController::class,'store']);
 Route::post('/contact',[ContactController::class,'store']);
+Route::get('/dashboard',fn()=>view('dashboard'));
+Route::get('/login',[AuthController::class, 'loginForm'])->name('login');
+Route::post('/login',[AuthController::class,'login']);
+Route::get('/logout', function(){
+    Auth::logout();
+    return Redirect::to('login');
+ });
+
 
 //dashboard routes//
 
@@ -42,6 +51,10 @@ Route::get('/add-menu', fn()=>view('super-admin.add-menu'));
 Route::get('/login',fn()=>view('login'));
 Route::post('/add-menu',[MenuController::class,'store']);
 
+//dashboard routes//
 
+Route::prefix('admin')->group(function(){
+Route::get('/order-list', fn()=>view('order-list'));
+Route::get('/user-list', [UserController::class,'userList']);
 
 });

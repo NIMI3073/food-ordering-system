@@ -4,27 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-
 use Illuminate\Http\Response;
-use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Redirect;
 
-class UserController extends Controller
+class AuthController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index( Request $request)
+    public function index()
     {
-
-  
-            }
-
-          
-    
+      
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -44,36 +38,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-     $validated = $request->validate([
-
-            'name'=>'string|required',
-            'email' =>'string|required',
-            'phone'=>'string|required',
-            'password'=>'string|required|confirmed|min:6'
-
-        ]);
-        $validated['password'] = Hash::make($validated['password']);
-         User::create($validated);
-
-        return redirect()
-        ->to(route('order'))
-        ->with('message', 'The post has been added successfully!');
-       
-        // if($user){
-           
-        //      return response([
-        //    'data'=> $user,
-        //    'message'=> 'Registration complete'
-        //  ]);
-        // }else{
-        //     return response([
-        //         'data'=> null,
-        //         'message' => 'Unknown error occurred'
-        //     ], Response::HTTP_UNAUTHORIZED);
-        // }
-
-       
-
+        $data = $request->all();
+        $data['password'] = Hash::make($data['password']);
+        return User::create($data);
     }
 
     /**
@@ -120,17 +87,42 @@ class UserController extends Controller
     {
         //
     }
-    
 
-
-    public function userList (Request $request){
-    
-       $users = User::all();
-        return response([
-            'users'=>$users,
-            
-        ]);
+    public function loginForm()
+    {
+        if (Auth::check()) {
+            return redirect('dashboard');
+        }
+        return view('login');
     }
 
-}
 
+    public function login(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        if (Auth::attempt([
+            'email' => $request->email,
+            'password' => $request->password
+        ])) {
+
+            $user = User::where('email', $request->email)->first();
+            Auth::login($user);
+            return redirect('dashboard');
+        } else {
+            return view('login')->with([
+                'data' => null,
+                'message' => 'Wrong Input'
+            ], Response::HTTP_UNAUTHORIZED);
+        }
+    }
+
+    // public function logout()
+    // {
+    //     Auth::logout();
+    //     return redirect('/login');
+    // }
+}
