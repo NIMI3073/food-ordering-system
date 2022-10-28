@@ -91,10 +91,36 @@ class AuthController extends Controller
     public function loginForm()
     {
         if (Auth::check()) {
-            return redirect('dashboard');
+            return redirect('cart/cart');
         }
-        return view('login');
+        return view('/login');
     }
+
+
+    // public function login(Request $request)
+    // {
+    //     $request->validate([
+    //         'email' => 'required|email',
+    //         'password' => 'required',
+    //     ]);
+
+    //     if (Auth::attempt([
+    //         'email' => $request->email,
+    //         'password' => $request->password
+    //     ])) {
+
+    //         $user = User::where('email', $request->email)->first();
+    //         Auth::login($user);
+    //         // $userToken = $user->createToken('auth_token')->plainTextToken;
+    //         return redirect('cart/cart');
+    //     } else {
+    //         return view('login')->with([
+    //             'data' => null,
+    //             'message' => 'Wrong Input'
+    //         ], Response::HTTP_UNAUTHORIZED);
+    //     }
+    // }
+
 
 
     public function login(Request $request)
@@ -108,21 +134,27 @@ class AuthController extends Controller
             'email' => $request->email,
             'password' => $request->password
         ])) {
-
             $user = User::where('email', $request->email)->first();
             Auth::login($user);
-            return redirect('dashboard');
-        } else {
+            $userToken = $user->createToken('auth_token')->plainTextToken;
             return view('login')->with([
+                'data' => $user,
+                'token' => $userToken,
+            ]);
+        } else {
+            return response([
                 'data' => null,
-                'message' => 'Wrong Input'
+                'alert' => 'Wrong email or password'
             ], Response::HTTP_UNAUTHORIZED);
         }
+
+    }
+    
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('login');
     }
 
-    // public function logout()
-    // {
-    //     Auth::logout();
-    //     return redirect('/login');
-    // }
 }
+// }

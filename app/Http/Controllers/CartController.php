@@ -85,7 +85,7 @@ class CartController extends Controller
         ]);
 
       $cartItem = Cart::where([
-        'user_id' => 2,
+        'user_id' => auth()->user()->id,
         'menu_id' => $request->menu_id,
       ])->first();
 
@@ -94,7 +94,7 @@ class CartController extends Controller
         $cartItem->save();
       }else{
         $cartItem = Cart::create([
-            'user_id' => 2,
+            'user_id' => auth()->user()->id,
             'menu_id' => $request->menu_id,
         ]);
       }
@@ -105,7 +105,7 @@ class CartController extends Controller
 
     public function cartItems(){
        
-    $cartItems = Cart::with(['menu'])->where('user_id', 2)->get();
+    $cartItems = Cart::with(['menu'])->where('user_id', auth()->user()->id)->get();
 
     return view('cart-dashboard/cart')->with([
         'cartItems'=> $cartItems,
@@ -114,24 +114,6 @@ class CartController extends Controller
     }
 
 
-    
-public function deleteItem(Request $request){
-   
-    $deleteItem = Cart::where('menu_id',$request->id)->first();
-    $menuId = $deleteItem->menu_id;
- if($deleteItem){
 
-    Cart::where('menu_id',$deleteItem->id)->delete();
-
-   $deleteItem->delete(); 
- }
-    
- return view('cart-dashboard.cart')->with([
-    'items' => Cart::where('menu_id',$menuId)->get(),
-    'message'=>'item deleted Successfully',
-
-]);
-
-}
 
 }

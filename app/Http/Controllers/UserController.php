@@ -20,8 +20,7 @@ class UserController extends Controller
     public function index( Request $request)
     {
 
-  
-            }
+    }
 
           
     
@@ -53,24 +52,20 @@ class UserController extends Controller
 
         ]);
         $validated['password'] = Hash::make($validated['password']);
-         User::create($validated);
-
-        return redirect()
-        ->to(route('order'))
-        ->with('message', 'The post has been added successfully!');
-       
-        // if($user){
+        $user = User::create($validated);
+        
+        if($user){
            
-        //      return response([
-        //    'data'=> $user,
-        //    'message'=> 'Registration complete'
-        //  ]);
-        // }else{
-        //     return response([
-        //         'data'=> null,
-        //         'message' => 'Unknown error occurred'
-        //     ], Response::HTTP_UNAUTHORIZED);
-        // }
+             return response([
+           'data'=> $user,
+           'message'=> 'Registration complete'
+         ]);
+        }else{
+            return response([
+                'data'=> null,
+                'message' => 'Unknown error occurred'
+            ], Response::HTTP_UNAUTHORIZED);
+        }
 
        
 
