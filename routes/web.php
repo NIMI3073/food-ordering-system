@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MenuController;
 use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Contracts\Cache\Store;
@@ -24,10 +25,12 @@ Route::get('/',fn()=>view('index'));
 Route::get('/about', fn()=>view('about'));
 Route::get('/order', fn()=>view('order'));
 Route::get('/menu', fn()=>view('menu'));
+Route::get('/menu-gallery', fn()=>view('menu-gallery'));
 Route::get('/contact', fn()=>view('contact'));
 Route::get('/reservation', fn()=>view('reservation'));
 Route::get('/register',fn()=>view('register'));
 Route::get('/payment',fn()=>view('payment'));
+Route::get('/order',fn()=>view('order'));
 Route::post('/register',[UserController::class,'store']);
 Route::post('/contact',[ContactController::class,'store']);
 Route::get('/dashboard',fn()=>view('dashboard'));
@@ -39,20 +42,19 @@ Route::get('/logout', function(){
  });
 
 
+//dashboard routes//
 
+Route::prefix('admin')->group(function(){
+Route::get('/order-list', fn()=>view('super-admin.order-list'));
+Route::get('/order-list', fn()=>view('super-admin.user-list'));
+Route::get('/add-menu', fn()=>view('super-admin.add-menu'));
+Route::get('/login',fn()=>view('login'));
+Route::post('/add-menu',[MenuController::class,'store']);
 
+//dashboard routes//
 
-
-// Admin dashboard routes//
-
-Route::prefix('admin')->middleware(['auth:web'])->group(function(){    
-    Route::get('/user-list',fn()=>view('super-admin.user-list'));
-    Route::get('/order-list', fn()=>view('super-admin.order-list'));
-    // Route::get('/dashboard',fn()=>view('super-admin.dashboard'));
-
-
-
-    
-
+Route::prefix('admin')->group(function(){
+Route::get('/order-list', fn()=>view('order-list'));
+Route::get('/user-list', [UserController::class,'userList']);
 
 });
