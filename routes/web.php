@@ -58,3 +58,4 @@ Route::get('/order-list', fn()=>view('order-list'));
 Route::get('/user-list', [UserController::class,'userList']);
 
 });
+});
