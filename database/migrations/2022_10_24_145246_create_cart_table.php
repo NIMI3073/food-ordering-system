@@ -13,13 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('menu', function (Blueprint $table) {
-            $table->id();
-            $table->string('file');
-            $table->enum('type',['Breakfast','Lunch','Dinner','snacks','wine','drinks']);
-            $table->string('name_of_menu');
-            $table->integer('price');
-            $table->string('description');
+        Schema::create('carts', function (Blueprint $table) {
+            $table->id(); 
+            $table->integer('user_id');
+            $table->integer('menu_id');
+            $table->integer('units')->default(1);
+            $table->string('description')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('menu');
+        Schema::dropIfExists('carts');
     }
 };

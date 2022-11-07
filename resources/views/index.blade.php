@@ -26,32 +26,57 @@
 <body>
 
 	
-	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light " id="ftco-navbar">
-		<div class="container">
-			<a class="navbar-brand" href="index">Food.<span class="text-info">ie</span></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
-			</button>
+	
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light " id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index">Food.<span class="text-info">ie</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
 
-			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a href="index" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="about" class="nav-link">About</a></li>
-					<li class="nav-item"><a href="menu" class="nav-link">Menu</a></li>
-					<li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
-					@if (auth()->user() === 'super_admin')
-					<li class="nav-item"><a href="order-list" class="nav-link">Order-list</a></li>
-					@endif
-					<li class="nav-item"><a href="reservation" class="nav-link">Reservation</a></li>
-					<li class="nav-item"><a href="register" class="nav-link">Register</a></li>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="index" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about" class="nav-link">About</a></li>
+                    {{-- <li class="nav-item"><a href="menu" class="nav-link">Menu</a></li> --}}
+                    <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="cart/cart" class="nav-link">Cart</a></li>
+                    @if (auth()->user() === 'super_admin')
+                        <li class="nav-item"><a href="order-list" class="nav-link">Order-list</a></li>
+                        <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
+                        <li class="nav-item"><a href="add-menu" class="nav-link">Add New Menu</a></li>
+                    @endif
+                    <li class="nav-item"><a href="reservation" class="nav-link">Reservation</a></li>
+                    <li class="nav-item"><a href="order" class="nav-link"> Make Order</a></li>
 
-					<li class="nav-item"><a href="order" class="nav-link"> Make Order</a></li>
-				
+                    <div class="dropdown">
+                        <button class="dropbtn">Check In 
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <li class="nav-item"><a href="register" class="nav-link">Sign Up</a></li>
+                            <li class="nav-item"><a href="login" class="nav-link">Login</a></li>
+                            <li class="nav-item"><a href="logout" class="nav-link">LogOut</a></li>
+                        </div>
+                    </div>
 
-				</ul>
-			</div>
-		</div>
-	</nav>
+                    <div class="dropdown" style="margin-top:5px">
+                        <button class="dropbtn btn-sm">Menu
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <li class="nav-item"><a href="menu-gallery" class="nav-link">Menu Gallery</a></li>
+                            <li class="nav-item"><a href="order" class="nav-link">Make Order</a></li>
+                        </div>
+                    </div>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
 	<!-- END nav -->
 	
 	<section class="hero-wrap">
