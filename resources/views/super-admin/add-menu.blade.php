@@ -147,7 +147,7 @@
                         </div>
 
                         <div class="row justify-content-center">
-                            <button type="submit" id="btn" class="btn btn-primary py-3 px-4">Submit</button>
+                            <button type="submit" id="btn" class="btn btn-primary py-3 px-4 ">Submit</button>
                         </div>
                     </div>
 
