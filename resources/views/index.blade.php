@@ -47,29 +47,29 @@
                         <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
                         <li class="nav-item"><a href="add-menu" class="nav-link">Add New Menu</a></li>
                     @endif
-                    <li class="nav-item"><a href="reservation" class="nav-link">Reservation</a></li>
+                    {{-- <li class="nav-item"><a href="reservation" class="nav-link">Reservation</a></li> --}}
                     <li class="nav-item"><a href="order" class="nav-link"> Make Order</a></li>
-
+{{-- 
                     <div class="dropdown">
                         <button class="dropbtn">Check In 
                           <i class="fa fa-caret-down"></i>
                         </button>
-                        <div class="dropdown-content">
+                        <div class="dropdown-content"> --}}
                           <li class="nav-item"><a href="register" class="nav-link">Sign Up</a></li>
                             <li class="nav-item"><a href="login" class="nav-link">Login</a></li>
                             <li class="nav-item"><a href="logout" class="nav-link">LogOut</a></li>
-                        </div>
-                    </div>
-
+                        {{-- </div>
+                    </div> --}}
+{{-- 
                     <div class="dropdown" style="margin-top:5px">
                         <button class="dropbtn btn-sm">Menu
                           <i class="fa fa-caret-down"></i>
                         </button>
-                        <div class="dropdown-content">
+                        <div class="dropdown-content"> --}}
                           <li class="nav-item"><a href="menu-gallery" class="nav-link">Menu Gallery</a></li>
                             <li class="nav-item"><a href="order" class="nav-link">Make Order</a></li>
-                        </div>
-                    </div>
+                        {{-- </div>
+                    </div> --}}
 
 
                 </ul>
