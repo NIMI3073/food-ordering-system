@@ -24,7 +24,13 @@ class User extends Authenticatable
 
      protected $table = 'users';
 
-    //  protected $with = ['order'];
+    
+     public function carts(){
+        return $this->hasMany(User:: class,'id','cart_product_id');
+
+    }
+
+   
 
 
     // protected $fillable = [

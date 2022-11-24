@@ -92,7 +92,7 @@
         <div class="row no-gutters">
             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-warning">
                 <form action="/admin/add-menu" class="appointment-form text-center text-block" method="POST"
-                    id="" enctype="multipart/form-data">
+                    id="menuForm" enctype="multipart/form-data">
                     @csrf
                     <h3 class="mb-3 text-center">Add New Menu</h3>
 
@@ -107,8 +107,12 @@
                         <div class="form-group">
                             <strong> <select class="form-control text-white" name="type" id="menu">
                                 <option value="" selected="" disabled="">--Select Menu--</option>
-                                <option class="text-dark" value="african dish">African Dishes</option>
-                                <option class="text-dark" value="foreign dish">Foregin Dishes</option>
+                                <option class="text-dark" value="Breakfast">Breakfast</option>
+                                <option class="text-dark" value="Lunch">Lunch</option>
+                                <option class="text-dark" value="Dinner">Dinner</option>
+                                <option class="text-dark" value="snacks">Snacks</option>
+                                <option class="text-dark" value="wine">Wine</option>
+                                <option class="text-dark" value="drinks">Drinks</option>
 
                             </select></strong>
                         </div>
@@ -122,6 +126,16 @@
                             @enderror
                         </div>
 
+                      
+                          
+                        <div class="form-group">
+                            <input type="text" name="description" class="form-control" id="description"
+                                placeholder="Food description">
+
+                            @error('description')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
 
                         <div class="form-group">
                             <input type="text" name="price" class="form-control" id="price"
@@ -141,9 +155,9 @@
 
             </div>
 
-            @if (isset($message))
+            {{-- @if (isset($message))
                 <div class="alert alert-success">{{ $message }}</div>
-            @endif
+            @endif --}}
         </div>
     </div>
 
@@ -164,4 +178,4 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/vue@3"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-{{-- <script src="{{ asset('js/add-menu.js') }}"></script> --}}
+<script src="{{ asset('js/add-menu.js') }}"></script>
