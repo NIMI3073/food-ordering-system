@@ -227,7 +227,20 @@
 
 </x-footer>
 
+
 </body>
+<?php
+if(isset($token)){
+    echo "
+<script>
+    window.localStorage.setItem('token', \"$token\");
+    </script>
+";
+
+}
+
+?>
+
 
 </html>
 <script src="https://unpkg.com/vue@3"></script>
