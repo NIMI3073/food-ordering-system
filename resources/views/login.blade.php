@@ -9,7 +9,7 @@
 </head>
 
 <body class="bg-light">
-        <h5 class=" text-primary" id="food">Food.<i class="text-dark">ie</i></h5>
+    <section class="h-100" id="loginSection">
     <form action="login" class="login" id="logform" method="POST">
       @csrf
         <h4 class=" text-center text-primary pt-8"><span class="glyphicon glyphicon-user text-primary "></span>Login</h4>
@@ -26,18 +26,12 @@
         <button type="submit" class="btn btn-lg btn-success" id="green"> <a href="register"></a> create new account</button>
 
     </form>
-    {{-- @if (isset($token))
-    <script>
-        window.localStorage.setItem('token', `{{ $token }}`);
-        window.location = 'cart/cart'
-    </script>
-@endIf --}}
-
+     {{-- <h5 class=" text-primary" id="food">Food.<i class="text-dark">ie</i></h5> --}}
+   
+    </section>
 </body>
 
 </html>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/vue@3"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-{{-- <script src="{{ asset('js/order-list.js') }}"></script> --}}

@@ -1,3 +1,7 @@
+{{-- <x-header>
+
+</x-header> --}}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,10 +29,36 @@
 
     <link rel="stylesheet" href="{{ asset('design-asset/css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('design-asset/css/style.css') }}">
+   
 </head>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light " id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index">Food.<span class="text-info">ie</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto" style="font-family: cursive">
+                <li class="nav-item active"><a href="Home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="menu-gallery" class="nav-link">Menu-gallery</a></li>
+                <li class="nav-item"><a href="logout" class="nav-link">Logout</a> </li>
+
+
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
 <!-- END nav -->
 
-<section class="h-100 gradient-custom">
+<section class="h-100  gradient-custom" style="margin-top:80px" >
     <div class="container py-5">
         <div class="row d-flex justify-content-center my-4">
             <div class="col-md-8">
@@ -37,7 +67,6 @@
                         <h5 class="mb-0">Cart items</h5>
                     </div>
                     @foreach ($cartItems as $cartItems)
-                    @endforeach
                     <div class="card-body">
                         <!-- Single item -->
 
@@ -101,6 +130,7 @@
                                 <!-- Price -->
                             </div>
                         </div>
+                        @endforeach
                         <!-- Single item -->
 
                         <hr class="my-4" />
@@ -201,6 +231,17 @@
 </body>
 
 </html>
+<?php
+if(isset($token)){
+    echo "
+<script>
+    window.localStorage.setItem('token', \"$token\");
+    </script>
+";
+
+}
+
+?>
 <script src="https://unpkg.com/vue@3"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

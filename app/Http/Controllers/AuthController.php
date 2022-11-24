@@ -137,10 +137,8 @@ class AuthController extends Controller
             $user = User::where('email', $request->email)->first();
             Auth::login($user);
             $userToken = $user->createToken('auth_token')->plainTextToken;
-            return view('login')->with([
-                'data' => $user,
-                'token' => $userToken,
-            ]);
+            //concern seperation//
+            return CartController::cartItems($userToken);
         } else {
             return response([
                 'data' => null,

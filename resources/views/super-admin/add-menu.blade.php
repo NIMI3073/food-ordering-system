@@ -45,12 +45,12 @@
             </button>
 
             <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto" style="font-family: cursive">
                     <li class="nav-item active"><a href="login" class="nav-link">Login</a></li>
                     <li class="nav-item"><a href="order-list" class="nav-link">Orders</a></li>
                     <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
                     <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
-                    <li class="nav-item"><span class="glyphicon glyphicon-off"style="margin-top:17px"></span> </li>
+                    <li class="nav-item"><a href="logout" class="nav-link">Logout</a> </li>
 
 
 
@@ -59,24 +59,9 @@
             </div>
         </div>
     </nav>
-<!-- END nav -->
 
-{{-- <section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');"
-    data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-center">
-            <div class="col-md-9 ftco-animate text-center mb-5">
-                <h1 class="mb-2 bread">Menu</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
-                                class="fa fa-chevron-right"></i></a></span> <span>Menu <i
-                            class="fa fa-chevron-right"></i></span></p>
-            </div>
-        </div>
-    </div>
-</section> --}}
 
-<section class="ftco-section" style=" margin-top:20px;padding-bottom:30px">
+<section class="ftco-section" style=" margin-top:20px;padding-bottom:30px" id="menuform">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-7 text-center heading-section ftco-animate">

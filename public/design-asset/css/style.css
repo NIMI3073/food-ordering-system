@@ -8684,12 +8684,12 @@ textarea.form-control {
 
 
       .login{
-       margin-top: 120px;
-      width: 30%;
-        position: relative;
-        left: 50.9em;
+       margin-top: 100px;
+       width: 100%;
+       margin-left:500px;
+        /* position: relative;
+        left: 20em; */
         background-color: white; 
-        /* border: 2px solid gray; */
         border-radius: 10px;
         padding: 7px;
         font-family:monospace;
@@ -8708,20 +8708,16 @@ textarea.form-control {
         background-color: green;
        width: 100%;
       }
-      #food{
+      /* #food{
          position:relative;
           font-size: 50px;
-          margin-top: 80px;
-          /* margin-left: 100px; */
+          bottom: 7em;
+          width: 100%;
+          height: 100%;
          font-weight:bolder;
          font-family:  Georgia, Times, 'Times New Roman', serif;
-      }
-      #logform{
-        position: relative;
-        bottom:4em;
-        margin-bottom: 100px;
-        
-      }
+      } */
+    
 
       input[type=text], input[type=password] {
         width: 100%;
@@ -8744,7 +8740,7 @@ textarea.form-control {
       }
 
       @media screen and (max-width: 992px) {
-        #food,
+      
         #logform {
           width: 50%;
         }
@@ -9389,11 +9385,21 @@ textarea.form-control {
       }
       }
 
+      #menuform{
+
+        font-family: cursive;
+        
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to right, rgba(123, 17, 100, 1), rgba(37, 117, 249, 1));
+        
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, rgba(123, 17, 100, 1), rgba(37, 117, 249, 1))
+      }
       
 
       svg{
 
-        /* background: #6a11cb; */
+        background: #6a11cb;
         font-family: cursive;
         
   
@@ -9404,6 +9410,7 @@ textarea.form-control {
       
       .gradient-custom {
         /* fallback for old browsers */
+     
         background: #6a11cb;
         font-family: cursive;
         
@@ -9414,6 +9421,7 @@ textarea.form-control {
         background: linear-gradient(to right, rgba(123, 17, 100, 1), rgba(37, 117, 249, 1))
         }
 
+      
         
         .dropdown .dropbtn {
           font-size: 16px;  
