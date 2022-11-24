@@ -57,4 +57,4 @@ Route::middleware(['auth:web'])->group(function(){
         Route::get('/delete-item',[CartController::class,'deleteItem'])->name('delete-item');
     });
 });
-});
+// });
