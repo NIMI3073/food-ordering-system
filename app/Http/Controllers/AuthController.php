@@ -137,16 +137,14 @@ class AuthController extends Controller
             $user = User::where('email', $request->email)->first();
             Auth::login($user);
             $userToken = $user->createToken('auth_token')->plainTextToken;
-            return view('login')->with([
-                'data' => $user,
-                'token' => $userToken,
-            ]);
-        } else {
-            return response([
-                'data' => null,
-                'alert' => 'Wrong email or password'
-            ], Response::HTTP_UNAUTHORIZED);
-        }
+             //concern seperation//
+             return CartController::cartItems($userToken);
+            } else {
+                return response([
+                    'data' => null,
+                    'alert' => 'Wrong email or password'
+                ], Response::HTTP_UNAUTHORIZED);
+            }
 
     }
     
