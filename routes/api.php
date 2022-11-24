@@ -27,9 +27,9 @@ use App\Models\User;
     Route::get('/order', [OrderController::class, 'index']);
     Route::get('/menu', [MenuController::class, 'menuList']);
     Route::post('/add-menu',[MenuController::class,'store']);
-    // Route::post('menu-gallery',[MenuController::class,'postCart'])->name('post-cart');
-    Route::post('carts', [CartController::class, 'store'])->name('cart.store');
-   
+    Route::middleware(['auth:sanctum'])->group(function(){
+        Route::post('carts', [CartController::class, 'store'])->name('cart.store');
+    });
 
     
    
