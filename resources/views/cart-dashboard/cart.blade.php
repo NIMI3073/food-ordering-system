@@ -52,7 +52,7 @@
     </nav>
 <!-- END nav -->
 
-<section class="h-100 gradient-custom" style="margin-top: 80px">
+<section class="h-100 gradient-custom" style="margin-top:80px">
     <div class="container py-5">
         <div class="row d-flex justify-content-center my-4">
             <div class="col-md-8">
