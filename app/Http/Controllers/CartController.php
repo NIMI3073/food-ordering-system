@@ -103,15 +103,15 @@ class CartController extends Controller
 }
 
 
-    public function cartItems(){
-       
-    $cartItems = Cart::with(['menu'])->where('user_id', auth()->user()->id)->get();
+public static function cartItems($token = null){
+    //static is used when another instance of the constructor is not called  i.e "$this" is not been used//
+ $cartItems = Cart::with(['menu'])->where('user_id', auth()->user()->id)->get();
+ return view('cart-dashboard/cart')->with([
+     'cartItems'=> $cartItems,
+     'token' => $token
+ ]);
 
-    return view('cart-dashboard/cart')->with([
-        'cartItems'=> $cartItems,
-    ]);
-
-    }
+ }
 
 
 

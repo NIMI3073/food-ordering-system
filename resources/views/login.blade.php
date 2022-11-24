@@ -26,12 +26,7 @@
         <button type="submit" class="btn btn-lg btn-success" id="green"> <a href="register"></a> create new account</button>
 
     </form>
-    {{-- @if (isset($token))
-    <script>
-        window.localStorage.setItem('token', `{{ $token }}`);
-        window.location = 'cart/cart'
-    </script>
-@endIf --}}
+    
 
 </body>
 
