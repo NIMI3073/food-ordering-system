@@ -216,7 +216,7 @@
 							<h3>Breakfast</h3>
 						</div>
 						<div class="menus d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/akara-pap.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/akara-pap.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -230,7 +230,7 @@
 							</div>
 						</div>
 						<div class="menus d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/fried-yam.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/fried-yam.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -244,7 +244,7 @@
 							</div>
 						</div>
 						<div class="menus border-bottom-0 d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/breakfast-3.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/breakfast-3.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -268,7 +268,7 @@
 							<h3>Lunch</h3>
 						</div>
 						<div class="menus d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/eba.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/eba.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -282,7 +282,7 @@
 							</div>
 						</div>
 						<div class="menus d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/abula.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/abula.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -296,7 +296,7 @@
 							</div>
 						</div>
 						<div class="menus border-bottom-0 d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/semo.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/semo.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -320,7 +320,7 @@
 							<h3>Dinner</h3>
 						</div>
 						<div class="menus d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/porridge.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/porridge.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -334,7 +334,7 @@
 							</div>
 						</div>
 						<div class="menus d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/Ewa-Agoyin.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/Ewa-Agoyin.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -348,7 +348,7 @@
 							</div>
 						</div>
 						<div class="menus border-bottom-0 d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/ofada.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/ofada.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -373,7 +373,7 @@
 							<h3>Drinks</h3>
 						</div>
 						<div class="menus d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/dessert-1.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/dessert-1.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -387,7 +387,7 @@
 							</div>
 						</div>
 						<div class="menus d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/dessert-2.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/dessert-2.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -401,7 +401,7 @@
 							</div>
 						</div>
 						<div class="menus border-bottom-0 d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/dessert-3.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/dessert-3.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -425,7 +425,7 @@
 							<h3>Wine Card</h3>
 						</div>
 						<div class="menus d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/wine-1.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/wine-1.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -439,7 +439,7 @@
 							</div>
 						</div>
 						<div class="menus d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/wine-2.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/wine-2.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -453,7 +453,7 @@
 							</div>
 						</div>
 						<div class="menus border-bottom-0 d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/wine-3.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/wine-3.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -477,7 +477,7 @@
 							<h3>Drinks &amp; Tea</h3>
 						</div>
 						<div class="menus d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/drink-1.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/drink-1.jpg); background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -491,7 +491,7 @@
 							</div>
 						</div>
 						<div class="menus d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/drink-2.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/drink-2.jpg);background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -505,7 +505,7 @@
 							</div>
 						</div>
 						<div class="menus border-bottom-0 d-flex ftco-animate">
-							<div class="menu-img img" style="background-image: url(images/drink-3.jpg);"></div>
+							<div class="menu-img img" style="background-image: url(images/drink-3.jpg);background-size:contain"></div>
 							<div class="text">
 								<div class="d-flex">
 									<div class="one-half">
@@ -577,7 +577,7 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
-						<a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+						<a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');background-size:contain">
 						</a>
 						<div class="text px-4 pt-3 pb-4">
 							<div class="meta">

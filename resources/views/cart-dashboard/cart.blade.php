@@ -44,10 +44,10 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto" style="font-family: cursive">
                 <li class="nav-item active"><a href="Home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="menu-gallery" class="nav-link">Menu-gallery</a></li>
-                <li class="nav-item"><a href="logout" class="nav-link">Logout</a> </li>
+                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="/menu-gallery" class="nav-link">Menu-gallery</a></li>
+                <li class="nav-item"><a href="/logout" class="nav-link">Logout</a> </li>
 
 
 
@@ -189,7 +189,7 @@
                             <li
                                 class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                                 Menus
-                                <span>#3300</span>
+                                <span>#0000</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                                 Delivery
