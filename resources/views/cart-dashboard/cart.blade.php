@@ -66,7 +66,7 @@
                         <h5 class="mb-0">Cart items</h5>
                     </div>
                     @foreach ($cartItems as $cartItems)
-                    @endforeach
+                   
                     <div class="card-body">
                         <!-- Single item -->
 
@@ -130,6 +130,7 @@
                                 <!-- Price -->
                             </div>
                         </div>
+                        @endforeach
                         <!-- Single item -->
 
                         <hr class="my-4" />
@@ -229,6 +230,8 @@
 
 
 </body>
+
+</html>
 <?php
 if(isset($token)){
     echo "
@@ -240,9 +243,6 @@ if(isset($token)){
 }
 
 ?>
-
-
-</html>
 <script src="https://unpkg.com/vue@3"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
