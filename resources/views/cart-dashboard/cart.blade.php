@@ -35,7 +35,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light " id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="index">Food.<span class="text-info">ie</span></a>
+        <a class="navbar-brand" href="index">Food.<span class="text-white">ie</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
             aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
@@ -83,7 +83,7 @@
 
                             </div>
 
-                            <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                            <div class="col-lg-5 col-md-6 mb-4 mb-lg-0 text-dark">
                                 <!-- Data -->
                                 <p>{{ $cartItems->menu->name_of_menu }}</p>
                                 <p>{{ $cartItems->menu->description }}</p>
@@ -105,38 +105,40 @@
                             <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
                                 <!-- Quantity -->
                                 <div class="d-flex mb-4" style="max-width: 300px">
+                                    
                                     <button class="btn mb-5"
                                         onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                                         <i class="fas fa-minus" style="background-color: red;color:white"></i>
-                                    </button>
+                                    </button></a>
 
-                                    <div class="form-outline">
-                                        <input id="form1" min="0" name="quantity" value="1"
+                                    <div class="form-outline text-dark">
+                                        <input id="form1" min="0" name="quantity" value="0"
                                             type="number" class="form-control" />
                                         <label class="form-label" for="form1">Quantity</label>
                                     </div>
 
                                     <button class="btn  mb-5"
                                         onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                        <i class="fas fa-plus" style="background-color: black;color:white"></i>
+                                        <i class="fas fa-plus" style="background-color: black;color:white"></i></a>
                                     </button>
                                 </div>
                                 <!-- Quantity -->
 
                                 <!-- Price -->
-                                <p class="text-start text-md-center">
+                                <p class="text-start text-md-center text-danger">
                                     <strong>#{{ $cartItems->menu->price }}</strong>
                                 </p>
                                 <!-- Price -->
                             </div>
                         </div>
-                        @endforeach
+                        
                         <!-- Single item -->
 
                         <hr class="my-4" />
                        
                         <!-- Single item -->
                     </div>
+                    @endforeach
                 </div>
                 <div class="card mb-4">
                     <div class="card-body">
@@ -180,20 +182,20 @@
         </div> 
             </div>
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card mb-4 ">
                     <div class="card-header py-3">
-                        <h5 class="mb-0">Summary</h5>
+                        <h5 class="mb-0 text-dark">Summary</h5>
                     </div>
                     <div class="card-body">
-                        <ul class="list-group list-group-flush">
+                        <ul class="list-group list-group-flush text-dark">
                             <li
-                                class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                Menus
-                                <span>#0000</span>
+                                class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0 text-dark">
+                                Quantity
+                                <span class="text-dark">{{ $unit }}</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                                 Delivery
-                                <span>#100</span>
+                                <span class="text-dark">#100</span>
                             </li>
                             <li
                                 class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
@@ -203,23 +205,29 @@
                                         <p class="mb-0">(including VAT)</p>
                                     </strong>
                                 </div>
-                                <span><strong>#0000</strong></span>
+                                
+                                    
+                               
+                                <span class="text-dark"><strong>#{{ $total }}</strong></span>
+           
+
                             </li>
                         </ul>
-
-                        <button type="button" class="btn btn-block btn-sm "
-                            style="background-color: blue;color:white">
-                            <a href="/menu"></a>
-                            Go back to Gallery
-                        </button>
+                       <a href="/payment">
+                        <button type="submit" class="btn btn-sm btn-success text-white text-sm" style="margin-inline-start:20px;font-family:Cambria,'Times New Roman', serif">
+                          <i class="fa-sharp fa-solid fa-money-check"></i>
+                            Checkout</button>
+                    </a>
+                    <a href="/menu-gallery">
+                        
+                        <button type="submit" class="btn btn-sm btn-warning text-white text-sm" style="margin-inline-start:20px;font-family:Cambria,'Times New Roman', serif">
+                            <i class="fa-solid fa-cart-shopping text-danger"></i>Continue shopping</button>
+                    </a>
                     </div>
                 </div>
             </div>
-            @if (isset($message))
-                <div style="color: green; margin-left:30px">
-                    {{ $successMessage }}
-                </div>
-            @endIf
+         
+          
         </div>
     </div>
 </section>

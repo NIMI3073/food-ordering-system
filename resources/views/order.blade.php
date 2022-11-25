@@ -22,7 +22,7 @@
 <section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top: 10px;padding-bottom: 10px">
     <div class="container">
         <div class="row no-gutters">
-            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-info">
+            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-dark">
                 <form action="/order" class="appointment-form" method="POST" id="orderForm">
                     @csrf
                     <h3 class="mb-3 text-center">Make your Order</h3>
@@ -56,7 +56,7 @@
                         </div>
 
                         <div class="form-group">
-                            <textarea class="form-control text-center"  cols="30" rows="5" id="meal" name="type_of_meal" placeholder="Type of Meal You want to order!!"></textarea>
+                            <textarea class="form-control text-center"  cols="20" rows="5" id="meal" name="type_of_meal" placeholder="Type of Meal You want to order!!"></textarea>
                             @error('type_of_meal')
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror

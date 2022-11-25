@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('menu_id');
             $table->integer('units')->default(1);
             $table->string('description')->nullable();
+            $table->enum('status',['in_cart','paid','delivered','cancelled','returned'])->default('in_cart');
             $table->timestamps();
         });
     }

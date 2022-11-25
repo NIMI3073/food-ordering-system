@@ -55,5 +55,7 @@ Route::middleware(['auth:web'])->group(function(){
         
         Route::get('cart',[CartController::class,'cartItems'])->name('cart-items');
         Route::get('/delete-item',[CartController::class,'destroy'])->name('delete-item');
+        Route::post('increase-item',[CartController::class,'increaseQuantity'])->name('increase-item');
+        // Route::get('increase-item',[CartController::class,'increaseItemOnCart'])->name('increase-item');
     });
 });

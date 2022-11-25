@@ -9,6 +9,7 @@ use Illuminate\Http\Response;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Redis;
 
 class UserController extends Controller
 {
@@ -67,7 +68,6 @@ class UserController extends Controller
             ], Response::HTTP_UNAUTHORIZED);
         }
 
-       
 
     }
 

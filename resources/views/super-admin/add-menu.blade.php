@@ -75,7 +75,7 @@
 <section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="padding-bottom: 40px;" id="menuForm">
     <div class="container">
         <div class="row no-gutters">
-            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-warning">
+            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-dark">
                 <form action="/admin/add-menu" class="appointment-form text-center text-block" method="POST"
                     id="menuForm" enctype="multipart/form-data">
                     @csrf
@@ -132,7 +132,7 @@
                         </div>
 
                         <div class="row justify-content-center">
-                            <button type="submit" id="btn" class="btn btn-primary py-3 px-4 ">Submit</button>
+                            <button type="submit" id="btn" class="btn btn-success py-4 px-4">Submit</button>
                         </div>
                     </div>
 
@@ -140,9 +140,6 @@
 
             </div>
 
-            {{-- @if (isset($message))
-                <div class="alert alert-success">{{ $message }}</div>
-            @endif --}}
         </div>
     </div>
 

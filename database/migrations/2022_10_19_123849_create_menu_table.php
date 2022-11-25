@@ -19,6 +19,7 @@ return new class extends Migration
             $table->enum('type',['Breakfast','Lunch','Dinner','snacks','wine','drinks']);
             $table->string('name_of_menu');
             $table->integer('price');
+            $table->integer('delivery_fee')->default(100);
             $table->string('description');
             $table->timestamps();
         });

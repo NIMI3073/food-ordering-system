@@ -53,7 +53,7 @@
                                   
                                             {{-- <input type="hidden" name=" menu_id" value=""> --}}
                                 <button type="button" class="btn btn-sm btn-warning" style="font-family: cursive"
-                                    onclick="addToCart('{{ $menu->menu_id }}')" id="btn"> Add to Cart</button>
+                                    onclick="addToCart('{{ $menu->id }}')" id="btn"> Add to Cart</button>
                                     {{-- </form> --}}
                             </div>
                         </div>

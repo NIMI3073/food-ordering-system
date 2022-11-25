@@ -39,37 +39,23 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="index" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="about" class="nav-link">About</a></li>
-                    {{-- <li class="nav-item"><a href="menu" class="nav-link">Menu</a></li> --}}
                     <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+					<li class="nav-item"><a href="reservation" class="nav-link">Reservation</a></li>
                     <li class="nav-item"><a href="cart/cart" class="nav-link">Cart</a></li>
+					<li class="nav-item"><a href="menu-gallery" class="nav-link">Menu Gallery</a></li>
+					<li class="nav-item"><a href="order" class="nav-link">Make Order</a></li>
                     @if (auth()->user() === 'super_admin')
                         <li class="nav-item"><a href="order-list" class="nav-link">Order-list</a></li>
                         <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
+						<li class="nav-item"><a href="menu" class="nav-link">Menu</a></li>
                         <li class="nav-item"><a href="add-menu" class="nav-link">Add New Menu</a></li>
                     @endif
-                    {{-- <li class="nav-item"><a href="reservation" class="nav-link">Reservation</a></li> --}}
-                    <li class="nav-item"><a href="order" class="nav-link"> Make Order</a></li>
-{{-- 
-                    <div class="dropdown">
-                        <button class="dropbtn">Check In 
-                          <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content"> --}}
+
                           <li class="nav-item"><a href="register" class="nav-link">Sign Up</a></li>
                             <li class="nav-item"><a href="login" class="nav-link">Login</a></li>
                             <li class="nav-item"><a href="logout" class="nav-link">LogOut</a></li>
-                        {{-- </div>
-                    </div> --}}
-{{-- 
-                    <div class="dropdown" style="margin-top:5px">
-                        <button class="dropbtn btn-sm">Menu
-                          <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content"> --}}
-                          <li class="nav-item"><a href="menu-gallery" class="nav-link">Menu Gallery</a></li>
-                            <li class="nav-item"><a href="order" class="nav-link">Make Order</a></li>
-                        {{-- </div>
-                    </div> --}}
+                      
+                      
 
 
                 </ul>
@@ -577,7 +563,7 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
-						<a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');background-size:contain">
+						<a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
 						</a>
 						<div class="text px-4 pt-3 pb-4">
 							<div class="meta">

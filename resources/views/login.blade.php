@@ -23,7 +23,8 @@
              id="primary">Log in</button>
         <hr class="new1">
 
-        <button type="submit" class="btn btn-lg btn-success" id="green"> <a href="register"></a> create new account</button>
+        <a href="/register">
+        <button type="button" class="btn btn-lg btn-success" id="green">  create new account</button></a>
 
     </form>
      {{-- <h5 class=" text-primary" id="food">Food.<i class="text-dark">ie</i></h5> --}}
