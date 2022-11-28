@@ -19,13 +19,17 @@
 
         <label for="password" class="form-label text-primary" style="margin-left: 10px">Password:</label>
       <input type="password" class="form-control " placeholder="Enter password" name="password" required>
-        <button type="submit" class=" btn btn-lg btn-primary text-center "
+        <button type="submit" class=" btn btn-lg btn-primary text-center mt-3 "
              id="primary">Log in</button>
         <hr class="new1">
 
-        <a href="/register">
-        <button type="button" class="btn btn-lg btn-success" id="green">  create new account</button></a>
-
+        {{-- <a href="/register"> --}}
+        {{-- <button type="button" class="btn btn-lg btn-success" id="green">  create new account</button></a> --}}
+        <div style="display: flex; justify-content: space-between;">
+          <p class="text-primary"><a href="{{ route('forget-password') }}">forgot password?</a></p>
+          <p  class="text-success"><a href="/register">sign up</a></p>
+        </div>
+          </div>
     </form>
      {{-- <h5 class=" text-primary" id="food">Food.<i class="text-dark">ie</i></h5> --}}
    

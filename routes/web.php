@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ResetPasswordController;
 use Illuminate\Support\Facades\Redirect;
 
 
@@ -35,6 +36,15 @@ Route::get('login1',fn()=>view('login1'));
 Route::post('/login',[AuthController::class,'login']);
 Route::get('/login',[AuthController::class, 'loginForm'])->name('login');
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('web')->name('logout');
+
+
+Route::get('email-token',[ResetPasswordController::class,'showEmailTokenForm'])->name('email-token.get');
+Route::post('email-token',[ResetPasswordController::class,'tokenForm'])->name('email-token');
+Route::get('forget-password', [ResetPasswordController::class, 'showForgotPasswordForm'])->name('forget-password');
+Route::post('forget-password', [ResetPasswordController::class, 'submitForgotPasswordForm'])->name('forget-password.post');
+Route::get('reset-password', [ResetPasswordController::class, 'showResetPasswordForm'])->name('reset-password.get');
+Route::post('reset-password', [ResetPasswordController::class, 'submitResetPasswordForm'])->name('reset-password');
+
 
 //dashboard routes//
 
