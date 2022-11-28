@@ -31,7 +31,7 @@ Route::get('/register',fn()=>view('register'));
 Route::get('/payment',fn()=>view('payment'));
 Route::post('/register',[UserController::class,'store']);
 Route::post('/contact',[ContactController::class,'store']);
-
+Route::get('login1',fn()=>view('login1'));
 Route::post('/login',[AuthController::class,'login']);
 Route::get('/login',[AuthController::class, 'loginForm'])->name('login');
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('web')->name('logout');

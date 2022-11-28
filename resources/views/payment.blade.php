@@ -3,33 +3,33 @@
 </x-header>
 
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
+{{-- <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
     <div class="overlay"></div>
-    <div class="container">
-        {{-- <div class="row no-gutters slider-text align-items-end justify-content-center">
+    <div class="cntainer">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate text-center mb-5">
                 <h1 class="mb-2 bread">Make Order Now!!</h1>
                 <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
                                 class="fa fa-chevron-right"></i></a></span> <span>Order <i
                             class="fa fa-chevron-right"></i></span></p>
             </div>
-        </div> --}}
+        </div>
     </div>
-</section>
+</section> --}}
 
 
 
-<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top: 10px;padding-bottom: 10px" id="myForm">
+<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt mb-10" style="margin-top:170px;">
     <div class="container">
         <div class="row no-gutters">
-            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-danger">
+            <div class="col-sm-10 p-4 p-md-5 d-flex align-items-center justify-content-center bg-danger">
                 <form action="/payment" class="appointment-form" method="POST">
                     @csrf
-                    <h3 class="mb-3 text-center">Make payment!!</h3>
+                    <h3 class="mb-1 text-center">Make payment!!</h3>
                     <div class="row justify-content-center">
 
                         <div class="form-group">
-                            <input type="name" name="name" size="50"  class="form-control text-center" id="name" placeholder="Name">
+                            <input type="name" name="name" size="30"  class="form-control text-center" id="name" placeholder="Name">
                         </div>
                         @error('name')
                         <div class="alert alert-danger ">{{ $message }}</div>
@@ -63,21 +63,12 @@
                         </div>
                     </div>
 
-
-
-
                     <div class="row justify-content-center">
-                      
                         <button type="submit"  id="btn" class="btn btn-white py-3 px-4">Submit</button>
-                      
                     </div>
-                </div>
-                    
-                                 
+                </div>             
                 </form>
-                
             </div>
-
         </div>
     </div>
 
@@ -88,9 +79,9 @@
 
  
 
-<x-footer>
+{{-- <x-footer>
 
-</x-footer>
+</x-footer> --}}
 </body>
 
 </html>
