@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\menu;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class CartController extends Controller
 {
@@ -81,7 +82,8 @@ class CartController extends Controller
     public function store(Request $request)
     {
        $validated = $request->validate([
-            'menu_id'=>'string|exists:menu,id'
+            'menu_id'=>'string|exists:menu,id',
+            
         ]);
 
       $cartItem = Cart::where([
@@ -96,6 +98,7 @@ class CartController extends Controller
         $cartItem = Cart::create([
             'user_id' => auth()->user()->id,
             'menu_id' => $request->menu_id,
+            'group_id' => $this->generateGroupId()
         ]);
       }
         return response()->json($cartItem);
@@ -115,6 +118,13 @@ class CartController extends Controller
         'total' => self::getCartTotal($cartItems),
         'unit'=>self::getItemUnits($cartItems),
         'token' => $token,
+        'groupId' => $cartItems->first()->group_id,
+        //json is used to merge two programming language 
+        'userData' => json_encode([
+            'email' => auth()->user()->email,
+            'phone_number' => auth()->user()->phone,
+            'name' => auth()->user()->name
+        ])
         
     ]);
 
@@ -122,7 +132,7 @@ class CartController extends Controller
 
     public static function getCartTotal($cartItems) : int
     {
-        //the total amount the the customer would page on cart
+        //the total amount the customer would page on cart
         $total = 0;
         foreach($cartItems as $item){
             $total+= $item->units * $item->menu->price + $item->menu->delivery_fee;
@@ -132,18 +142,12 @@ class CartController extends Controller
     }
 
     public static function getItemUnits($cartItems){
-        //to get to the numbers of item users added to the cart
+        //to get the numbers of item users added to the cart
         $unit = 0;
         foreach($cartItems as $itemNum){
             $unit+=$itemNum->units + $itemNum->menu->unit;
         }
         return $unit;
-    }
-
-    public function increaseItemOnCart(){
-       
-        // Cart::where('menu_id',request()->menu_id)->first()->units++;
-        // return $this->cartItems();
     }
 
     public function increaseQuantity(Request $request)
@@ -152,6 +156,45 @@ class CartController extends Controller
         return $this->cartItems();
     }
 
+
+    public function paymentProcess(Request $request){
+     
+        $validated =$request->validate([
+            'tx_ref'=> 'string|required',
+            'transaction_id' =>'string|required'
+        ]);
+
+        $transactionId = $validated['transaction_id'];
+
+        $groupId = explode('_', $validated['tx_ref'])[0];
+
+        $response = Http::withToken(env('FLUTTERWAVE_SECRET_KEY'))
+        ->get("https://api.flutterwave.com/v3/transactions/$transactionId/verify")->object();
+
+        // Check Transaction Status
+
+        // Calculate Price of Cart Items related to Group Id
+
+        // Check if Cart Total === Amount Paid
+
+        // Update Status of Cart Items related to Group ID to paid
+
+        // Redirect User to Desired Success Page
+    }
+    
+    
+  public function generateGroupId(){
+    $groupId =  substr(str_shuffle('123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 5);
+
+    if( Cart::where('group_id', $groupId)->exists()){
+        return $this->generateGroupId();
+    }
+
+    
+    $cartItem = Cart::where('user_id', auth()->id())->where('status','in_cart')->first('group_id');
+
+    return is_null($cartItem) ? $groupId : $cartItem->group_id;
+  }
     
     }
 

@@ -213,11 +213,12 @@
 
                             </li>
                         </ul>
-                       <a href="/payment">
-                        <button type="submit" class="btn btn-sm btn-success text-white text-sm" style="margin-inline-start:20px;font-family:Cambria,'Times New Roman', serif">
-                          <i class="fa-sharp fa-solid fa-money-check"></i>
-                            Checkout</button>
-                    </a>
+                      
+  
+<script src="https://checkout.flutterwave.com/v3.js"></script>
+  <button type="button" class="btn btn-success" id="start-payment-button" onclick="makePayment({{ $total }}, {{ $userData }}, '{{ $groupId }}')">Pay Now</button>
+
+                    
                     <a href="/menu-gallery">
                         
                         <button type="submit" class="btn btn-sm btn-warning text-white text-sm" style="margin-inline-start:20px;font-family:Cambria,'Times New Roman', serif">

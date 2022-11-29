@@ -50,7 +50,7 @@
                     <li class="nav-item"><a href="order-list" class="nav-link">Orders</a></li>
                     <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
                     <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
-                    <li class="nav-item"><a href="logout" class="nav-link">Logout</a> </li>
+                    <li class="nav-item"><a href="/logout" class="nav-link">Logout</a> </li>
 
 
 
@@ -145,10 +145,6 @@
 
 
 </section>
-
-
-
-
 
 <x-footer>
 

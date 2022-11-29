@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id(); 
             $table->integer('user_id');
             $table->integer('menu_id');
+            $table->string('group_id');    
             $table->integer('units')->default(1);
             $table->string('description')->nullable();
             $table->enum('status',['in_cart','paid','delivered','cancelled','returned'])->default('in_cart');

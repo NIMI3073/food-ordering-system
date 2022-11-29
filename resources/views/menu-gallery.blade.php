@@ -204,21 +204,21 @@
                     </div>
                     @foreach ($drink as $drinks )
                     <div class="menus d-flex ftco-animate">
-                        <div class="menu-img img" style="background-image: url({{ $drink->file }}); background-size:cover"></div>
+                        <div class="menu-img img" style="background-image: url({{ $drinks->file }}); background-size:cover"></div>
                         <div class="text">
                             <div class="d-flex">
                                 <div class="one-half">
-                                    <h3>{{ $drink->name_of_menu }}</h3>
+                                    <h3>{{ $drinks->name_of_menu }}</h3>
                                 </div>
                                 <div class="one-forth">
-                                    <span class="price">#{{ $drink->price }}</span>
+                                    <span class="price">#{{ $drinks->price }}</span>
                                 </div>
                             </div>
                             <p>{{ $menu->description }}<span></span> <span></p>
                                 <button type="button" class="btn btn-sm btn-danger" style="font-family: cursive"
                             onclick="window.location.href='order'">Order now</button>
                         <button type="button" class="btn btn-sm btn-warning" style="font-family: cursive"
-                           onclick="addtocart('{{ $drink->id }}')"> Add to Cart</button>
+                           onclick="addtocart('{{ $drinks->id }}')"> Add to Cart</button>
                         </div>
                     </div>
                     @endforeach
