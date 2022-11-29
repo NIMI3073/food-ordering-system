@@ -221,7 +221,7 @@
                     <a href="/menu-gallery">
                         
                         <button type="submit" class="btn btn-sm btn-warning text-white text-sm" style="margin-inline-start:20px;font-family:Cambria,'Times New Roman', serif">
-                            <i class="fa-solid fa-cart-shopping text-danger"></i>Continue shopping</button>
+                            <i class="fa-solid fa-cart-shopping text-dark"></i>Continue shopping</button>
                     </a>
                     </div>
                 </div>

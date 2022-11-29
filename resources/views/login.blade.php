@@ -12,9 +12,9 @@
     <section class="h-100" id="loginSection">
     <form action="login" class="login" id="logform" method="POST">
       @csrf
-        <h4 class=" text-center text-primary pt-8"><span class="glyphicon glyphicon-user text-primary "></span>Login</h4>
+        <h4 class=" text-center text-primary"><span class="glyphicon glyphicon-user text-primary "></span>Login</h4>
 
-        <label for="email" class="form-label text-primary" style="margin-left: 10px">Email:</label>
+        <label for="email" class="form-label text-primary" style="margin-left: 1px">Email:</label>
         <input type="text" class="form-control" placeholder="Enter email" name="email" required>
 
         <label for="password" class="form-label text-primary" style="margin-left: 10px">Password:</label>
@@ -23,11 +23,9 @@
              id="primary">Log in</button>
         <hr class="new1">
 
-        {{-- <a href="/register"> --}}
-        {{-- <button type="button" class="btn btn-lg btn-success" id="green">  create new account</button></a> --}}
         <div style="display: flex; justify-content: space-between;">
           <p class="text-primary"><a href="{{ route('forget-password') }}">forgot password?</a></p>
-          <p  class="text-success"><a href="/register">sign up</a></p>
+          <p  class="text-success"><a href="register">sign up</a></p>
         </div>
           </div>
     </form>
