@@ -176,7 +176,9 @@ class CartController extends Controller
 
         // Check Transaction Status
         if(!$response->status === 'success'){
-           return '';
+           return view('payment')->with([
+            'message'=>'Transaction failed'
+           ]);
         }
     
 
@@ -188,7 +190,9 @@ class CartController extends Controller
         // Check if Cart Total === Amount Paid
         if($cartTotal !== $response->data->amount)
         {
-        return '';
+        return view('payment')->with([
+            'error'=>'error in transaction'
+        ]);
         }
         
         Payment::create([
@@ -227,11 +231,41 @@ class CartController extends Controller
     return is_null($cartItem) ? $groupId : $cartItem->group_id;
   }
 
+//to get all the cart items on list
+  public function cartList(){
+    $item = Cart::all();
+    return view('super-admin.cart-list')->with([
+        'index'=>1,
+        'items'=>$item,
+        
+    ]);
+}
+
+
+public function paymentList(){
+    $payment = Payment::where('status', 'paid')
+    ->get();
+    return view('super-admin.payment-list')->with([
+        'index'=>1,
+        'payments'=>$payment,
+    ]);
+}
+
+
+public function paymentInfo(Request $request){
+    $validated =$request->validate([
+        'group_id'=>'string|required|exists:carts,group_id',
+    ]);
+    $info = Cart::with(['menu'])->where('group_id',$request->group_id)->get();
+    return view('super-admin.payment-info')->with([
+        'index'=>1,
+        'infos'=>$info,
+    ]);
+}
 
   }
     
     
-
 
 
 

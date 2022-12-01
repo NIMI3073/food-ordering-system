@@ -119,9 +119,9 @@ class UserController extends Controller
 
 
     public function userList (Request $request){
-    
        $users = User::all();
-        return response([
+        return view('super-admin.user-list')->with([
+            'index'=>1,
             'users'=>$users,
             
         ]);

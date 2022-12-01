@@ -49,8 +49,11 @@
                     <li class="nav-item active"><a href="login" class="nav-link">Login</a></li>
                     <li class="nav-item"><a href="order-list" class="nav-link">Orders</a></li>
                     <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
+                    <li class="nav-item"><a href="cart-list" class="nav-link">Carts</a></li>
+                    <li class="nav-item"><a href="payment-list" class="nav-link">Payments</a></li>
                     <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
-                    <li class="nav-item"><a href="" class="nav-link"></a>Log Out </li>
+                    <li class="nav-item"><a href="logout" class="nav-link">Log Out</a> </li>
+                 
 
 
 
@@ -61,7 +64,7 @@
     </nav>
 
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');">
+{{-- <section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -71,10 +74,10 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
-<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top: 10px;padding-bottom: 10px">
+<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top:150px">
     <div class="container">
         <div class="row no-gutters">
             <div class="text-dark">
@@ -85,35 +88,30 @@
                     <thead class="thead-dark">
                         <tr>
                         <th>sn</th>
+                        <th>User Id</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Phone</th>
                         
                     </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
+                    
 
-                   {{-- @foreach ($users as $user)
-                       
+                  
+                        @foreach ($users as $user)
                  
                     <tbody>
 
                         <tr>
                         <td>{{ $index++ }}</td>
-                        <td>{{ $users->name }}</td>
-                        <td>{{ $users->email }}</td>
-                        <td>{{ $users->phone }}</td>
+                        <td>{{ $user->id }}</td>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->phone }}</td>
                       
                     </tr> 
                     </tbody>
-                    @endforeach --}}
+                    @endforeach
                 </table>
             </div>
         </div>

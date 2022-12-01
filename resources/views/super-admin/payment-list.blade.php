@@ -52,8 +52,7 @@
                     <li class="nav-item"><a href="cart-list" class="nav-link">Carts</a></li>
                     <li class="nav-item"><a href="payment-list" class="nav-link">Payments</a></li>
                     <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
-                    <li class="nav-item"><a href="logout" class="nav-link">Log Out </a></li>
-                    
+                    <li class="nav-item"><a href="logout" class="nav-link">Log Out</a> </li>
 
 
 
@@ -69,49 +68,54 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate text-center mb-5">
-                <h1 class="mb-2 bread">List Of Orders!</h1>
+                <h1 class="mb-2 bread">List Of Users!</h1>
                
             </div>
         </div>
     </div>
-</section>  --}}
+</section> --}}
 
 
-<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top:120px">
+<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top:150px">
     <div class="container">
         <div class="row no-gutters">
             <div class="text-dark">
-                <h4 class="text-center">List of Orders</h4>
+                <h2 class="text-center text-dark">Payment List</h2>
             </div>
-            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center ">
-                <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}" id="Table">
-                    <thead class="thead-dark">
-                        <tr>
-                        <th>sn</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Address</th>
-                        <th>Meal type</th>
-                        <th>Package(s)order</th>
+            <div class="col-lg-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-secondary" style="border-radius: 10px">
+                <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}">
+                    <tr class="text-center text-block">
+                        <thead class="bg-dark text-center">
+                        <th class="text-white">Sn</th>
+                        <th class="text-white">id</th>
+                        {{-- <th>Menu</th> --}}
+                        <th class="text-white">Transaction Id</th>
+                        <th class="text-white">Transaction Ref</th>
+                        <th class="text-white">Group id</th>
+                        <th class="text-white">Amount</th>
+                        <th class="text-white">Status</th>
+                        <th class="text-white">Action</th>
+                        
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="bg-dark">
                         <tr>
-                            @foreach ($orders as $order )
-                                
-                            @endforeach
-                        <td>{{ $index++ }}</td>
-                        <td>{{ $order->name }}</td>
-                        <td>{{ $order->email }}</td>
-                        <td>{{ $order->phone }}</td>
-                        <td>{{ $order->address }}</td>
-                         <td>{{ $order->type_of_meal }}</td>
-                        <td>{{ $order->no_of_package}}</td>
+                        @foreach ($payments as $payment)
+                        <td class="text-primary text-center">{{ $index++ }}</td>
+                        {{-- <th><img src="{{ url($payment->menu->file) }}" alt="Image" class="w-100" /></th> --}}
+                        <td class="text-danger text-center">{{ $payment->user_id }}</td>
+                        <td class="text-primary text-center">{{ $payment->transaction_id }}</td>
+                        <td class="text-danger text-center ">{{ $payment->tx_ref }}</td>
+                        <td class="text-primary text-center">{{ $payment->group_id }}</td>
+                        <td class="text-danger text-center ">{{ $payment->amount }}</td>
+                        <td class="text-success text-center">{{ $payment->status }}</td>
+                        <td ><button type="button" class="btn btn-lg btn-primary"><a href= "{{ route('payment-info') }}?group_id={{ $payment->group_id }}" class="text-white">more info</a></button> </td>
+                        <tr>
+                       
+                      
                     </tr> 
-                    </tbody>
                     
-                   
+                    @endforeach
                 </table>
             </div>
         </div>
@@ -130,5 +134,6 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/vue@3"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{ asset('js/user.js') }}"></script>
 
-<script src="{{ asset('js/order-list.js') }}"></script>
+

@@ -1,3 +1,5 @@
+//for flutter wave online payment,e-commerce.
+
 function makePayment(amount, userData, groupId) {
     FlutterwaveCheckout({
       public_key: "FLWPUBK_TEST-e99ece018a3d8f3e07811677d48bc508-X",

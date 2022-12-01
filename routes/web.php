@@ -6,8 +6,10 @@ use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ResetPasswordController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Redirect;
 
 
@@ -49,8 +51,11 @@ Route::post('reset-password', [ResetPasswordController::class, 'submitResetPassw
 //dashboard routes//
 
 Route::prefix('admin')->group(function(){
-Route::get('/order-list', fn()=>view('super-admin.order-list'));
-Route::get('/order-list', fn()=>view('super-admin.user-list'));
+Route::get('/order-list',[OrderController::class,'index']);
+Route::get('/user-list',[UserController::class,'userList']);
+Route::get('/cart-list',[CartController::class,'cartList']);
+Route::get('/payment-list',[CartController::class,'paymentList']);
+Route::get('/payment-info',[CartController::class,'paymentInfo'])->name('payment-info');
 Route::get('/add-menu', fn()=>view('super-admin.add-menu'));
 Route::post('/add-menu',[MenuController::class,'store']);
 });

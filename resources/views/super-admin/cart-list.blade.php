@@ -52,7 +52,7 @@
                     <li class="nav-item"><a href="cart-list" class="nav-link">Carts</a></li>
                     <li class="nav-item"><a href="payment-list" class="nav-link">Payments</a></li>
                     <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
-                    <li class="nav-item"><a href="logout" class="nav-link">Log Out </a></li>
+                    <li class="nav-item"><a href="logout" class="nav-link">Log Out</a> </li>
                     
 
 
@@ -69,49 +69,51 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate text-center mb-5">
-                <h1 class="mb-2 bread">List Of Orders!</h1>
+                <h1 class="mb-2 bread">List Of Users!</h1>
                
             </div>
         </div>
     </div>
-</section>  --}}
+</section> --}}
 
 
-<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top:120px">
+<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top:150px">
     <div class="container">
         <div class="row no-gutters">
             <div class="text-dark">
-                <h4 class="text-center">List of Orders</h4>
+                <h4 class="text-center">List of Users</h4>
             </div>
-            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center ">
+            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-warning">
                 <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}" id="Table">
                     <thead class="thead-dark">
                         <tr>
                         <th>sn</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Address</th>
-                        <th>Meal type</th>
-                        <th>Package(s)order</th>
+                        <th>Menu Id</th>
+                        <th>User Id</th>
+                        <th>group Id</th>
+                        <th>Units</th>
+                        <th>status</th>
+                        
                     </tr>
                     </thead>
+                    
+
+                  
+                        @foreach ($items as $item)
+                 
                     <tbody>
+
                         <tr>
-                            @foreach ($orders as $order )
-                                
-                            @endforeach
                         <td>{{ $index++ }}</td>
-                        <td>{{ $order->name }}</td>
-                        <td>{{ $order->email }}</td>
-                        <td>{{ $order->phone }}</td>
-                        <td>{{ $order->address }}</td>
-                         <td>{{ $order->type_of_meal }}</td>
-                        <td>{{ $order->no_of_package}}</td>
+                        <td>{{ $item->user_id }}</td>
+                        <td>{{ $item->menu_id }}</td>
+                        <td>{{ $item->group_id }}</td>
+                        <td>{{ $item->units}}</td>
+                        <td>{{ $item->status }}</td>
+                      
                     </tr> 
                     </tbody>
-                    
-                   
+                    @endforeach
                 </table>
             </div>
         </div>
@@ -121,14 +123,15 @@
 
  
 
-{{-- <x-footer>
+<x-footer>
 
-</x-footer> --}}
+</x-footer>
 </body>
 
 </html>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/vue@3"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{ asset('js/user.js') }}"></script>
 
-<script src="{{ asset('js/order-list.js') }}"></script>
+

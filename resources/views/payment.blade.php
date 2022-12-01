@@ -29,7 +29,7 @@
                     <td>{{ $payment->tx_ref }}</td>
                     <td>{{ $payment->group_id }}</td>
                     <td>{{ $payment->amount }}</td>
-                    <td>{{ $status }}</td>
+                    <td>{{ $payment->status}}</td>
                     <tr>
                    
                   
@@ -39,6 +39,23 @@
                 </tbody>
                
             </table>
+            <div class="text danger">
+            
+                @if (isset($message))
+
+                <div class="alert alert-danger">{{ $message }}</div>
+                    
+                @endif
+            </div>
+
+            <div class="text danger">
+            
+                @if (isset($error))
+
+                <div class="alert alert-danger">{{ $error}}</div>
+
+                @endif
+            </div>
             </div>
         </div>
     </div>

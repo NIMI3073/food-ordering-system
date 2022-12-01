@@ -43,7 +43,7 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto" style="font-family: cursive">
-                <li class="nav-item active"><a href="Home" class="nav-link">Home</a></li>
+                <li class="nav-item active"><a href="index" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
                 <li class="nav-item"><a href="/menu-gallery" class="nav-link">Menu-gallery</a></li>
