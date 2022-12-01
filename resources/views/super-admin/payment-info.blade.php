@@ -76,8 +76,6 @@
                         <thead class="thead-dark">
                         <th >Sn</th>
                         <th>Menu</th>
-                        {{-- <th>Transaction Id</th>
-                        <th>Transaction Ref</th> --}}
                         <th>Group id</th>
                         <th>Amount</th>
                         
@@ -87,13 +85,10 @@
                     </thead>
                     @foreach ($infos as $info )
                         
-                
                     <tbody class="text-center text-bold bg-primary">
                         <tr>
                         <td>{{ $index++ }}</td>
                         <td><img src="{{ url($info->menu->file) }}" alt="Image" style="border-radius:70%;width:140px" /></td>
-                        {{-- <td>{{ $info->transaction_id }}</td>
-                        <td>{{ $info->tx_ref }}</td> --}}
                         <td>{{ $info->group_id }}</td>
                         <td>{{ $info->menu->price }}</td>
                        
@@ -109,11 +104,6 @@
                
 </section>
 
- 
-
-{{-- <x-footer>
-
-</x-footer> --}}
 </body>
 
 </html>

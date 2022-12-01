@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->integer('phone_number');
-            $table->time('check_in_time');
-            $table->time('check_out_time');
-            $table->date('check_in_date');
+            $table->date('check_in');
+            $table->time('time');
+            $table->integer('guest');
             $table->timestamps();
         });
     }

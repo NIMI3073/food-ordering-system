@@ -251,7 +251,6 @@ public function paymentList(){
     ]);
 }
 
-
 public function paymentInfo(Request $request){
     $validated =$request->validate([
         'group_id'=>'string|required|exists:carts,group_id',
