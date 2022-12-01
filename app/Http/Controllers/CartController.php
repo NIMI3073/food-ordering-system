@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
-use App\Models\menu;
+use App\Models\Payment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -89,6 +89,7 @@ class CartController extends Controller
       $cartItem = Cart::where([
         'user_id' => auth()->user()->id,
         'menu_id' => $request->menu_id,
+        'status' => 'in_cart'
       ])->first();
 
       if($cartItem){
@@ -118,7 +119,7 @@ class CartController extends Controller
         'total' => self::getCartTotal($cartItems),
         'unit'=>self::getItemUnits($cartItems),
         'token' => $token,
-        'groupId' => $cartItems->first()->group_id,
+        'groupId' => $cartItems->first()?->group_id,
         //json is used to merge two programming language 
         'userData' => json_encode([
             'email' => auth()->user()->email,
@@ -161,29 +162,59 @@ class CartController extends Controller
      
         $validated =$request->validate([
             'tx_ref'=> 'string|required',
-            'transaction_id' =>'string|required'
+            'transaction_id' =>'string|required',
+            
         ]);
 
         $transactionId = $validated['transaction_id'];
 
         $groupId = explode('_', $validated['tx_ref'])[0];
-
         $response = Http::withToken(env('FLUTTERWAVE_SECRET_KEY'))
         ->get("https://api.flutterwave.com/v3/transactions/$transactionId/verify")->object();
 
+        // dd($response);
+
         // Check Transaction Status
+        if(!$response->status === 'success'){
+           return '';
+        }
+    
 
         // Calculate Price of Cart Items related to Group Id
+            $cartItems = Cart::where('group_id', $groupId)->get();
+
+            $cartTotal = CartController::getCartTotal($cartItems);
 
         // Check if Cart Total === Amount Paid
+        if($cartTotal !== $response->data->amount)
+        {
+        return '';
+        }
+        
+        Payment::create([
+            'user_id' => auth()->id(),
+            'transaction_id' => $transactionId,
+            'tx_ref' =>$request->tx_ref, 
+            'group_id' =>$groupId,
+            'amount' => $cartTotal,
+            'status' => 'paid'
+        ]);
 
         // Update Status of Cart Items related to Group ID to paid
+        Cart::where('group_id', $groupId)->update([
+            'status'=>'paid'
+        ]);
 
         // Redirect User to Desired Success Page
+        return view('payment')->with([
+            'index'=>1,
+            'status'=>'paid',
+            'payments' => Payment::where('user_id', auth()->id())->get()
+        ]);
+    
     }
     
-    
-  public function generateGroupId(){
+    public function generateGroupId(){
     $groupId =  substr(str_shuffle('123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 5);
 
     if( Cart::where('group_id', $groupId)->exists()){
@@ -195,8 +226,11 @@ class CartController extends Controller
 
     return is_null($cartItem) ? $groupId : $cartItem->group_id;
   }
+
+
+  }
     
-    }
+    
 
 
 

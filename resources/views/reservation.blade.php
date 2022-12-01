@@ -21,7 +21,7 @@
 
 <section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt align-items-center" style="margin-top: 10px;padding-bottom:10px;position:relative;left:25em;">
     <div class="container">
-		<div class="row no-gutters">
+		<div class="row no-gutters horizontal-inline" style="display:inline">
 			<div class="col-sm-4 p-4 p-md-5 d-flex align-items-center justify-content-center bg-dark">
 				<form action="#" class="appointment-form">
 					<h3 class="mb-3">Book your Table</h3>

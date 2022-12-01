@@ -29,7 +29,7 @@ Route::get('/menu', fn()=>view('menu'));
 Route::get('/contact', fn()=>view('contact'));
 Route::get('/reservation', fn()=>view('reservation'));
 Route::get('/register',fn()=>view('register'));
-Route::get('/payment',fn()=>view('payment'));
+// Route::get('/payment',fn()=>view('payment'));
 Route::post('/register',[UserController::class,'store']);
 Route::post('/contact',[ContactController::class,'store']);
 Route::get('login1',fn()=>view('login1'));
@@ -60,6 +60,8 @@ Route::middleware(['auth:web'])->group(function(){
     Route::get('/menu-gallery',[MenuController::class,'menuGallery']);
     // Route::post('/menu-gallery',[CartController::class,'store'])->name('post-cart');
     Route::get('payment/process',[CartController::class,'paymentProcess'])->name('payment/process');
+    Route::get('payment',[CartController::class,'paymentStatus'])->name('payment');
+
     Route::prefix('cart')->group(function(){
         // Route::get('/cart', [CartController::class, 'deleteItem']);
         
