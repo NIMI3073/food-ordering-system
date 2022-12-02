@@ -36,7 +36,7 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="index" class="nav-link">Home</a></li>
+                    <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
                       <li class="nav-item"><a href="reservation" class="nav-link">Reservation</a></li>
@@ -50,13 +50,15 @@
                            <li class="nav-item"><a href="menu" class="nav-link">Menu</a></li>
                         <li class="nav-item"><a href="add-menu" class="nav-link">Add New Menu</a></li>
                     @endif
-                  
-                    
-                      <li class="nav-item"><a href="register" class="nav-link">Sign Up</a></li>
-                            <li class="nav-item"><a href="login" class="nav-link">Login</a></li>
-                            <li class="nav-item"><a href="logout" class="nav-link">LogOut</a></li>
-
-                    
+                      
+                      @if(auth()->check())
+                      <li class="nav-item"><a href="logout" class="nav-link">LogOut</a></li>
+                          @else
+                          <li class="nav-item"><a href="register" class="nav-link">Sign Up</a></li>
+                          <li class="nav-item"><a href="login" class="nav-link">Login</a></li>
+                          
+                    @endif
+                   
 
 
                 </ul>

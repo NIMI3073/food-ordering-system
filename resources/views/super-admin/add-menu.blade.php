@@ -100,7 +100,7 @@
                                 <option class="text-dark" value="Dinner">Dinner</option>
                                 <option class="text-dark" value="snacks">Snacks</option>
                                 <option class="text-dark" value="wine">Wine</option>
-                                <option class="text-dark" value="drinks">Drinks</option>
+                                <option class="text-dark" value="drinks">Drink</option>
 
                             </select></strong>
                         </div>

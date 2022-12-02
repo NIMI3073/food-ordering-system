@@ -19,7 +19,11 @@
 </section>
 
 
-<section class="ftco-section" id="menuSection">
+
+<x-menu>
+    
+</x-menu>
+{{-- <section class="ftco-section" id="menuSection">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-7 text-center heading-section ftco-animate">
@@ -51,10 +55,10 @@
                                 <button type="button" class="btn btn-sm btn-danger" style="font-family: cursive"
                                     onclick="window.location.href='order'" id="btn">Order now</button>
                                   
-                                            {{-- <input type="hidden" name=" menu_id" value=""> --}}
+                                            
                                 <button type="button" class="btn btn-sm btn-warning" style="font-family: cursive"
                                     onclick="addToCart('{{ $menu->id }}')" id="btn"> Add to Cart</button>
-                                    {{-- </form> --}}
+                                  
                             </div>
                         </div>
                     @endforeach
@@ -125,9 +129,9 @@
             </div>
         </div>
     </div>
-</section>
-<!--    -->
-<section class="ftco-section">
+</section> --}}
+
+{{-- <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center mb-2 pb-2">
             <div class="col-md-3 text-center heading-section ftco-animate">
@@ -229,7 +233,7 @@
         </div>
     </div>
 
-</section>
+</section> --}}
 
 
 

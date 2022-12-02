@@ -70,13 +70,14 @@
             <div class="text-dark">
                 <h2 class="text-center text-dark">Payment Info</h2>
             </div>
-            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-warning">
-                <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}" id="Table">
+            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-warning table-responsive{-sm|-md|-lg|-xl}"">
+                <table class="table table-bordered" id="Table" >
                     <tr class="text-center text-block text-dark">
                         <thead class="thead-dark">
                         <th >Sn</th>
                         <th>Menu</th>
                         <th>Group id</th>
+                        <th>Description</th>
                         <th>Amount</th>
                         
                        
@@ -85,11 +86,14 @@
                     </thead>
                     @foreach ($infos as $info )
                         
-                    <tbody class="text-center text-bold bg-primary">
-                        <tr>
+                       
+                            <tbody class="text-center" >
+                      
+                            <tr >
                         <td>{{ $index++ }}</td>
                         <td><img src="{{ url($info->menu->file) }}" alt="Image" style="border-radius:70%;width:140px" /></td>
                         <td>{{ $info->group_id }}</td>
+                        <td>{{ $info->menu->description }}</td>
                         <td>{{ $info->menu->price }}</td>
                        
                       

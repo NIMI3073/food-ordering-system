@@ -91,7 +91,7 @@ class AuthController extends Controller
     public function loginForm()
     {
         if (Auth::check()) {
-            return redirect('cart/cart');
+            return redirect('menu-gallery');
         }
         return view('/login');
     }

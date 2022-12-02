@@ -8942,7 +8942,7 @@ textarea.form-control {
   cursor: -moz-zoom-in;
   cursor: zoom-in; }
 
-.mfp-with-zoom .mfp-container,
+/* .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
   backface-visibility: hidden;
@@ -8950,7 +8950,7 @@ textarea.form-control {
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; }
+  transition: all 0.3s ease-out; } */
 
 .mfp-with-zoom.mfp-ready .mfp-container {
   opacity: 1; }
@@ -9425,6 +9425,16 @@ textarea.form-control {
       border-radius: 10px;
   }
     
+  table.table-bordered{
+    border:3px solid blue;
+    margin-top:20px;
+  }
+ table.table-bordered > thead > tr > th{
+    border:1px solid blue;
+}
+table.table-bordered > tbody > tr > td{
+    border:1px solid blue;
+} 
       .gradient-custom {
      
         background: #6a11cb;

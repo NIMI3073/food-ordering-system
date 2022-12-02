@@ -64,24 +64,14 @@
     </nav>
 
 
-{{-- <section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-center">
-            <div class="col-md-9 ftco-animate text-center mb-5">
-                <h1 class="mb-2 bread">List Of Users!</h1>
-               
-            </div>
-        </div>
-    </div>
-</section> --}}
+
 
 
 <section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top:150px">
     <div class="container">
         <div class="row no-gutters">
             <div class="text-dark">
-                <h4 class="text-center">List of Users</h4>
+                <h4 class="text-center">Items in Cart</h4>
             </div>
             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-warning">
                 <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}" id="Table">

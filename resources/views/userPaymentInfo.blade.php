@@ -11,28 +11,24 @@
                 <thead class="thead-dark">
                     <tr class="text-center text-block text-dark">
                     <th >Sn</th>
-                    <th>id</th>
-                    <th>Transaction Id</th>
-                    <th>Transaction Ref</th>
                     <th>Order id</th>
+                    <th>Menu</th>
                     <th>Amount</th>
                     <th>Status</th>
-                    <th>Action</th>
+                    {{-- <th>Action</th> --}}
                    
                     
                 </tr>
                 </thead>
                 <tbody>
                     <tr>
-                    @foreach ($payments as $payment)
+                    @foreach ($menu as $menus)
                     <td>{{ $index++ }}</td>
-                    <td>{{ $payment->user_id }}</td>
-                    <td>{{ $payment->transaction_id }}</td>
-                    <td>{{ $payment->tx_ref }}</td>
-                    <td>{{ $payment->group_id }}</td>
-                    <td>{{ $payment->amount }}</td>
-                    <td>{{ $payment->status}}</td>
-                    <td ><button type="button" class="btn btn-warning"><a href= "{{ route('userPaymentInfo') }}?group_id={{ $payment->group_id }}" class="text-white">more info</a></button> </td>
+                    <td>{{ $menus->group_id }}</td>
+                    <td><img src="{{ url($menus->menu->file) }}" alt="Image" style="border-radius:50%;width:140px" /></td>
+                    <td>{{ $menus->menu->price }}</td>
+                    <td>{{ $status}}</td>
+                    {{-- <td><button type="button" class="btn btn-success"><a href="/payment" class="text-white">Back</a></button></td> --}}
                   
                     <tr>
                    

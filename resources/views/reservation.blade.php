@@ -6,7 +6,8 @@
 	<div class="container">
 		<div class="row no-gutters">
 			<div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-primary">
-				<form action="reservation" class="appointment-form">
+				<form action="reservation" class="appointment-form" method="post">
+					@csrf
 					<h3 class="mb-3">Book your Table</h3>
 					<div class="row justify-content-center">
 						<div class="col-md-4">
@@ -37,7 +38,7 @@
 							<div class="form-group">
 								<div class="input-wrap">
 									<div class="icon"><span class="fa fa-calendar"></span></div>
-									<input type="text" name="check_in" class="form-control book_date" placeholder="Check-In">
+									<input type="date" name="check_in" class="form-control book_date" placeholder="Check-In">
 									@error('check_in')
 									<div class="alert alert-danger">{{ $message }}</div>
 								@enderror
@@ -48,7 +49,7 @@
 							<div class="form-group">
 								<div class="input-wrap">
 									<div class="icon"><span class="fa fa-clock-o"></span></div>
-									<input type="text" name="time" class="form-control book_time" placeholder="Time">
+									<input type="time" name="time" class="form-control book_time" placeholder="Time">
 									@error('time')
 									<div class="alert alert-danger">{{ $message }}</div>
 								@enderror
@@ -60,13 +61,13 @@
 								<div class="form-field">
 									<div class="select-wrap">
 										<div class="icon"><span class="fa fa-chevron-down"></span></div>
-										<select name="guest" id="" class="form-control">
-											<option value="">Guest</option>
-											<option value="">1</option>
-											<option value="">2</option>
-											<option value="">3</option>
-											<option value="">4</option>
-											<option value="">5</option>
+										<select name="guest" id="" class="form-control text-white">
+											<option value="" selected="" disabled="">--Guest--</option>
+											<option value="5">5</option>
+											<option value="10">10</option>
+											<option value="15">15</option>
+											<option value="20">20</option>
+											<option value="25">25</option>
 										</select>
 									</div>
 								</div>

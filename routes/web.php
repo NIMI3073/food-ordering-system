@@ -10,6 +10,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Redirect;
 
 
@@ -24,7 +25,7 @@ use Illuminate\Support\Facades\Redirect;
 |
 */
 
-Route::get('/index',fn()=>view('index'));
+Route::get('/',fn()=>view('index'));
 Route::get('/about', fn()=>view('about'));
 Route::get('/order', fn()=>view('order'));
 Route::get('/menu', fn()=>view('menu'));
@@ -36,6 +37,7 @@ Route::post('/register',[UserController::class,'store']);
 Route::post('/contact',[ContactController::class,'store']);
 Route::get('login1',fn()=>view('login1'));
 Route::post('/login',[AuthController::class,'login']);
+Route::post('/reservation',[ReservationController::class,'store']);
 Route::get('/login',[AuthController::class, 'loginForm'])->name('login');
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('web')->name('logout');
 
@@ -65,7 +67,8 @@ Route::middleware(['auth:web'])->group(function(){
     Route::get('/menu-gallery',[MenuController::class,'menuGallery']);
     // Route::post('/menu-gallery',[CartController::class,'store'])->name('post-cart');
     Route::get('payment/process',[CartController::class,'paymentProcess'])->name('payment/process');
-    Route::get('payment',[CartController::class,'paymentStatus'])->name('payment');
+    Route::get('payment',fn()=>view('payment'))->name('payment');
+    Route::get('userPaymentInfo',[CartController::class,'paymentStatusInfo'])->name('userPaymentInfo');
 
     Route::prefix('cart')->group(function(){
         // Route::get('/cart', [CartController::class, 'deleteItem']);

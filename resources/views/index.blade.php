@@ -37,7 +37,7 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="index" class="nav-link">Home</a></li>
+                    <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
 					<li class="nav-item"><a href="reservation" class="nav-link">Reservation</a></li>
@@ -51,9 +51,15 @@
                         <li class="nav-item"><a href="add-menu" class="nav-link">Add New Menu</a></li>
                     @endif
 
+                           
+                      @if(auth()->check())
+                      <li class="nav-item"><a href="logout" class="nav-link">LogOut</a></li>
+                          @else
                           <li class="nav-item"><a href="register" class="nav-link">Sign Up</a></li>
-                            <li class="nav-item"><a href="login" class="nav-link">Login</a></li>
-                            <li class="nav-item"><a href="logout" class="nav-link">LogOut</a></li>
+                          <li class="nav-item"><a href="login" class="nav-link">Login</a></li>
+                          
+                    @endif
+                        
                       
                       
 
@@ -185,7 +191,10 @@
 		</div>
 	</section>
 
-	<section class="ftco-section">
+	<x-menu>
+		
+	</x-menu>
+	{{-- <section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-7 text-center heading-section ftco-animate">
@@ -511,7 +520,7 @@
 			</div>
 		</div>
 
-	</section> 
+	</section>  --}}
 
 
 	<section class="ftco-section ftco-no-pt ftco-no-pb">
@@ -528,7 +537,7 @@
 						<p>Perfect Ingredients that will give good taste to your savour,eat with us today, dream for more and crave for more.
 							The taste is the difference🍲🍛
 						</p>
-						<p><a href="#" class="btn btn-primary">Learn more</a></p>
+						<p><a href="#" class="btn btn-danger">Learn more</a></p>
 					</div>
 				</div>
 			</div>
@@ -546,16 +555,16 @@
 			<div class="row">
 				<div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
-						<a href="blog-single" class="block-20" style="background-image:url('images/image_1.jpg');">
+						<a href="blog-single" class="block-20" style="background-image:url('images/pizza.jpg');">
 						</a>
 						<div class="text px-4 pt-3 pb-4">
 							<div class="meta">
-								<div><a href="#">August 3, 2020</a></div>
+								<div><a href="#">August 3, 2022</a></div>
 								<div><a href="#">Admin</a></div>
 							</div>
-							<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+							<h3 class="heading"><a href="#"></a>"People who love to eat are always the best people." "To eat is a necessity, but to eat intelligently is an art."</h3>
 							<p class="clearfix">
-								<a href="#" class="float-left read btn btn-primary">Read more</a>
+								<a href="#" class="float-left read btn btn-danger">Read more</a>
 								<a href="#" class="float-right meta-chat"><span class="fa fa-comment"></span> 3</a>
 							</p>
 						</div>
@@ -563,16 +572,16 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
-						<a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+						<a href="blog-single.html" class="block-20" style="background-image: url('images/pancakes.jpg');">
 						</a>
 						<div class="text px-4 pt-3 pb-4">
 							<div class="meta">
-								<div><a href="#">August 3, 2020</a></div>
+								<div><a href="#">August 3, 2022</a></div>
 								<div><a href="#">Admin</a></div>
 							</div>
-							<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+							<h3 class="heading"><a href="#">“To me, food is as much about the moment, the occasion, the location and the company as it is about the taste.</a></h3>
 							<p class="clearfix">
-								<a href="#" class="float-left read btn btn-primary">Read more</a>
+								<a href="#" class="float-left read btn btn-warning">Read more</a>
 								<a href="#" class="float-right meta-chat"><span class="fa fa-comment"></span> 3</a>
 							</p>
 						</div>
@@ -580,16 +589,16 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
-						<a href="blog-single" class="block-20" style="background-image: url('images/image_3.jpg');">
+						<a href="blog-single" class="block-20" style="background-image: url('images/shawarma.jpg');">
 						</a>
 						<div class="text px-4 pt-3 pb-4">
 							<div class="meta">
-								<div><a href="#">August 3, 2020</a></div>
+								<div><a href="#">August 3, 2022</a></div>
 								<div><a href="#">Admin</a></div>
 							</div>
-							<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+							<h3 class="heading"><a href="#">"People who love to eat are always the best people." "To eat is a necessity, but to eat intelligently is an art."</a></h3>
 							<p class="clearfix">
-								<a href="#" class="float-left read btn btn-primary">Read more</a>
+								<a href="#" class="float-left read btn btn-danger">Read more</a>
 								<a href="#" class="float-right meta-chat"><span class="fa fa-comment"></span> 3</a>
 							</p>
 						</div>
@@ -599,7 +608,7 @@
 		</div>
 	</section>
 
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-intro bg-primary">
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-intro bg-danger">
 		<div class="container py-5">
 			<div class="row py-2">
 				<div class="col-md-12 text-center">
@@ -616,3 +625,8 @@
 		
 	</body>
 	</html>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="https://unpkg.com/vue@3"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script src="{{ asset('js/menu-gallery.js') }}"></script>

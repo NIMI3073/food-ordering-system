@@ -163,7 +163,7 @@ class CartController extends Controller
         $validated =$request->validate([
             'tx_ref'=> 'string|required',
             'transaction_id' =>'string|required',
-            
+      
         ]);
 
         $transactionId = $validated['transaction_id'];
@@ -213,7 +213,8 @@ class CartController extends Controller
         return view('payment')->with([
             'index'=>1,
             'status'=>'paid',
-            'payments' => Payment::where('user_id', auth()->id())->get()
+            'payments'=>Payment::where('user_id', auth()->id())->get()
+            
         ]);
     
     }
@@ -260,6 +261,19 @@ public function paymentInfo(Request $request){
         'index'=>1,
         'infos'=>$info,
     ]);
+}
+
+public function paymentStatusInfo(Request $request){
+    $validated =$request->validate([
+        'group_id'=>'string|required|exists:carts,group_id',
+    ]);
+    $menu = Cart::with(['menu'])->where('group_id',$request->group_id)->get();
+    return view('userPaymentInfo')->with([
+        'index'=>1,
+        'status'=>'paid',
+        'menu'=>$menu
+    ]);
+
 }
 
   }
