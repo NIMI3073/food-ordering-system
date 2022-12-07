@@ -33,107 +33,74 @@
     <link rel="stylesheet" href="{{ asset('design-asset/css/style.css') }}">
 </head>
 
-<body>
+<body class="bg-light">
 
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light " id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="index">Food.<span class="text-info">ie</span></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
-            </button>
-
             <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
-                 
+                <ul class="navbar-nav ml-auto" style="font-family: cursive">
+                    
                     <li class="nav-item"><a href="order-list" class="nav-link">Orders</a></li>
                     <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
                     <li class="nav-item"><a href="cart/cart" class="nav-link"><i class="fa-solid fa-cart-plus text-warning"></i></a></li>
                     <li class="nav-item"><a href="payment-list" class="nav-link">Payments</a></li>
                     <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
-                
                     @if(auth()->check())
                     <li class="nav-item"><a href="logout" class="nav-link">Log Out</a> </li>
                     @else
                     <li class="nav-item active"><a href="login" class="nav-link">Login</a></li>
                   @endif
-
-
-
-
                 </ul>
             </div>
         </div>
     </nav>
 
-
-{{-- <section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-center">
-            <div class="col-md-9 ftco-animate text-center mb-5">
-                <h1 class="mb-2 bread">List Of Orders!</h1>
-               
-            </div>
-        </div>
-    </div>
-</section>  --}}
-
-
-<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top:120px">
-    <div class="container">
-        <div class="row no-gutters">
-            <div class="text-dark">
-                <h4 class="text-center">List of Orders</h4>
-            </div>
-            <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center ">
-                <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}" id="Table">
-                    <thead class="thead-dark">
-                        <tr>
-                        <th>sn</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Address</th>
-                        <th>Meal type</th>
-                        <th>Package(s)order</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            @foreach ($orders as $order )
-                                
-                            @endforeach
-                        <td>{{ $index++ }}</td>
-                        <td>{{ $order->name }}</td>
-                        <td>{{ $order->email }}</td>
-                        <td>{{ $order->phone }}</td>
-                        <td>{{ $order->address }}</td>
-                         <td>{{ $order->type_of_meal }}</td>
-                        <td>{{ $order->no_of_package}}</td>
-                    </tr> 
-                    </tbody>
+    <section class="h-100" >
+        <div class="container">
+            <div class="row blog-entry " style="margin-top:150px">
+                <form action="blog" method="POST" enctype="multipart/form-data" id="blogForm" class="">
+                    @csrf
+                    <h2 class="text-dark text-center">Blog table</h2>
+                    <div class="form-group">
+                        <input  type="file" name="cover_image" class="form-control text-center" placeholder="Cover-image" id="file">
+                        @error('cover_image')
+                        <span class="alert alert-danger">{{ $message }}</span>
+                            
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="date" class="form-control text-center" placeholder="Enter date" id="date">
+                        @error('date')
+                        <span class="alert alert-danger">{{ $message }}</span>
+                            
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <textarea cols="30" rows="5"  name="content" class="form-control text-dark" placeholder="Write content" id="content"></textarea>
+                        @error('content')
+                        <span class="alert alert-danger">{{ $message }}</span>
+                            
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="list" class="form-control text-center" placeholder="Enter list" id="list"> 
+                        @error('list')
+                        <span class="alert alert-danger">{{ $message }}</span>
+                            
+                        @enderror
+                    </div>
                     
-                   
-                </table>
+                        <button type="submit" class="btn btn-lg btn-success py-3 px-4  " id="btn">Submit</button>
+                </form>
             </div>
         </div>
-    </div>
-               
-</section>
-
- 
-
-{{-- <x-footer>
-
-</x-footer> --}}
-</body>
-
+    </section>
+        
+    </body>
 </html>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/vue@3"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://kit.fontawesome.com/3e395a6b59.js" crossorigin="anonymous"></script>
-
-<script src="{{ asset('js/order-list.js') }}"></script>
+<script src="{{ asset('js/blog.js') }}"></script>

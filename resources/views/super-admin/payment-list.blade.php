@@ -46,13 +46,18 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="login" class="nav-link">Login</a></li>
+                   
                     <li class="nav-item"><a href="order-list" class="nav-link">Orders</a></li>
                     <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
-                    <li class="nav-item"><a href="cart-list" class="nav-link">Carts</a></li>
+                    <li class="nav-item"><a href="cart/cart" class="nav-link"><i class="fa-solid fa-cart-plus text-warning"></i></a></li>
                     <li class="nav-item"><a href="payment-list" class="nav-link">Payments</a></li>
                     <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
+                 
+                    @if(auth()->check())
                     <li class="nav-item"><a href="logout" class="nav-link">Log Out</a> </li>
+                    @else
+                    <li class="nav-item active"><a href="login" class="nav-link">Login</a></li>
+                  @endif
 
 
 

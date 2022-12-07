@@ -46,13 +46,18 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="login" class="nav-link">Login</a></li>
+                 
                     <li class="nav-item"><a href="order-list" class="nav-link">Orders</a></li>
                     <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
-                    <li class="nav-item"><a href="cart-list" class="nav-link">Carts</a></li>
+                    <li class="nav-item"><a href="cart/cart" class="nav-link"><i class="fa-solid fa-cart-plus text-warning"></i></a></li>
                     <li class="nav-item"><a href="payment-list" class="nav-link">Payments</a></li>
                     <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
+                  
+                    @if(auth()->check())
                     <li class="nav-item"><a href="logout" class="nav-link">Log Out</a> </li>
+                    @else
+                    <li class="nav-item active"><a href="login" class="nav-link">Login</a></li>
+                  @endif
                  
 
 
@@ -106,15 +111,14 @@
 
  
 
-{{-- <x-footer>
 
-</x-footer> --}}
 </body>
 
 </html>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/vue@3"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/3e395a6b59.js" crossorigin="anonymous"></script>
 <script src="{{ asset('js/user.js') }}"></script>
 
 

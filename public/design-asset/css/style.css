@@ -8430,14 +8430,17 @@ h1, h2, h3, h4, h5,
   display: block; }
 
 .blog-entry {
-  background: #fff;
+  background: whitesmoke;
+  border-radius: 10px;
   position: relative;
+  margin: 0 auto;
+   left: 0em;
   z-index: 0; }
   .blog-entry:after {
     position: absolute;
     bottom: -5px;
     right: 20px;
-    left: 20px;
+    left: 80px;
     height: 10px;
     background: #f0f0f0;
     content: '';
@@ -8448,12 +8451,14 @@ h1, h2, h3, h4, h5,
     -webkit-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 480px) {
     .blog-entry {
-      margin-bottom: 30px; } }
-  @media (max-width: 767.98px) {
+      width:500px;
+      display: block;
+      float: none; } }
+  @media (max-width: 922px) {
     .blog-entry {
-      margin-bottom: 30px; } }
+      width:50%; } }
   .blog-entry .text {
     border-top: 0;
     border-radius: 2px;
@@ -8695,6 +8700,16 @@ textarea.form-control {
         box-shadow: 3px 3px 2px 2px gainsboro
       
       }
+      .blog{
+        margin: 0 auto;
+        position: relative;
+         /* top: 5em; */
+       width: 100%; 
+        background-color: #f0f0f0; 
+        border-radius:3px;
+        padding: 7px;
+        font-family:monospace;
+      }
     
       
       hr.new1 {
@@ -8726,13 +8741,15 @@ textarea.form-control {
       }
       
       @media screen and (min-width: 480px) {
-        #logform{width: 300px;}
+        #logform,
+        .blog{width: 300px;}
         #food{margin-left: 80px; width: 300px;}
       }
 
       @media screen and (max-width: 992px) {
       
-        #logform {
+        #logform,
+        .blog {
           width: 50%;
         }
       }
@@ -8740,14 +8757,15 @@ textarea.form-control {
       /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
        @media screen and (max-width: 600px) {
         #food
-        #logform {
+        #logform,
+        .blog {
           width: 100%;
         } 
       
       
       /* Change styles for span and cancel button on extra small screens */
       @media screen and (max-width: 300px) {
-       #logform,#food {
+       #logform,#food,.blog {
            display: block;
            float: none;
         }

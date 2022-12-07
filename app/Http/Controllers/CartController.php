@@ -16,7 +16,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+    
     }
 
     /**
@@ -82,8 +82,7 @@ class CartController extends Controller
     public function store(Request $request)
     {
        $validated = $request->validate([
-            'menu_id'=>'string|exists:menu,id',
-            
+            'menu_id'=>'string|exists:menu,id',   
         ]);
 
       $cartItem = Cart::where([

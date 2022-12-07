@@ -8,9 +8,11 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ReservationController;
+use App\Models\Blog;
 use Illuminate\Support\Facades\Redirect;
 
 
@@ -60,6 +62,12 @@ Route::get('/payment-list',[CartController::class,'paymentList']);
 Route::get('/payment-info',[CartController::class,'paymentInfo'])->name('payment-info');
 Route::get('/add-menu', fn()=>view('super-admin.add-menu'));
 Route::post('/add-menu',[MenuController::class,'store']);
+Route::get('blog',fn()=>view('super-admin.blog'));
+Route::post('blog',[BlogController::class,'store'])->name('blog');
+Route::put('blog',[BlogController::class,'update'])->name('blog');
+Route::delete('blog',[BlogController::class,'destroy']);
+Route::get('index',[BlogController::class,'showBlog'])->name('showBlog');
+
 });
 
 // __ cart dashboard||
@@ -69,6 +77,7 @@ Route::middleware(['auth:web'])->group(function(){
     Route::get('payment/process',[CartController::class,'paymentProcess'])->name('payment/process');
     Route::get('payment',fn()=>view('payment'))->name('payment');
     Route::get('userPaymentInfo',[CartController::class,'paymentStatusInfo'])->name('userPaymentInfo');
+ 
 
     Route::prefix('cart')->group(function(){
         // Route::get('/cart', [CartController::class, 'deleteItem']);

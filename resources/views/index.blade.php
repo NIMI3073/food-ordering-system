@@ -41,7 +41,7 @@
                     <li class="nav-item"><a href="about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
 					<li class="nav-item"><a href="reservation" class="nav-link">Reservation</a></li>
-                    <li class="nav-item"><a href="cart/cart" class="nav-link">Cart</a></li>
+					<li class="nav-item"><a href="cart/cart" class="nav-link"><i class="fa-solid fa-cart-plus text-warning"></i></a></li>
 					<li class="nav-item"><a href="menu-gallery" class="nav-link">Menu Gallery</a></li>
 					<li class="nav-item"><a href="order" class="nav-link">Make Order</a></li>
                     @if (auth()->user() === 'super_admin')
@@ -51,7 +51,6 @@
                         <li class="nav-item"><a href="add-menu" class="nav-link">Add New Menu</a></li>
                     @endif
 
-                           
                       @if(auth()->check())
                       <li class="nav-item"><a href="logout" class="nav-link">LogOut</a></li>
                           @else
@@ -59,11 +58,6 @@
                           <li class="nav-item"><a href="login" class="nav-link">Login</a></li>
                           
                     @endif
-                        
-                      
-                      
-
-
                 </ul>
             </div>
         </div>
@@ -553,22 +547,28 @@
 				</div>
 			</div>
 			<div class="row">
+				@foreach ($blogs as $blog )
 				<div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
-						<a href="blog-single" class="block-20" style="background-image:url('images/pizza.jpg');">
+						<a href="blog-single" class="block-20" style="background-image:url({{ $blog->cover_image }});">
 						</a>
+					
+							
+					
 						<div class="text px-4 pt-3 pb-4">
 							<div class="meta">
-								<div><a href="#">August 3, 2022</a></div>
+								<div><a href="#">{{ $blog->date }}</a></div>
 								<div><a href="#">Admin</a></div>
 							</div>
-							<h3 class="heading"><a href="#"></a>"People who love to eat are always the best people." "To eat is a necessity, but to eat intelligently is an art."</h3>
+							<h3 class="heading"><a href="#"></a>{{ $blog->content }}</h3>
 							<p class="clearfix">
 								<a href="#" class="float-left read btn btn-danger">Read more</a>
-								<a href="#" class="float-right meta-chat"><span class="fa fa-comment"></span> 3</a>
+								<a href="#" class="float-right meta-chat"><span class="fa fa-comment"></span> {{ $blog->list }}</a>
 							</p>
 						</div>
+
 					</div>
+					@endforeach
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
@@ -628,5 +628,5 @@
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<script src="https://unpkg.com/vue@3"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	
+	<script src="https://kit.fontawesome.com/3e395a6b59.js" crossorigin="anonymous"></script>
 	<script src="{{ asset('js/menu-gallery.js') }}"></script>
