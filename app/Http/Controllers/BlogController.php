@@ -83,6 +83,6 @@ class BlogController extends Controller
     }
 
     public function showBlog(){
-        
+      
     }
 }
