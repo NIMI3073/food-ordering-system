@@ -7,6 +7,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\BlogController;
 use App\Models\User;
 
 /*
@@ -30,6 +31,7 @@ use App\Models\User;
     Route::middleware(['auth:sanctum'])->group(function(){
     // Route::post('menu-gallery',[MenuController::class,'postCart'])->name('post-cart');
     Route::post('carts', [CartController::class, 'store'])->name('cart.store');
+    Route::post('blog', [BlogController::class, 'store']);
    
     });
     
