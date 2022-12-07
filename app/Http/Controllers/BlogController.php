@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -13,7 +14,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -34,7 +35,21 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated =$request->validate([
+            'cover_image'=>['required','mimes:jpg,png,jpeg','max:2048'],
+            'date'=> 'string|required',
+            'content'=>'string|required',
+            'list' => 'string|required',
+        ]);
+
+        $upload = $request->file('cover_image')->store('public/images');
+        $full_path =explode("/", $upload);
+      $validated['cover_image'] = end($full_path);
+
+      Blog::create($validated);
+      return response([
+          "message" => '  Successful'
+      ]);
     }
 
     /**
@@ -45,7 +60,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -68,7 +83,11 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'content' =>'string|required',
+        ]);
+        Blog::where('content',$request->content)->update();
+      
     }
 
     /**
@@ -79,10 +98,18 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delete = Blog::where('id',request()->id)->first()->delete();
+        return $delete;
     }
-
-    public function showBlog(){
-      
+    
+    public function showBlog(Request $request){
+        $request->validate([
+            'content'=>'string|required'
+        ]);
+        $blog = Blog::where('content',$request->content)->get();
+         return view('index')->with([
+            'blogs'=>$blog
+         ]);
+         
     }
 }
