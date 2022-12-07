@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use Egulias\EmailValidator\Result\Reason\Reason;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -41,11 +42,10 @@ class BlogController extends Controller
             'content'=>'string|required',
             'list' => 'string|required',
         ]);
-
+      
         $upload = $request->file('cover_image')->store('public/images');
         $full_path =explode("/", $upload);
       $validated['cover_image'] = end($full_path);
-
       Blog::create($validated);
       return response([
           "message" => '  Successful'
@@ -84,9 +84,16 @@ class BlogController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
+            'id' => 'integer|required|exists:blog,id',
             'content' =>'string|required',
+            
         ]);
-        Blog::where('content',$request->content)->update();
+        Blog::where('id',auth()->user()->id)->update([
+            'content'=> $request->content
+        ]);
+
+        
+        return redirect()->back();
       
     }
 
@@ -96,20 +103,87 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        $delete = Blog::where('id',request()->id)->first()->delete();
-        return $delete;
+    public function destroy( $id){
+
     }
+   
     
+    
+
     public function showBlog(Request $request){
-        $request->validate([
-            'content'=>'string|required'
-        ]);
-        $blog = Blog::where('content',$request->content)->get();
-         return view('index')->with([
-            'blogs'=>$blog
-         ]);
+      $blogs = Blog::all();
+      return view('index')->with([
+        'blogs'=>$blogs
+      ]);
          
     }
+
+ 
+    public function getBlogList(Request $request){
+        $blog= Blog::all();
+        return view('super-admin.blog-list')->with([
+            'index'=>1,
+            'blogLists'=>$blog,
+        ]);
+        
+    }
+
+
+    public function deleteContent(Request $request){
+        {
+            $request->validate([
+                'id'=> 'required|integer|exists:blog,id',
+            
+            ]);
+           
+            $deleteContent = Blog::where('id',$request->id)->first();
+            $id = $deleteContent->course_id;
+         if($deleteContent){
+            
+            // submission
+            Blog::where('id',$deleteContent->id)->delete();
+        
+           $deleteContent->delete(); 
+         }
+            
+         return view('super-admin.blog-list')->with([
+            'content' => Blog::where('id',$id)->get(),
+            'success'=>'Deleted Successfully',
+        ]);
+    }
+}
+
+
+public function editContentForm (Request $request){
+    $request->validate([
+        'id'=> 'required|integer|exists:blog,id'
+    ]);
+    $editContent =  Blog::where('id',$request->id)->first();
+    return view('super-admin.edit-content')->with([
+        'index'=>1,
+        'contents' => $editContent
+    ]);
+
+}
+
+
+
+public function editContent(Request $request)
+{
+    $request->validate([
+        'id' => 'integer|required|exists:blog,id',
+        'content' => 'string|required'
+    ]);
+    $editContent = Blog::where('id',$request->id)->first();
+    // dd($editContent);
+    if ($editContent) {
+        $editContent->update(['content' => $request->content]);
+    }         
+    
+    return view('super-admin.edit-content')->with([
+        'contents' => $editContent,
+        'successMessage'=>'Successful'
+    ]);
+
+}
 }

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('cover_image');
             $table->date('date');
             $table->longText('content');
-            $table->string('list');
+            $table->string('title');
             $table->timestamps();
         });
     }

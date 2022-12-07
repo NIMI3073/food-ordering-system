@@ -527,8 +527,8 @@
 		<div class="container">
 			<div class="row d-flex">
 				<div class="col-md-6 d-flex">
-					<div class="img img-2 w-100 mr-md-2" style="background-image:url(images/bg_6.jpg);"></div>
-					<div class="img img-2 w-100 ml-md-2" style="background-image:url(images/bg_4.jpg);"></div>
+					<div class="img img-2 w-100 mr-md-2" style="background-image:url(images/recipes.jpg);"></div>
+					<div class="img img-2 w-100 ml-md-2" style="background-image:url(images/recipe.jpg);"></div>
 				</div>
 				<div class="col-md-6 ftco-animate makereservation p-4 p-md-5">
 					<div class="heading-section ftco-animate mb-5">
@@ -553,24 +553,34 @@
 				</div>
 			</div>
 			<div class="row">
+				
+
+				<x-blog>
+
+				</x-blog>
+			
+{{-- 		
 				<div class="col-md-4 ftco-animate">
+					@foreach ($blogs as $blog )
 					<div class="blog-entry">
-						<a href="blog-single" class="block-20" style="background-image:url('images/pizza.jpg');">
+						<a href="blog-single" class="block-20" style="background-image:url({{ $blog->cover_image }});">
 						</a>
 						<div class="text px-4 pt-3 pb-4">
 							<div class="meta">
-								<div><a href="#">August 3, 2022</a></div>
-								<div><a href="#">Admin</a></div>
+								<div><a href="#">{{ $blog->date }}</a></div>
+								<div><a href="#">{{ $blog->list }}</a></div>
 							</div>
-							<h3 class="heading"><a href="#"></a>"People who love to eat are always the best people." "To eat is a necessity, but to eat intelligently is an art."</h3>
+							<h3 class="heading"><a href="#"></a>{{ $blog->content }}</h3>
 							<p class="clearfix">
 								<a href="#" class="float-left read btn btn-danger">Read more</a>
 								<a href="#" class="float-right meta-chat"><span class="fa fa-comment"></span> 3</a>
 							</p>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-4 ftco-animate">
+				@endforeach
+
+				</div> --}}
+				{{-- <div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
 						<a href="blog-single.html" class="block-20" style="background-image: url('images/pancakes.jpg');">
 						</a>
@@ -603,7 +613,7 @@
 							</p>
 						</div>
 					</div>
-				</div>
+				</div> --}}
 			</div>
 		</div>
 	</section>

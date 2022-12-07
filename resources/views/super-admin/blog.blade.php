@@ -62,6 +62,7 @@
                 <form action="blog" method="POST" enctype="multipart/form-data" id="blogForm" class="">
                     @csrf
                     <h2 class="text-dark text-center">Blog table</h2>
+                   
                     <div class="form-group">
                         <input  type="file" name="cover_image" class="form-control text-center" placeholder="Cover-image" id="file">
                         @error('cover_image')
@@ -77,7 +78,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <textarea cols="30" rows="5"  name="content" class="form-control text-dark" placeholder="Write content" id="content"></textarea>
+                        <textarea cols="30" rows="3"  name="content" class="form-control text-dark" placeholder="Write content" id="content"></textarea>
                         @error('content')
                         <span class="alert alert-danger">{{ $message }}</span>
                             
@@ -87,7 +88,7 @@
                         <input type="text" name="list" class="form-control text-center" placeholder="Enter list" id="list"> 
                         @error('list')
                         <span class="alert alert-danger">{{ $message }}</span>
-                            
+
                         @enderror
                     </div>
                     

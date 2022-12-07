@@ -46,21 +46,21 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="blog" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="order-list" class="nav-link">Orders</a></li>
+                 
+                    <li class="nav-item"><a href="blog-list" class="nav-link">blogs</a></li>
                     <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
                     <li class="nav-item"><a href="cart-list" class="nav-link">Carts</a></li>
                     <li class="nav-item"><a href="payment-list" class="nav-link">Payments</a></li>
                     <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
-                  
-                              
+                    <li class="nav-item"><a href="blog" class="nav-link">Blog</a></li>
+                
                     @if(auth()->check())
                     <li class="nav-item"><a href="logout" class="nav-link">LogOut</a></li>
-                        
+                        @else
+
                         <li class="nav-item"><a href="login" class="nav-link">Login</a></li>
                         
                   @endif
-                    
 
 
 
@@ -71,51 +71,37 @@
     </nav>
 
 
-{{-- <section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-center">
-            <div class="col-md-9 ftco-animate text-center mb-5">
-                <h1 class="mb-2 bread">List Of Orders!</h1>
-               
-            </div>
-        </div>
-    </div>
-</section>  --}}
-
-
 <section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top:120px">
     <div class="container">
         <div class="row no-gutters">
             <div class="text-dark">
-                <h4 class="text-center">List of Orders</h4>
+                <h4 class="text-center">The blogs</h4>
             </div>
             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center ">
                 <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}" id="Table">
                     <thead class="thead-dark">
                         <tr>
-                        <th>sn</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Address</th>
-                        <th>Meal type</th>
-                        <th>Package(s)order</th>
+                       <th>sn</th>
+                        <th>cover image</th>
+                        <th>content</th>
+                        <th>date</th>
+                       
                     </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            @foreach ($orders as $order )
+                            @foreach ($contents as $content )
                                 
-                            @endforeach
+                        
                         <td>{{ $index++ }}</td>
-                        <td>{{ $order->name }}</td>
-                        <td>{{ $order->email }}</td>
-                        <td>{{ $order->phone }}</td>
-                        <td>{{ $order->address }}</td>
-                         <td>{{ $order->type_of_meal }}</td>
-                        <td>{{ $order->no_of_package}}</td>
+                        <td><img src="{{ url($content->cover_image) }}" alt="Image" style="border-radius:20%;width:140px" /></td>
+                        <td>{{ $content->content }}</td>
+                        <td>{{ $content->date }}</td>
+                        <td>{{ $blog->list }}</td>
+                       
+                       
                     </tr> 
+                    @endforeach
                     </tbody>
                     
                    
@@ -123,6 +109,22 @@
             </div>
         </div>
     </div>
+
+    <form action="{{ route ('edit-content') }}" method="POST" style="margin-top:120px;margin-left:120px">
+        @csrf
+        <div class="section">
+            <textarea rows="3" cols="30" name="question" value=""></textarea>
+            <input type="hidden" name="id" value="">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Update</button>
+        @if(isset($success))
+        <div style="color: rgb(4, 48, 4); margin-left:30px">
+          {{ $success }}
+        </div>
+        @endIf
+
+        </form>
                
 </section>
 
@@ -137,5 +139,6 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/vue@3"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/3e395a6b59.js" crossorigin="anonymous"></script>
 
-<script src="{{ asset('js/order-list.js') }}"></script>
+<script src="{{ asset('js/blog-list.js') }}"></script>

@@ -46,21 +46,21 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="blog" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="order-list" class="nav-link">Orders</a></li>
+                 
+                    <li class="nav-item"><a href="blog-list" class="nav-link">blogs</a></li>
                     <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
                     <li class="nav-item"><a href="cart-list" class="nav-link">Carts</a></li>
                     <li class="nav-item"><a href="payment-list" class="nav-link">Payments</a></li>
                     <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
-                  
-                              
+                    <li class="nav-item"><a href="blog" class="nav-link">Blog</a></li>
+                
                     @if(auth()->check())
                     <li class="nav-item"><a href="logout" class="nav-link">LogOut</a></li>
-                        
+                        @else
+
                         <li class="nav-item"><a href="login" class="nav-link">Login</a></li>
                         
                   @endif
-                    
 
 
 
@@ -76,7 +76,7 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate text-center mb-5">
-                <h1 class="mb-2 bread">List Of Orders!</h1>
+                <h1 class="mb-2 bread">List Of blogs!</h1>
                
             </div>
         </div>
@@ -88,34 +88,40 @@
     <div class="container">
         <div class="row no-gutters">
             <div class="text-dark">
-                <h4 class="text-center">List of Orders</h4>
+                <h4 class="text-center">The blogs</h4>
             </div>
             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center ">
                 <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}" id="Table">
                     <thead class="thead-dark">
                         <tr>
                         <th>sn</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Address</th>
-                        <th>Meal type</th>
-                        <th>Package(s)order</th>
+                        <th>cover image</th>
+                        <th>content</th>
+                        <th>date</th>
+                        <th>list</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            @foreach ($orders as $order )
+                            @foreach ($blogLists as $blog )
                                 
-                            @endforeach
+                        
                         <td>{{ $index++ }}</td>
-                        <td>{{ $order->name }}</td>
-                        <td>{{ $order->email }}</td>
-                        <td>{{ $order->phone }}</td>
-                        <td>{{ $order->address }}</td>
-                         <td>{{ $order->type_of_meal }}</td>
-                        <td>{{ $order->no_of_package}}</td>
+                        <td><img src="{{ url($blog->cover_image) }}" alt="Image" style="border-radius:70%;width:140px" /></td>
+                        <td>{{ $blog->content }}</td>
+                        <td>{{ $blog->date }}</td>
+                        <td>{{ $blog->list }}</td>
+                        <td><a  href= "{{ route('edit-content') }}?id={{ $blog->id }}">
+                            <i class="fa-solid fa-square-pen text-warning"></i>
+                            </a>
+                            <a href="{{ route('delete-content') }}?id={{ $blog->id }}">
+                            <i class="fa-sharp fa-solid fa-trash text-danger"></i>
+                            </a>
+                        </td>
+                       
                     </tr> 
+                    @endforeach
                     </tbody>
                     
                    
@@ -137,5 +143,6 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/vue@3"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/3e395a6b59.js" crossorigin="anonymous"></script>
 
-<script src="{{ asset('js/order-list.js') }}"></script>
+<script src="{{ asset('js/blog-list.js') }}"></script>

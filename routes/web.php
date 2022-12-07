@@ -10,6 +10,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Redirect;
 
@@ -26,6 +27,7 @@ use Illuminate\Support\Facades\Redirect;
 */
 
 Route::get('/',fn()=>view('index'));
+
 Route::get('/about', fn()=>view('about'));
 Route::get('/order', fn()=>view('order'));
 Route::get('/menu', fn()=>view('menu'));
@@ -40,6 +42,8 @@ Route::post('/login',[AuthController::class,'login']);
 Route::post('/reservation',[ReservationController::class,'store']);
 Route::get('/login',[AuthController::class, 'loginForm'])->name('login');
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('web')->name('logout');
+Route::get('/index',[BlogController::class,'showBlog'])->name('index');
+
 
 
 Route::get('email-token',[ResetPasswordController::class,'showEmailTokenForm'])->name('email-token.get');
@@ -60,6 +64,13 @@ Route::get('/payment-list',[CartController::class,'paymentList']);
 Route::get('/payment-info',[CartController::class,'paymentInfo'])->name('payment-info');
 Route::get('/add-menu', fn()=>view('super-admin.add-menu'));
 Route::post('/add-menu',[MenuController::class,'store']);
+// Route::get('blog',fn()=>view('super-admin.blog'));
+Route::post('blog',[BlogController::class,'store']);
+Route::get('edit-content',[BlogController::class,'editContentForm'])->name('edit-contents');
+Route::post('edit-content-post',[BlogController::class,'editContent'])->name('edit-content');
+Route::get('delete-content',[BlogController::class,'deleteContent'])->name('delete-content');
+Route::get('blog',[BlogController::class,'showBlog']);
+Route::get('blog-list',[BlogController::class,'getBlogList'])->name('blog-list');
 });
 
 // __ cart dashboard||
