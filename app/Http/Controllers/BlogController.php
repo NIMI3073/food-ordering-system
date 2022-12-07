@@ -148,7 +148,7 @@ class BlogController extends Controller
             
          return view('super-admin.blog-list')->with([
             'content' => Blog::where('id',$id)->get(),
-            'success'=>'Deleted Successfully',
+            // 'success'=>'Deleted Successfully',
         ]);
     }
 }

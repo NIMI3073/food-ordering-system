@@ -1,5 +1,4 @@
-<
-    <!-- Be present above all else. - Naval Ravikant -->
+ <!-- Be present above all else. - Naval Ravikant -->
 
 
     <div class="col-md-4 ftco-animate">

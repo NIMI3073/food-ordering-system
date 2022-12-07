@@ -99,7 +99,6 @@
                         <td>{{ $content->date }}</td>
                         <td>{{ $blog->list }}</td>
                        
-                       
                     </tr> 
                     @endforeach
                     </tbody>

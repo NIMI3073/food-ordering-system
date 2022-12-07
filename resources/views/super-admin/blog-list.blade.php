@@ -112,7 +112,7 @@
                         <td>{{ $blog->content }}</td>
                         <td>{{ $blog->date }}</td>
                         <td>{{ $blog->list }}</td>
-                        <td><a  href= "{{ route('edit-content') }}?id={{ $blog->id }}">
+                        <td><a  href= "{{ route('editing-content') }}?id={{ $blog->id }}">
                             <i class="fa-solid fa-square-pen text-warning"></i>
                             </a>
                             <a href="{{ route('delete-content') }}?id={{ $blog->id }}">
