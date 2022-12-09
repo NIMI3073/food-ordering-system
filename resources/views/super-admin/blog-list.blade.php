@@ -49,10 +49,10 @@
                  
                     <li class="nav-item"><a href="blog-list" class="nav-link">blogs</a></li>
                     <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
-                    <li class="nav-item"><a href="cart-list" class="nav-link">Carts</a></li>
+                    <li class="nav-item"><a href="cart-list" class="nav-link"><i class="fa-solid fa-cart-plus text-warning"></i></a></li>
                     <li class="nav-item"><a href="payment-list" class="nav-link">Payments</a></li>
                     <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
-                    <li class="nav-item"><a href="blog" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="add-blog" class="nav-link">Blog</a></li>
                 
                     @if(auth()->check())
                     <li class="nav-item"><a href="logout" class="nav-link">LogOut</a></li>
@@ -111,8 +111,8 @@
                         <td><img src="{{ url($blog->cover_image) }}" alt="Image" style="border-radius:70%;width:140px" /></td>
                         <td>{{ $blog->content }}</td>
                         <td>{{ $blog->date }}</td>
-                        <td>{{ $blog->list }}</td>
-                        <td><a  href= "{{ route('editing-content') }}?id={{ $blog->id }}">
+                        <td>{{ $blog->title }}</td>
+                        <td><a  href= "{{ route('edit-content') }}?id={{ $blog->id }}">
                             <i class="fa-solid fa-square-pen text-warning"></i>
                             </a>
                             <a href="{{ route('delete-content') }}?id={{ $blog->id }}">

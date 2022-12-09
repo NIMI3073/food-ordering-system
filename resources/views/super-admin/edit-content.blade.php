@@ -49,7 +49,7 @@
                  
                     <li class="nav-item"><a href="blog-list" class="nav-link">blogs</a></li>
                     <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
-                    <li class="nav-item"><a href="cart-list" class="nav-link">Carts</a></li>
+                    <li class="nav-item"><a href="cart-list" class="nav-link"><i class="fa-solid fa-cart-plus text-warning"></i></a></li>
                     <li class="nav-item"><a href="payment-list" class="nav-link">Payments</a></li>
                     <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
                     <li class="nav-item"><a href="blog" class="nav-link">Blog</a></li>
@@ -71,52 +71,31 @@
     </nav>
 
 
-<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top:120px">
+<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top:120px" >
     <div class="container">
         <div class="row no-gutters">
-            <div class="text-dark">
-                <h4 class="text-center">The blogs</h4>
+            <div class="text-dark mt-5 px-4 align-items-center justify-content-center">
+                {{-- <h2 class="text-center"><strong>The blogs</strong></h2> --}}
             </div>
             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center ">
-                <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}" id="Table">
-                    <thead class="thead-dark">
-                        <tr>
-                       <th>sn</th>
-                        <th>cover image</th>
-                        <th>content</th>
-                        <th>date</th>
-                       
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            @foreach ($contents as $content )
-                                
-                        
-                        <td>{{ $index++ }}</td>
-                        <td><img src="{{ url($content->cover_image) }}" alt="Image" style="border-radius:20%;width:140px" /></td>
-                        <td>{{ $content->content }}</td>
-                        <td>{{ $content->date }}</td>
-                        <td>{{ $blog->list }}</td>
-                       
-                    </tr> 
-                    @endforeach
-                    </tbody>
-                    
-                   
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <form action="{{ route ('edit-content') }}" method="POST" style="margin-top:120px;margin-left:120px">
-        @csrf
-        <div class="section">
-            <textarea rows="3" cols="30" name="question" value=""></textarea>
-            <input type="hidden" name="id" value="">
+               <div class=" text-dark text-center">
+                {{-- <p>Cover-image: {{ $content->cover_image }}</p> --}}
+                <p><strong>Content: {{ $content->content }}</</strong></p>
+                <p><strong>Date:  {{ $content->date}}</strong> </p>
+                <p> <strong>Title: {{ $content->title}}</strong> </p>
+               </div>
+                          
+              
         </div>
         
-        <button type="submit" class="btn btn-primary">Update</button>
+    <form action="{{ route ('edit-content') }}" method="POST" style="margin-top:10px;position:relative;left:23em" id="editForm">
+        @csrf
+        <div class="align-items-center justify-content-center">
+            <textarea rows="5" cols="40" name="question" id="content">{{ $content->content }}</textarea>
+            <input type="hidden" name="id" id="editId" value="{{ $content->id }}">
+        </div>
+        
+        <button type="submit" class="btn btn-primary text-white px-4 mt-3"style="position:relative;left:10em">Update</button>
         @if(isset($success))
         <div style="color: rgb(4, 48, 4); margin-left:30px">
           {{ $success }}
@@ -124,6 +103,8 @@
         @endIf
 
         </form>
+    </div>
+</div>
                
 </section>
 
@@ -140,4 +121,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://kit.fontawesome.com/3e395a6b59.js" crossorigin="anonymous"></script>
 
-<script src="{{ asset('js/blog-list.js') }}"></script>
+<script src="{{ asset('js/edit-content.js') }}"></script>
+

@@ -43,13 +43,14 @@
                     
                     <li class="nav-item"><a href="order-list" class="nav-link">Orders</a></li>
                     <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>
+                    <li class="nav-item active"><a href="blog-list" class="nav-link">Blogs</a></li>
                     <li class="nav-item"><a href="cart/cart" class="nav-link"><i class="fa-solid fa-cart-plus text-warning"></i></a></li>
                     <li class="nav-item"><a href="payment-list" class="nav-link">Payments</a></li>
                     <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
                     @if(auth()->check())
                     <li class="nav-item"><a href="logout" class="nav-link">Log Out</a> </li>
                     @else
-                    <li class="nav-item active"><a href="login" class="nav-link">Login</a></li>
+                    <li class="nav-item "><a href="login" class="nav-link">Login</a></li>
                   @endif
                 </ul>
             </div>
@@ -59,7 +60,7 @@
     <section class="h-100" >
         <div class="container">
             <div class="row blog-entry " style="margin-top:150px">
-                <form action="blog" method="POST" enctype="multipart/form-data" id="blogForm" class="">
+                <form action="add-blog" method="POST" enctype="multipart/form-data" id="blogForm" class="">
                     @csrf
                     <h2 class="text-dark text-center">Blog table</h2>
                    
@@ -77,6 +78,8 @@
                             
                         @enderror
                     </div>
+
+                    
                     <div class="form-group">
                         <textarea cols="30" rows="3"  name="content" class="form-control text-dark" placeholder="Write content" id="content"></textarea>
                         @error('content')
@@ -84,14 +87,15 @@
                             
                         @enderror
                     </div>
+                    
                     <div class="form-group">
-                        <input type="text" name="list" class="form-control text-center" placeholder="Enter list" id="list"> 
-                        @error('list')
+                        <input type="text" name="title" class="form-control text-center" placeholder="Enter title" id="list"> 
+                        @error('title')
                         <span class="alert alert-danger">{{ $message }}</span>
 
                         @enderror
                     </div>
-                    
+               
                         <button type="submit" class="btn btn-lg btn-success py-3 px-4  " id="btn">Submit</button>
                 </form>
             </div>
@@ -104,4 +108,4 @@
 <script src="https://unpkg.com/vue@3"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://kit.fontawesome.com/3e395a6b59.js" crossorigin="anonymous"></script>
-<script src="{{ asset('js/blog.js') }}"></script>
+<script src="{{ asset('js/blog-list.js') }}"></script>

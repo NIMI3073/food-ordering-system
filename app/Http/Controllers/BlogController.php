@@ -40,7 +40,7 @@ class BlogController extends Controller
             'cover_image'=>['required','mimes:jpg,png,jpeg','max:2048'],
             'date'=> 'string|required',
             'content'=>'string|required',
-            'list' => 'string|required',
+            'title' => 'string|required',
         ]);
       
         $upload = $request->file('cover_image')->store('public/images');
@@ -83,16 +83,18 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $request->validate([
             'id' => 'integer|required|exists:blog,id',
-            'content' =>'string|required',
-            
+            'content' => 'string|required|'
         ]);
-        Blog::where('id',auth()->user()->id)->update([
-            'content'=> $request->content
-        ]);
+        return  Blog::find($request->id)
+            ->update(
+                [
+                    'status' => $request->status
+                ]
+            );
 
-        
         return redirect()->back();
       
     }
@@ -104,7 +106,8 @@ class BlogController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy( $id){
-
+        $deleteTodo = Blog::where('id', $id)->first();
+        $deleteTodo->delete();  
     }
    
     
@@ -137,7 +140,7 @@ class BlogController extends Controller
             ]);
            
             $deleteContent = Blog::where('id',$request->id)->first();
-            $id = $deleteContent->course_id;
+            $id = $deleteContent->id;
          if($deleteContent){
             
             // submission
@@ -147,7 +150,7 @@ class BlogController extends Controller
          }
             
          return view('super-admin.blog-list')->with([
-            'content' => Blog::where('id',$id)->get(),
+            'contents' => Blog::where('id',$id)->get(),
             // 'success'=>'Deleted Successfully',
         ]);
     }
@@ -160,12 +163,11 @@ public function editContentForm (Request $request){
     ]);
     $editContent =  Blog::where('id',$request->id)->first();
     return view('super-admin.edit-content')->with([
-        'index'=>1,
-        'contents' => $editContent
+        'content' => $editContent
+       
     ]);
 
 }
-
 
 
 public function editContent(Request $request)
@@ -177,12 +179,14 @@ public function editContent(Request $request)
     $editContent = Blog::where('id',$request->id)->first();
     // dd($editContent);
     if ($editContent) {
-        $editContent->update(['content' => $request->content]);
+        $editContent->update(
+            ['content' => $request->content]
+        );
     }         
-    
+
     return view('super-admin.edit-content')->with([
-        'contents' => $editContent,
-        'successMessage'=>'Successful'
+        'content' => $editContent,
+        'alert' => 'successful'
     ]);
 
 }
