@@ -40,10 +40,9 @@
                     <li class="nav-item"><a href="about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
                       <li class="nav-item"><a href="reservation" class="nav-link">Reservation</a></li>
-                    <li class="nav-item"><a href="cart/cart" class="nav-link">Cart</a></li>
                     <li class="nav-item"><a href="menu-gallery" class="nav-link">Menu Gallery</a></li>
-               
                       <li class="nav-item"><a href="order" class="nav-link">Make Order</a></li>
+                      <li class="nav-item"><a href="cart-list" class="nav-link"><i class="fa-solid fa-cart-plus text-warning"></i></a></li>
                     @if (auth()->user() === 'super_admin')
                         <li class="nav-item"><a href="order-list" class="nav-link">Order-list</a></li>
                         <li class="nav-item"><a href="user-list" class="nav-link">Users</a></li>

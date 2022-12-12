@@ -44,7 +44,7 @@ class MenuController extends Controller
     {
         $validated = $request->validate([
             'file'=>['required','mimes:jpg,png,jpeg','max:2048'],
-            'type'=>['string','required', Rule::in(['Breakfast','Lunch','Dinner','snacks','wine','drink'])],
+            'type'=>['string','required', Rule::in(['Breakfast','Lunch','Dinner','snacks','wine','drinks'])],
             'name_of_menu'=>['string','required'],
             'description' =>['string','required'],
             'price'=>['integer','required'],

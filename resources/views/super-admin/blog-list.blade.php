@@ -71,34 +71,21 @@
     </nav>
 
 
-{{-- <section class="hero-wrap hero-wrap-2" style="background-image: url('images/section_bg03.png');">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-center">
-            <div class="col-md-9 ftco-animate text-center mb-5">
-                <h1 class="mb-2 bread">List Of blogs!</h1>
-               
-            </div>
-        </div>
-    </div>
-</section>  --}}
-
-
 <section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top:120px">
     <div class="container">
         <div class="row no-gutters">
             <div class="text-dark">
-                <h4 class="text-center">The blogs</h4>
+                <h4 class="text-center"><strong>The blogs</strong> </h4>
             </div>
             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center ">
                 <table class="table table-striped table table-bordered table table-responsive{-sm|-md|-lg|-xl}" id="Table">
                     <thead class="thead-dark">
                         <tr>
                         <th>sn</th>
-                        <th>cover image</th>
-                        <th>content</th>
-                        <th>date</th>
-                        <th>list</th>
+                        <th>Date</th>
+                        <th>Cover image</th>
+                        <th>Content</th>
+                        <th>Title</th>
                         <th>Action</th>
                     </tr>
                     </thead>
@@ -106,12 +93,13 @@
                         <tr>
                             @foreach ($blogLists as $blog )
                                 
-                        
                         <td>{{ $index++ }}</td>
-                        <td><img src="{{ url($blog->cover_image) }}" alt="Image" style="border-radius:70%;width:140px" /></td>
-                        <td>{{ $blog->content }}</td>
                         <td>{{ $blog->date }}</td>
+                        <td><img src="{{ url($blog->cover_image) }}" style="border-radius:70%;width:120px" /></td>
                         <td>{{ $blog->title }}</td>
+                        <td>{{ $blog->content }}</td>   
+              
+                     
                         <td><a  href= "{{ route('edit-content') }}?id={{ $blog->id }}">
                             <i class="fa-solid fa-square-pen text-warning"></i>
                             </a>
@@ -132,11 +120,6 @@
                
 </section>
 
- 
-
-{{-- <x-footer>
-
-</x-footer> --}}
 </body>
 
 </html>

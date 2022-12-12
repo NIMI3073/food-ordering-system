@@ -13,7 +13,7 @@ protected $guarded =[];
 
 protected $table ='blog';
 
-    public function getFileAttribute($value){
+    public function getCoverImageAttribute($value){
         return url("/storage/images/$value");
     }
 }

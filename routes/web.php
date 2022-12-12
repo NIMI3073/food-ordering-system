@@ -67,7 +67,7 @@ Route::get('/add-blog', fn()=>view('super-admin.add-blog'));
 Route::post('/add-menu',[MenuController::class,'store']);
 Route::post('add-blog',[BlogController::class,'store']);
 Route::get('edit-content',[BlogController::class,'editContentForm'])->name('edit-content');
-Route::post('edit-content',[BlogController::class,'editContent'])->name('edit-content');
+Route::put('edit-content',[BlogController::class,'editContent'])->name('edit-content');
 Route::get('delete-content',[BlogController::class,'deleteContent'])->name('delete-content');
 Route::get('blog',[BlogController::class,'showBlog']);
 Route::get('blog-list',[BlogController::class,'getBlogList'])->name('blog-list');

@@ -15,11 +15,10 @@ form.addEventListener("submit",($event)=>{
   
     console.log(contents);
 
-    axios.post("http://127.0.0.1:8000/api/edit-content", contents)
+    axios.put("http://127.0.0.1:8000/api/edit-content", contents)
     .then((response) => {
         console.log(response);
-        alert(response.data.message)
-     
+        alert(response.data.message);
     })
     .catch((error) => {
         console.log(error.response);
@@ -27,23 +26,25 @@ form.addEventListener("submit",($event)=>{
     });
 });
 
-function contentUpdate(id,content){
+
+
+// function contentUpdate(id,content){
    
-    return axios.put("http://127.0.0.1:8000/api/edit-content", {
-        id:id,
-        content:content
-    }).then((response)=>{
-    let editUpdate = response.data;
-    console.log(editUpdate);
-    alert(response.data.message)
-    document.querySelector("#content_"+ id).textContent = content
-    
+//     return axios.put("http://127.0.0.1:8000/api/edit-content", {
+//         id:id,
+//         content:content
+//     }).then((response)=>{
+//     let editUpdate = response.data;
+//     console.log(editUpdate);
+//     alert(response.data.message)
+//     document.querySelector("#content_"+ id).textContent = content
+//     alert(response.data.message);
+
+//     });
+
     
 
-    });
 
-    
-}
 
 
 

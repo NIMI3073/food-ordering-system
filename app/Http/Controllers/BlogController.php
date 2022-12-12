@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
-use Egulias\EmailValidator\Result\Reason\Reason;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Egulias\EmailValidator\Result\Reason\Reason;
 
 class BlogController extends Controller
 {
@@ -91,11 +92,13 @@ class BlogController extends Controller
         return  Blog::find($request->id)
             ->update(
                 [
-                    'status' => $request->status
+                    'content' => $request->content
                 ]
             );
 
-        return redirect()->back();
+        return response([
+            'alert'=>'successful'
+        ]);
       
     }
 
@@ -143,15 +146,15 @@ class BlogController extends Controller
             $id = $deleteContent->id;
          if($deleteContent){
             
-            // submission
+       
             Blog::where('id',$deleteContent->id)->delete();
         
            $deleteContent->delete(); 
          }
             
          return view('super-admin.blog-list')->with([
+            'blogList'=>$deleteContent,
             'contents' => Blog::where('id',$id)->get(),
-            // 'success'=>'Deleted Successfully',
         ]);
     }
 }
@@ -182,12 +185,19 @@ public function editContent(Request $request)
         $editContent->update(
             ['content' => $request->content]
         );
+        return response([
+            // 'content' => $editContent,
+            'message' => 'successful'
+        ]);
+    
+    }else{
+        return response([
+            'content'=> null,
+            'alert' => 'Unknown error occurred'
+        ], Response::HTTP_UNAUTHORIZED);
     }         
 
-    return view('super-admin.edit-content')->with([
-        'content' => $editContent,
-        'alert' => 'successful'
-    ]);
-
+   
 }
+
 }
