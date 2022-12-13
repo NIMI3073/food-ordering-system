@@ -12,6 +12,8 @@ use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ReservationController;
+use App\Models\Blog;
+use App\Models\Cart;
 use Illuminate\Support\Facades\Redirect;
 
 
@@ -27,6 +29,12 @@ use Illuminate\Support\Facades\Redirect;
 */
 
 Route::get('/',fn()=>view('index'));
+// Route::get('/',function(){
+//     // to display total number of items added to cart behind the cart icon
+//    return view('index')->with([
+//         'cartCount' =>auth()->check() ? Cart::where('status', 'in_cart')->where('user_id', auth()->id())->count() : 0,
+//     ]);
+// });
 
 Route::get('/about', fn()=>view('about'));
 Route::get('/order', fn()=>view('order'));
@@ -42,7 +50,7 @@ Route::post('/login',[AuthController::class,'login']);
 Route::post('/reservation',[ReservationController::class,'store']);
 Route::get('/login',[AuthController::class, 'loginForm'])->name('login');
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('web')->name('logout');
-Route::get('/index',[BlogController::class,'showBlog'])->name('index');
+
 
 
 

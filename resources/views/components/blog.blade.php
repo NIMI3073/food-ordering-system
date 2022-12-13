@@ -42,8 +42,10 @@
 					<h2 class="mb-4">Recent Blog</h2>
 				</div>
 			</div>
-            @foreach ($blogs as $blog  )
-			<div class=" row col-sm-3">
+			<div class="row">
+				<div class="col-6">
+            @foreach ($blogs as $blog)
+		
                 <div class="col-md-4 ftco-animate" >
                     <div class="blog-entry">
                         <div class="block-20" style="background-image:url({{ $blog->cover_image }});">
@@ -60,32 +62,32 @@
                             </p>
                         </div>
                     </div>
-                @endforeach
+            
             
                 </div>
+			</div>
 			
-			
-	
-				{{-- <div class="col-md-4 ftco-animate">
+			@endforeach
+				 {{-- <div class="col-md-4 ftco-animate">
 				
 					<div class="blog-entry">
-						<a href="blog-single" class="block-20" style="background-image:url(person_1.jpg);">
+						<a href="blog-single" class="block-20" style="background-image:url({{ $blog->cover_image }});">
 						</a>
 						<div class="text px-4 pt-3 pb-4">
 							<div class="meta">
-								<div><a href="#"></a></div>
-								<div><a href="#"></a></div>
+								<div><a href="#"></a>{{ $blog->date }}</div>
+								<div><a href="#">{{ $blog->title }}</a></div>
 							</div>
-							<h3 class="heading"><a href="#"></a></h3>
+							<h3 class="heading"><a href="#"></a>{{ $blog->content }}</h3>
 							<p class="clearfix">
 								<a href="#" class="float-left read btn btn-danger">Read more</a>
 								<a href="#" class="float-right meta-chat"><span class="fa fa-comment"></span> 3</a>
 							</p>
 						</div>
 					</div>
-				
+				 
 
-				</div>  --}}
+				</div>   --}}
 				{{-- <div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
 						<a href="blog-single.html" class="block-20" style="background-image: url('images/pancakes.jpg');">

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<x-header>
+
+</x-header>
+{{-- <html lang="en">
 <head>
 	<title>Foodie</title>
 	<meta charset="utf-8">
@@ -42,7 +45,7 @@
                     <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
 					<li class="nav-item"><a href="reservation" class="nav-link">Reservation</a></li>
 					<li class="nav-item"><a href="cart/cart" class="nav-link"><i class="fa-solid fa-cart-plus text-warning">
-						{{-- <span class='badge badge-warning' id='lblCartCount'>0</span> --}}
+						<span class='text-yellow text-sm' id="cart_counter">{{ $cartCount }}</span>
 						</i></a></li>
 						
 					<li class="nav-item"><a href="menu-gallery" class="nav-link">Menu Gallery</a></li>
@@ -70,7 +73,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> --}}
 
 	<!-- END nav -->
 	
@@ -530,8 +533,8 @@
 		<div class="container">
 			<div class="row d-flex">
 				<div class="col-md-6 d-flex">
-					<div class="img img-2 w-100 mr-md-2" style="background-image:url(images/bg_6.jpg);"></div>
-					<div class="img img-2 w-100 ml-md-2" style="background-image:url(images/bg_4.jpg);"></div>
+					<div class="img img-2 w-100 mr-md-2" style="background-image:url(images/recipe.jpg);"></div>
+					<div class="img img-2 w-100 ml-md-2" style="background-image:url(images/recipe_2.jpg);"></div>
 				</div>
 				<div class="col-md-6 ftco-animate makereservation p-4 p-md-5">
 					<div class="heading-section ftco-animate mb-5">
@@ -551,6 +554,8 @@
 	<x-blog>
 					
 	</x-blog>
+
+	
 
 	{{-- <section class="ftco-section bg-light">
 		<div class="container">

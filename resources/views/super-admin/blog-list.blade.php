@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+    <x-admin-header>
+        
+    </x-admin-header>
 
-<head>
+{{-- <head>
     <title>Foodie</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -68,7 +71,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> --}}
 
 
 <section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="margin-top:120px">

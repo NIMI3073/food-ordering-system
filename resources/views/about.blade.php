@@ -19,8 +19,8 @@
  <div class="container">
   <div class="row d-flex">
     <div class="col-md-6 d-flex" style="margin-top: 10px">
-     <div class="img img-2 w-100 mr-md-2" style="background-image: url(images/bg_6.jpg);"></div>
-     <div class="img img-2 w-100 ml-md-2" style="background-image: url(images/bg_4.jpg);"></div>
+     <div class="img img-2 w-100 mr-md-2" style="background-image: url(images/recipe.jpg);"></div>
+     <div class="img img-2 w-100 ml-md-2" style="background-image: url(images/recipe_2.jpg);"></div>
    </div>
    <div class="col-md-6 ftco-animate makereservation p-4 p-md-5">
      <div class="heading-section ftco-animate mb-5">
