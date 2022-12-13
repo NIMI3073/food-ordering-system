@@ -111,6 +111,8 @@ class BlogController extends Controller
     public function destroy( $id){
         $deleteTodo = Blog::where('id', $id)->first();
         $deleteTodo->delete();  
+
+        return view('super-admin.blog-list');
     }
    
     
@@ -153,7 +155,7 @@ class BlogController extends Controller
          }
             
          return view('super-admin.blog-list')->with([
-            'blogList'=>$deleteContent,
+            'blogList'=>$id,
             'contents' => Blog::where('id',$id)->get(),
         ]);
     }

@@ -41,7 +41,10 @@
                     <li class="nav-item"><a href="about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
 					<li class="nav-item"><a href="reservation" class="nav-link">Reservation</a></li>
-					<li class="nav-item"><a href="cart-list" class="nav-link"><i class="fa-solid fa-cart-plus text-warning"></i></a></li>
+					<li class="nav-item"><a href="cart/cart" class="nav-link"><i class="fa-solid fa-cart-plus text-warning">
+						{{-- <span class='badge badge-warning' id='lblCartCount'>0</span> --}}
+						</i></a></li>
+						
 					<li class="nav-item"><a href="menu-gallery" class="nav-link">Menu Gallery</a></li>
 					<li class="nav-item"><a href="order" class="nav-link">Make Order</a></li>
                     @if (auth()->user() === 'super_admin')
@@ -544,7 +547,12 @@
 		</div>
 	</section>
 
-	<section class="ftco-section bg-light">
+
+	<x-blog>
+					
+	</x-blog>
+
+	{{-- <section class="ftco-section bg-light">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-7 text-center heading-section ftco-animate">
@@ -555,32 +563,30 @@
 			<div class="row">
 				
 
-				<x-blog>
-					
-				</x-blog>
+		
 			
-{{-- 		
+	
 				<div class="col-md-4 ftco-animate">
-					@foreach ($blogs as $blog )
+				
 					<div class="blog-entry">
-						<a href="blog-single" class="block-20" style="background-image:url({{ $blog->cover_image }});">
+						<a href="blog-single" class="block-20" style="background-image:url(person_1.jpg);">
 						</a>
 						<div class="text px-4 pt-3 pb-4">
 							<div class="meta">
-								<div><a href="#">{{ $blog->date }}</a></div>
-								<div><a href="#">{{ $blog->list }}</a></div>
+								<div><a href="#"></a></div>
+								<div><a href="#"></a></div>
 							</div>
-							<h3 class="heading"><a href="#"></a>{{ $blog->content }}</h3>
+							<h3 class="heading"><a href="#"></a></h3>
 							<p class="clearfix">
 								<a href="#" class="float-left read btn btn-danger">Read more</a>
 								<a href="#" class="float-right meta-chat"><span class="fa fa-comment"></span> 3</a>
 							</p>
 						</div>
 					</div>
-				@endforeach
+				
 
-				</div> --}}
-				{{-- <div class="col-md-4 ftco-animate">
+				</div> 
+				<div class="col-md-4 ftco-animate">
 					<div class="blog-entry">
 						<a href="blog-single.html" class="block-20" style="background-image: url('images/pancakes.jpg');">
 						</a>
@@ -613,21 +619,22 @@
 							</p>
 						</div>
 					</div>
-				</div> --}}
+				</div>
 			</div>
 		</div>
-	</section>
+	</section> --}}
 
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-intro bg-danger">
 		<div class="container py-5">
 			<div class="row py-2">
 				<div class="col-md-12 text-center">
 					<h2>We Make Delicious &amp; Nutritious Food</h2>
-					<a href="#" class="btn btn-white btn-outline-white">Book A Table Now</a>
+					<a href="reservation" class="btn btn-white btn-outline-white">Book A Table Now</a>
 				</div>
 			</div>
 		</div>
 	</section>
+	
 <x-footer>
 
 
@@ -638,5 +645,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<script src="https://unpkg.com/vue@3"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/3e395a6b59.js" crossorigin="anonymous"></script>
 	
 	<script src="{{ asset('js/menu-gallery.js') }}"></script>

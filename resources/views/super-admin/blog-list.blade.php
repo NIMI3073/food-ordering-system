@@ -84,8 +84,8 @@
                         <th>sn</th>
                         <th>Date</th>
                         <th>Cover image</th>
-                        <th>Content</th>
                         <th>Title</th>
+                        <th>Content</th>
                         <th>Action</th>
                     </tr>
                     </thead>
@@ -95,7 +95,7 @@
                                 
                         <td>{{ $index++ }}</td>
                         <td>{{ $blog->date }}</td>
-                        <td><img src="{{ url($blog->cover_image) }}" style="border-radius:70%;width:120px" /></td>
+                        <td><img src="{{ url($blog->cover_image) }}" style="border-radius:20%;width:120px" /></td>
                         <td>{{ $blog->title }}</td>
                         <td>{{ $blog->content }}</td>   
               

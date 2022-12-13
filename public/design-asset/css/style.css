@@ -8435,7 +8435,8 @@ h1, h2, h3, h4, h5,
     border-radius: 10px;
     position: relative;
     margin: 0 auto;
-     left: 0em;
+    display: inline-block;
+     /* left: 0em; */
     z-index: 0; }
     .blog-entry:after {
       position: absolute;
@@ -8491,7 +8492,7 @@ h1, h2, h3, h4, h5,
         .blog-entry .meta > div a:hover {
           color: #cccccc; }
     .blog-entry:hover:after {
-      background: #e52b34;
+      /* background: #e52b34; */
       height: 15px;
       bottom: -7px; }
 .block-27 ul {
@@ -9451,23 +9452,34 @@ table.table-bordered > tbody > tr > td{
         background: linear-gradient(to right, rgba(123, 17, 100, 1), rgba(37, 117, 249, 1))
         }
 
+        textarea {	 
+          -webkit-box-sizing: border-box; 
+          -moz-box-sizing: border-box; 
+          box-sizing: border-box;	 
+          width: 100%;} 
       
-        
-        .dropdown .dropbtn {
-          font-size: 16px;  
-          border: none;
-          outline: none;
+          .badge:empty {
+            display: none;
+          }
+  
+
+         /* .fa-solid[data-count]:after{
+          position:absolute;
+          right:0%;
+          top:0%;
+          content: attr(data-count);
+          font-size:40%;
+          padding:.6em;
+          border-radius:999px;
+          line-height:.75em;
           color: white;
-          padding: 14px 16px;
-          background-color: inherit;
-          font-family: inherit;
-          margin-top: 12px;
-        }
-        
-        .navbar a:hover, .dropdown:hover .dropbtn {
           
+          text-align:center;
+          min-width:2em;
+          font-weight:bold;
+          background: white;
+          border-style:solid;
         }
-        
         .dropdown-content {
           display: none;
           position: absolute;
@@ -9493,5 +9505,35 @@ table.table-bordered > tbody > tr > td{
         
         .dropdown:hover .dropdown-content {
           display: block;
-        }
+        } */
       }
+
+      /* For desktop: */ 
+.col-1 {width: 8.33%;} 
+.col-2 {width: 16.66%;} 
+.col-3 {width: 25%;} 
+.col-4 {width: 33.33%;} 
+.col-5 {width: 41.66%;} 
+.col-6 {width: 50%;} 
+.col-7 {width: 58.33%;} 
+.col-8 {width: 66.66%;} 
+.col-9 {width: 75%;} 
+.col-10 {width: 83.33%;} 
+.col-11 {width: 91.66%;} 
+.col-12 {width: 100%;} 
+@media only screen and (max-width: 768px) { 
+  /* For mobile phones: */ 
+  [class*="col-"] { 
+  width: 100%; 
+  } 
+} 
+/* Use CSS media query for each devices,
+/* Extra small devices "mobile phones" */ 
+@media only screen and (max-width: 768px) {}  
+ 
+/* Extra small devices "Tabs" */ 
+@media only screen and (max-width: 992px) {...}  
+/* Extra small devices "Tabs" */ 
+@media only screen and (max-width: 1200px) {...} 
+ 
+@media only screen and (max-width: 1920px) {...}  */

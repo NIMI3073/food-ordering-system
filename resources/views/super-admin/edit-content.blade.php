@@ -91,11 +91,11 @@
     <form action="{{ route ('edit-content') }}" method="POST" style="margin-top:10px;position:relative;left:23em" id="editForm">
         @csrf
         <div class="align-items-center justify-content-center">
-            <textarea rows="5" cols="40" name="question" id="content">{{ $content->content }}</textarea>
+            <textarea rows="5" class="form-control textarea" cols="40" name="question" id="content">{{ $content->content }}</textarea>
             <input type="hidden" name="id" id="editId" value="{{ $content->id }}">
         </div>
         
-        <button type="submit" class="btn btn-primary text-white px-4 mt-3"style="position:relative;left:10em">Update</button>
+        <button type="submit" class="btn btn-primary text-white px-4 mt-3"style="position:relative;left:8em">Update</button>
         @if(isset($success))
         <div style="color: rgb(4, 48, 4); margin-left:30px">
           {{ $success }}
