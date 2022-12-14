@@ -30,6 +30,7 @@ use App\Models\User;
     Route::get('/menu', [MenuController::class, 'menuList']);
     Route::post('/add-menu',[MenuController::class,'store']);
     Route::post('add-blog', [BlogController::class, 'store']);
+    Route::post('blog-single', [BlogController::class, 'postBlogComment']);
     Route::put('edit-content',[BlogController::class,'editContent']);
     Route::middleware(['auth:sanctum'])->group(function(){
     // Route::post('menu-gallery',[MenuController::class,'postCart'])->name('post-cart');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\BlogSingle;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Egulias\EmailValidator\Result\Reason\Reason;
@@ -199,7 +200,29 @@ public function editContent(Request $request)
         ], Response::HTTP_UNAUTHORIZED);
     }         
 
-   
+   return redirect()->route('super-admin.blog-list');
+}
+
+
+public function postBlogComment( Request $request){
+    $validated = $request->validate([
+        'name'=>'string|required',
+        'email' =>'string|required',
+        // 'url'=>'string',
+        'message'=>'string|required'
+    ]);
+
+    BlogSingle::create($validated);
+    return response([
+        'message'=>'Comment posted successfully'
+    ]);
+}
+
+public function getBlogComment(Request $request){
+    $blog= BlogSingle::all();
+    return view('super-admin.blog-single')->with([
+        'blogComments'=>$blog,
+    ]);
 }
 
 }
