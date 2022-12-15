@@ -42,34 +42,33 @@
 					<h2 class="mb-4">Recent Blog</h2>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-6">
+		
             @foreach ($blogs as $blog)
 		
-                <div class="col-md-4 ftco-animate" >
+                <div class="col-md-6 ftco-animate" >
                     <div class="blog-entry">
                         <div class="block-20" style="background-image:url({{ $blog->cover_image }});">
                         </div>
                         <div class="text px-4 pt-3 pb-4">
                             <div class="meta">
-                                <div><{{ $blog->date }}</></div>
-                                <div>{{ $blog->title }}</></div>
+                                <div>{{ $blog->title }}</div>
                             </div>
-                            <h3 class="heading">{!! substr($blog->content, 0, 200) !!} ...</h3>
+                            <h3 class="text-dark">{!! substr($blog->content, 0, 200) !!} ...</h3>
                             <p class="clearfix">
-                                <a href="admin/blog-single" class="float-center read btn btn-danger">Read more</a>
-                                {{-- <a href="#" class="float-right meta-chat"><span class="fa fa-comment"></span> 3</a> --}}
+                                <a href="{{ route('blog-single') }}?id={{ $blog->id }}" class="float-center read btn btn-danger">Read more</a>
+                                <span class="fa fa-comment float-right meta-chat" id="comment_count">{{ $commentCount }}</span>
                             </p>
                         </div>
                     </div>
             
             
                 </div>
+                @endforeach
 			</div>
 			
-			@endforeach
+	
 				 
 			</div>
 		</div>
 	</section>
-
+<script src="{{ asset('js/blog-single.js') }}"></script>

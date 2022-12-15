@@ -97,7 +97,7 @@
                             @foreach ($blogLists as $blog )
                                 
                         <td>{{ $index++ }}</td>
-                        <td>{{ $blog->date }}</td>
+                        <td>{{ $blog->created_at }}</td>
                         <td><img src="{{ url($blog->cover_image) }}" style="border-radius:20%;width:120px" /></td>
                         <td>{{ $blog->title }}</td>
                         <td>{{ $blog->content }}</td>   

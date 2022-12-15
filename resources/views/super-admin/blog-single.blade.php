@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <x-header>
 
 </x-header>
@@ -25,20 +24,22 @@
       <h2 class="text-center">Recipes,
   Local news,
   Chefs,
-  Food envy/love/inspiration &
+  Food-love/inspiration &
   Sales and promotions</h2>
 
       <p>
-        <img src="{{ asset("images/delis.jpg") }}" alt="" class="img-fluid" style="height: 300px">
+        <img src="{{ url($blog->cover_image) }}" alt="" class="img-fluid" style="height: 300px;">
       </p>
-      <p class="align-items-end justify-content-center">"A recipe has no soul. You, as the cook, must bring soul to the recipe." 
+      <p>{{ $blog->title }}</p>
+      <p>{{ $blog->content }}</p>
+      {{-- <p class="align-items-end justify-content-center">"A recipe has no soul. You, as the cook, must bring soul to the recipe." 
         <em>"A recipe is a story that ends with good meal."I think baking is very rewarding, and if you follow a good recipe, you will get success.</em></p>
       <p>“Food is one part of the experience. And it has to be somewhere between 50 to 60 percent of the dining experience. But the rest counts as well: The mood, the atmosphere, the music, the feeling, the design, the harmony between what you have on the plate and what surrounds the plate.” “One of the reasons that people enjoy coming to a great restaurant is that when an extraordinary meal is placed in front of them, they feel honored, respected, and even a little bit loved." You can only find that at foodie!!!</p>
       <p>“Although the skills aren’t hard to learn, finding the happiness and finding the satisfaction and finding fulfillment in continuously serving somebody else something good to eat, is what makes a really good restaurant.”</p>
       <p>"The only time to eat diet food is while you're waiting for the steak to cook."One cannot think well, love well, sleep well, if not has not dined well.</p>
       <p>"Cooking is all about people. Food is maybe the only universal thing that really has the power to bring everyone together. No matter what culture, everywhere around the world, people eat together."</p>
       <p>“Customers don’t always know what they want. The decline in coffee-drinking was due to the fact that most of the coffee people bought was stale and they weren’t enjoying it. Once they tasted ours and experienced what we call “the third place”.. a gathering place between home and work where they were treated with respect.. they found we were filling a need they didn’t know they had.” </p>
-      <p>"People who love to eat are always the best people.""To eat is a necessity, but to eat intelligently is an art.""We all eat, an it would be a sad waste of opportunity to eat badly." “Every restaurant is a theater, and the truly great ones allow us to indulge in the fantasy that we are rich and powerful. When restaurants hold up their end of the bargain, they give us the illusion of being surrounded by servants intent on ensuring our happiness and offering extraordinary food. But even modest restaurants offer the opportunity to become someone else, at least for a little while. Restaurants free us from mundane reality; that is part of their charm. When you walk through the door, you are entering neutral territory where you are free to be whoever you choose for the duration of the meal.” </p>
+      <p>"People who love to eat are always the best people.""To eat is a necessity, but to eat intelligently is an art.""We all eat, an it would be a sad waste of opportunity to eat badly." “Every restaurant is a theater, and the truly great ones allow us to indulge in the fantasy that we are rich and powerful. When restaurants hold up their end of the bargain, they give us the illusion of being surrounded by servants intent on ensuring our happiness and offering extraordinary food. But even modest restaurants offer the opportunity to become someone else, at least for a little while. Restaurants free us from mundane reality; that is part of their charm. When you walk through the door, you are entering neutral territory where you are free to be whoever you choose for the duration of the meal.” </p> --}}
       <div class="tag-widget post-tag-container mb-5 mt-5">
         {{-- <div class="tagcloud">
           <a href="#" class="tag-cloud-link">Food</a>
@@ -59,8 +60,13 @@
       </div> --}}
 
 
-      <div class="pt-5 mt-5">
-        <h3 class="mb-5 h4 font-weight-bold p-4 bg-light">03 Feedbacks</h3>
+      <div class="pt-3 mt-3">
+        
+  
+        <x-blog-comment>
+          
+        </x-blog-comment>
+        {{-- <h3 class="mb-5 h4 font-weight-bold p-4 bg-light">Comments</h3>
         <ul class="comment-list">
           <li class="comment">
             
@@ -75,13 +81,13 @@
             </div>
           </li>
 
-          {{-- <li class="comment">
+          <li class="comment">
             <div class="vcard bio">
               <img src="{{ asset("images/person_1.jpg") }}" alt="Image placeholder">
             </div>
             <div class="comment-body">
               <h3>A.Y</h3>
-              <div class="meta mb-2">August 3, 2020 at 2:21pm</div>
+              <div class="meta mb-2">september 30, 2021 at 12:45pm</div>
               <p>To give real service you must add something which cannot be bought or measured with money, and that is sincerity and integrity</p>
               <p><a href="#" class="reply">Reply</a></p>
             </div>
@@ -93,7 +99,7 @@
             </div>
             <div class="comment-body">
               <h3>Jonny</h3>
-              <div class="meta mb-2">August 3, 2020 at 2:21pm</div>
+              <div class="meta mb-2">May 12, 2022 at 3:01am</div>
               <p>“A good restaurant is like a vacation; it transports you, and it becomes a lot more than just about the food.</p>
               <p><a href="#" class="reply">Reply</a></p>
             </div>
@@ -126,7 +132,7 @@
 
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
+              <textarea name="message" id="message" cols="20" rows="10" class="form-control"></textarea>
               @error('message')
               <span class="alert alert-danger">{{ $message }}</span>
           @enderror

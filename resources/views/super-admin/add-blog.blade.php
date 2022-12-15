@@ -75,14 +75,21 @@
                             
                         @enderror
                     </div>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <input type="date" name="date" class="form-control text-center" placeholder="Enter date" id="date">
                         @error('date')
                         <span class="alert alert-danger">{{ $message }}</span>
                             
                         @enderror
-                    </div>
+                    </div> --}}
 
+                    <div class="form-group">
+                        <input type="text" name="title" class="form-control text-center" placeholder="Enter title" id="title"> 
+                        @error('title')
+                        <span class="alert alert-danger">{{ $message }}</span>
+
+                        @enderror
+                    </div>
                     
                     <div class="form-group">
                         <textarea cols="30" rows="3"  name="content" class="form-control text-dark" placeholder="Write content" id="content"></textarea>
@@ -92,15 +99,9 @@
                         @enderror
                     </div>
                     
-                    <div class="form-group">
-                        <input type="text" name="title" class="form-control text-center" placeholder="Enter title" id="list"> 
-                        @error('title')
-                        <span class="alert alert-danger">{{ $message }}</span>
-
-                        @enderror
-                    </div>
+                   
                
-                        <button type="submit" class="btn btn-lg btn-success py-3 px-4  " id="btn">Submit</button>
+                        <button type="submit" class="btn btn-lg btn-success py-3 px-4 btn-center  " id="btn">Post Content</button>
                 </form>
             </div>
         </div>

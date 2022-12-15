@@ -2,15 +2,10 @@
 
 namespace App\View\Components;
 
-use App\Models\Blog as ModelBlog;
 use App\Models\BlogSingle;
-use GuzzleHttp\Psr7\Request;
-use Illuminate\Support\Facades\App;
 use Illuminate\View\Component;
 
-
-
-class blog extends Component
+class blogComment extends Component
 {
     /**
      * Create a new component instance.
@@ -29,10 +24,9 @@ class blog extends Component
      */
     public function render()
     {
-        $blogs = ModelBlog::orderBy('id', 'desc')->get();
-        return view('components.blog')->with([
-            'blogs'=>$blogs,
-            'commentCount' =>auth()->check() ? BlogSingle::where('id', auth()->id())->count() : 0,
+        $comment = BlogSingle::all();
+        return view('components.blog-comment')->with([
+            'comments'=>$comment
         ]);
     }
 }

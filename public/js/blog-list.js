@@ -1,8 +1,7 @@
 
 const file = document.getElementById('file')
-const date = document.getElementById('date')
+const title = document.getElementById('title')
 const content = document.getElementById('content')
-const title = document.getElementById('list')
 const submitBtn  = document.getElementById('btn')
 const form = document.getElementById('blogForm')
 
@@ -12,9 +11,9 @@ form.addEventListener("submit",($event)=>{
     let blogV2 = new FormData();
   
     blogV2.append('cover_image', file.files[0]),
-    blogV2.append('date', date.value),
+    blogV2.append('title', title.value),
     blogV2.append('content',content.value),
-    blogV2.append('title',title.value),
+   
  
   
     console.log(blogV2);

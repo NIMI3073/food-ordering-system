@@ -25,6 +25,10 @@ form.addEventListener("submit",($event)=>{
   axios.post("http://127.0.0.1:8000/api/blog-single", blogs)
   .then((response) => {
       console.log(response);
+      let commentCounterNode = document.querySelector('#comment_count');
+      let previousValue = parseInt(commentCounterNode.textContent)
+      console.log(previousValue)
+      cartCounterNode.textContent = previousValue+1
       alert(response.data.message);
   })
   .catch((error) => {

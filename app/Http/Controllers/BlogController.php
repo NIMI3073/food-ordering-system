@@ -40,9 +40,9 @@ class BlogController extends Controller
     {
         $validated =$request->validate([
             'cover_image'=>['required','mimes:jpg,png,jpeg','max:2048'],
-            'date'=> 'string|required',
-            'content'=>'string|required',
             'title' => 'string|required',
+            'content'=>'string|required',
+          
         ]);
       
         $upload = $request->file('cover_image')->store('public/images');
@@ -52,6 +52,8 @@ class BlogController extends Controller
       return response([
           "message" => '  Successful'
       ]);
+      
+      return redirect()->route('super-admin.blog-list');
     }
 
     /**
@@ -200,7 +202,7 @@ public function editContent(Request $request)
         ], Response::HTTP_UNAUTHORIZED);
     }         
 
-   return redirect()->route('super-admin.blog-list');
+   return redirect()->route('super-admin.blog-list',['id'=>$request->id]);
 }
 
 
@@ -216,13 +218,21 @@ public function postBlogComment( Request $request){
     return response([
         'message'=>'Comment posted successfully'
     ]);
+    return redirect()->route('super-admin.blog-single');
 }
 
-public function getBlogComment(Request $request){
-    $blog= BlogSingle::all();
-    return view('super-admin.blog-single')->with([
-        'blogComments'=>$blog,
+public function getBlogs (Request $request){
+    $request->validate([
+        'id'=> 'required|integer|exists:blog,id'
     ]);
+    $blogs=  Blog::where('id',$request->id)->first();
+    return view('super-admin.blog-single')->with([
+        'blog' => $blogs
+       
+    ]);
+
 }
+
+
 
 }
