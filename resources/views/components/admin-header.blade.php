@@ -54,7 +54,7 @@
                         <li class="nav-item"><a href="cart-list" class="nav-link"><i class="fa-solid fa-cart-plus text-warning"></i></a></li>
                         <li class="nav-item"><a href="payment-list" class="nav-link">Payments</a></li>
                         <li class="nav-item"><a href="add-menu" class="nav-link">Add Menu</a></li>
-                        <li class="nav-item"><a href="add-blog" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="add-blog" class="nav-link">Add New Blog</a></li>
                     
                         @if(auth()->check())
                         <li class="nav-item"><a href="logout" class="nav-link">LogOut</a></li>

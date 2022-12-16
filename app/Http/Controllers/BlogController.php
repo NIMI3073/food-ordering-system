@@ -158,11 +158,8 @@ class BlogController extends Controller
         
            $deleteContent->delete(); 
          }
-            
-         return view('super-admin.blog-list')->with([
-            'blogList'=>$id,
-            'contents' => Blog::where('id',$id)->get(),
-        ]);
+            return redirect()->back();
+   
     }
 }
 
@@ -212,7 +209,6 @@ public function postBlogComment( Request $request){
     $validated = $request->validate([
         'name'=>'string|required',
         'email' =>'string|required',
-        // 'url'=>'string',
         'message'=>'string|required'
     ]);
 
@@ -221,10 +217,7 @@ public function postBlogComment( Request $request){
     return response([
         'message'=>'Comment posted successfully'
     ]);
-    // return redirect()->back()->with('message','Comment posted successfully !');
-    // return response()->json(['code'=>200, 'message'=>'Comment posted successfully','data' => $validated], 200);
   
-    // return redirect()->back();
 }
 
 public function getBlogs (Request $request){

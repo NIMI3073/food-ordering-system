@@ -28,7 +28,8 @@ form.addEventListener("submit",($event)=>{
       // console.log(previousValue)
       // commentCounterNode.textContent = previousValue+1
       alert(response.data.message);
-      window.location.reload();
+      window.setTimeout(function(){ window.location.reload() },200);
+      // window.location.reload();
   })
   .catch((error) => {
       console.log(error.response);
