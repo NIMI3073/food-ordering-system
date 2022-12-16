@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\BlogSingle;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Egulias\EmailValidator\Result\Reason\Reason;
+use Illuminate\Support\Facades\Redirect;
 
 class BlogController extends Controller
 {
@@ -48,6 +49,7 @@ class BlogController extends Controller
         $upload = $request->file('cover_image')->store('public/images');
         $full_path =explode("/", $upload);
       $validated['cover_image'] = end($full_path);
+      $validated['slug'] = Str::slug($request->title);
       Blog::create($validated);
       return response([
           "message" => '  Successful'
@@ -215,10 +217,14 @@ public function postBlogComment( Request $request){
     ]);
 
     BlogSingle::create($validated);
+    //when api is being used you cannot used redirect, reload will be handle by javascript
     return response([
         'message'=>'Comment posted successfully'
     ]);
-    return redirect()->route('super-admin.blog-single');
+    // return redirect()->back()->with('message','Comment posted successfully !');
+    // return response()->json(['code'=>200, 'message'=>'Comment posted successfully','data' => $validated], 200);
+  
+    // return redirect()->back();
 }
 
 public function getBlogs (Request $request){
@@ -226,6 +232,16 @@ public function getBlogs (Request $request){
         'id'=> 'required|integer|exists:blog,id'
     ]);
     $blogs=  Blog::where('id',$request->id)->first();
+    return view('super-admin.blog-single')->with([
+        'blog' => $blogs
+       
+    ]);
+
+}
+
+public function getPost (string $slug){
+
+    $blogs=  Blog::where('slug',$slug)->firstOrFail();
     return view('super-admin.blog-single')->with([
         'blog' => $blogs
        

@@ -26,7 +26,7 @@ form.addEventListener("submit",($event)=>{
     .then((response) => {
         console.log(response);
         alert(response.data.message)
-
+        window.setTimeout(function(){ window.location = "http://127.0.0.1:8000/admin/blog-list"; },300);
      
     })
     .catch((error) => {

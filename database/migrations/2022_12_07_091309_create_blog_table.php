@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('blog', function (Blueprint $table) {
             $table->id();
             $table->string('cover_image');
-            $table->string('title');
+            $table->string('title')->unique();
             $table->longText('content');
-            // $table->slog('slog');
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }

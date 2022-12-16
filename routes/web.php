@@ -51,7 +51,7 @@ Route::post('/reservation',[ReservationController::class,'store']);
 Route::get('/login',[AuthController::class, 'loginForm'])->name('login');
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('web')->name('logout');
 
-
+Route::get('article/{slug}',[BlogController::class,'getPost'])->name('get-post');
 
 
 Route::get('email-token',[ResetPasswordController::class,'showEmailTokenForm'])->name('email-token.get');
@@ -74,6 +74,7 @@ Route::get('/add-menu', fn()=>view('super-admin.add-menu'));
 Route::get('/add-blog', fn()=>view('super-admin.add-blog'));
 // Route::get('blog-single', fn()=>view('super-admin.blog-single'));
 Route::get('blog-single',[BlogController::class,'getBlogs'])->name('blog-single');
+
 Route::get('blog-comment',[BlogController::class,'getComments'])->name('blog-comment');
 Route::post('blog-single',[BlogController::class,'postBlogComment']);
 Route::post('/add-menu',[MenuController::class,'store']);

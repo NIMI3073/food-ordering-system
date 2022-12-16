@@ -55,7 +55,7 @@
                             </div>
                             <h3 class="text-dark">{!! substr($blog->content, 0, 200) !!} ...</h3>
                             <p class="clearfix">
-                                <a href="{{ route('blog-single') }}?id={{ $blog->id }}" class="float-center read btn btn-danger">Read more</a>
+                                <a href="{{ route('get-post',['slug'=>$blog->slug]) }}" class="float-center read btn btn-danger">Read more</a>
                                 <span class="fa fa-comment float-right meta-chat" id="comment_count">{{ $commentCount }}</span>
                             </p>
                         </div>
