@@ -78,24 +78,26 @@
                 {{-- <h2 class="text-center"><strong>The blogs</strong></h2> --}}
             </div>
             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center ">
-               <div class=" text-dark text-center">
-                {{-- <p>Cover-image: {{ $content->cover_image }}</p> --}}
-                <p><strong>Content: {{ $content->content }}</</strong></p>
-                <p><strong>Date:  {{ $content->date}}</strong> </p>
+               <div class="col-md-8 text-dark text-center">
+                <div class="center-block col-4"><img src="{{url ($content->cover_image )}} " ></div>
+                {{-- <p><strong>Content: {{ $content->content }}</strong></p> --}}
+                <p><strong>Date:  {{ $content->created_at}}</strong> </p>
                 <p> <strong>Title: {{ $content->title}}</strong> </p>
                </div>
                           
               
         </div>
         
-    <form action="{{ route ('edit-content') }}" method="POST" style="margin-top:10px;position:relative;left:23em" id="editForm">
+    <form action="{{ route ('edit-content') }}" method="POST" style="margin-top:10px;" id="editForm">
         @csrf
-        <div class="align-items-center justify-content-center">
-            <textarea rows="5" class="form-control textarea" cols="40" name="question" id="content">{{ $content->content }}</textarea>
+        <div class="align-items-center justify-content-center w-100" style="border: 2px solid black; border-radius:10px">
+            <textarea rows="5" class="form-control " cols="20" name="question" id="content">{{ $content->content }}</textarea>
             <input type="hidden" name="id" id="editId" value="{{ $content->id }}">
         </div>
-        
-        <button type="submit" class="btn btn-primary text-white px-4 mt-3"style="position:relative;left:8em">Update</button>
+        <div class="text-center text-white">
+          <button type="submit" class="btn btn-primary text-white mt-2 py-3 px-4 btn-center"id="contentBtn">Update</button>   
+        </div>
+       
         @if(isset($success))
         <div style="color: rgb(4, 48, 4); margin-left:30px">
           {{ $success }}

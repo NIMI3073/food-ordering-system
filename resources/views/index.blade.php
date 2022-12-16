@@ -206,12 +206,12 @@
 		<div class="container">
 			<div class="row d-flex">
 				<div class="col-md-6 d-flex">
-					<div class="img img-2 w-100 mr-md-2" style="background-image:url(images/.jpg);"></div>
+					<div class="img img-2 w-100 mr-md-2" style="background-image:url(images/rst_1.jpg);background-size:cover"></div>
 					{{-- <div class="img img-2 w-100 ml-md-2" style="background-image:url(images/recipe_2.jpg);"></div> --}}
 				</div>
 				<div class="col-md-6 ftco-animate makereservation p-4 p-md-5">
 					<div class="heading-section ftco-animate mb-5">
-						<span class="subheading">This is our secrets</span>
+						<span class="subheading"><big>This is our secrets</big></span>
 						<h2 class="mb-4">Perfect Ingredients,Workhaolic staff,condusive environment</h2>
 						<p>For dining options like no other, visit a Foodie Restaurant and let our world-class chefs take you on a journey of flavors. With 23 restaurants and counting, a wide variety of meals and snacks made from the freshest ingredients and to the highest standards remains our hallmark.</p>
 							The taste is the difference🍲🍛
