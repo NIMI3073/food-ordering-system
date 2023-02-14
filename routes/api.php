@@ -40,7 +40,6 @@ use App\Models\User;
     });
     
    
-   
     
 
 
