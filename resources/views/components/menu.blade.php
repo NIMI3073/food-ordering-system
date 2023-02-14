@@ -40,6 +40,7 @@
                                 </div>
                             </div>
                         @endforeach
+                   
                         <span class="flat flaticon-bread" style="left: 0;"></span>
                         <span class="flat flaticon-breakfast" style="right: 0;"></span>
                     </div>
@@ -213,3 +214,4 @@
     
     </section>
 </div>
+<script src="https://kit.fontawesome.com/3e395a6b59.js" crossorigin="anonymous"></script>

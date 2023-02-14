@@ -14,11 +14,8 @@
     <link rel="stylesheet" href="{{ asset('design-asset/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('design-asset/css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('design-asset/css/magnific-popup.css') }}">
-
     <link rel="stylesheet" href="{{ asset('design-asset/css/bootstrap-datepicker.css') }}">
     <link rel="stylesheet" href="{{ asset('design-asset/css/jquery.timepicker.css') }}">
-
-
     <link rel="stylesheet" href="{{ asset('design-asset/css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('design-asset/css/style.css') }}">
 </head>

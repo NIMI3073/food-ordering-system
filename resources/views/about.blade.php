@@ -25,8 +25,8 @@
    </div>
    <div class="col-md-6 ftco-animate makereservation p-4 p-md-5">
      <div class="heading-section ftco-animate mb-5">
-      <span class="subheading"><strong>This is our secrets</strong> </span>
-      <h2 class="mb-4">Perfect Ingredients</h2>
+      <span class="subheading"><strong><h1>This our secrets</h1></strong> </span>
+      <h3 class="mb-4">*Perfect Ingredients*</h3>
       <p>Perfect Ingredients that will give good taste to your savour,eat with us today, dream for more and crave for more.
         The taste is the difference🍲🍛
       </p>
@@ -38,36 +38,51 @@
 </div>
 </section>
 
-<section class="ftco-section ftco-no-pt ftco-no-pb"style="margin-top: 20px">
-  <div class="container">
-   <div class="row d-flex">
-     <div class="col-md-6 " style="margin-top: 30px">
-      <div class="img img-2 w-100 mr-md-2" style="background-image:url(images/chef-1.jpg);background-size:cover"></div>
 
+<section class="ftco-section ftco-no-pt ftco-no-pb  "style="margin-top: 20px">
+  <div class="container text-center">
+    <div class="row d-flex ">
+          <div class="col-md-6 d-flex" style="margin-top: 10px" >
+    <div class="img img-2 w-100 mr-md-2 row" >
+      <img src="images/chef-1.jpg" class="w-100">
+      <img src=" images/chef-2.jpg" class="w-100">
+      </div>
     </div>
     <div class="col-md-6 ftco-animate makereservation p-4 p-md-5">
       <div class="heading-section ftco-animate mb-5">
-       <h2 class="mb-4">Smart Chefs</h2>
+       <h3 class="mb-4">*Smart Chefs*</h3>
        <p>  Our chefs are workaholic, ambitious and vibrant, aside from that they are beautitful and simple
        </p>
-       <div class="img img-2 w-100 mr-md-2" style="background-image:url(images/person_2.jpg);"></div>
-       <p><a href="index" class="btn btn-primary">Learn more</a></p>
+       <p>"The only time to eat diet food is while you're waiting for the steak to cook.<br>
+        "One cannot think well, love well, sleep well, if not has not dined well.
+        <br>
+       "Cooking is all about people. Food is maybe the only universal thing that really has the power to bring everyone together.
+       <br> No matter what culture, everywhere around the world, people eat together."</p>
+       </div>
+
+       {{-- <img src="images/chef-2.jpg" width="100"> --}}
+       {{-- <div class="img img-2 w-100 mr-md-2" style="background-image:url(images/person_2.jpg);"></div> --}}
+       {{-- <p><a href="index" class="btn btn-primary">Learn more</a></p> --}}
      </div>
    </div>
  </div>
  </div>
  </section>
 
- <section class="ftco-section ftco-no-pt ftco-no-pb"style="margin-top: 20px">
+ <section class="ftco-section ftco-no-pt ftco-no-pb"style="margin-top: 10px">
   <div class="container">
    <div class="row">
-     <div class=" " style="margin-top: 30px">
-      <div class="img img-2 w-100 mr-md-2" style="background-image:url(images/special-rice.jpg);background-size:cover"></div>
-
+     <div class="col-md-6 " style="margin-top: 10px">
+        <div class="img img-2 w-100 mr-md-2" style="position:relative;left:40em;top:35em">
+             <img src="images/special-rice.jpg" class="w-100"/>
+        </div>
+     
+      </div>
+      
     </div>
     <div class="col-md-6 ftco-animate makereservation p-4 p-md-5">
       <div class="heading-section ftco-animate mb-5">
-       <h2 class="mb-4">Our Delicacies</h2>
+       <h3 class="mb-4">*Our Delicacies*</h3>
        <p> 
         Every quality and tasty food lover in Nigeria identifies with our delicacies, one of which is Foodie Restaurant’s Chef Special Rice!
 
@@ -75,8 +90,7 @@ It’s Taste, Richness in ingredient and overall quality makes it stand out as o
 
 There is nothing as awesome and satisfying as eating a balanced meal comprising of fresh vegetables, grains, and rich proteins
        </p>
-       <div class="img img-2 w-100 mr-md-2" style="background-image:url(images/special-rice.jpg);background-size:cover"></div>
-
+    
        <p>Foodie Chef Special rice guarantees lavishness of enticing fresh ingredients, in the presence of shrimps, carrots, beef, sausages, green beans, spices, and a host of more flavoring, all combined to provide our consumers a delightful and delicious experience.
 
         The creation of the recipe to this dish was driven by the possibility of providing a healthy rice meal that can deliver way more nutritional benefits than the regular rice dishes around. You are assured to benefit hosts of vitamins and minerals in the likes of zinc, iron, folic acid, vitamin C, vitamin K, vitamin B12, and more to exploit.
@@ -88,11 +102,35 @@ There is nothing as awesome and satisfying as eating a balanced meal comprising 
         Are you yet to devour this special dish? Or, probably thinking of having a meal this rich and delicious?
         
         You just have to try Our Chef Special rice, after which you will be ecstatically glued to our various creative mind-blowing delicacies</p>
+
      </div>
    </div>
  </div>
  </div>
 </section>
+
+<section class="ftco-section ftco-no-pt ftco-no-pb"style="margin-top: 20px">
+  <div class="container">
+   <div class="row d-flex">
+     <div class="col-md-6 " style="margin-top: 30px">
+      <div class="img img-2 w-100 mr-md-2" style="background-image:url(images/dining-area.jpg);background-size:cover">
+        <img src="images/dining-area.jpg" class="w-100">
+      </div>
+
+    </div>
+    <div class="col-md-6 ftco-animate makereservation p-4 p-md-5">
+      <div class="heading-section ftco-animate mb-5">
+       <h3 class="mb-4">*Our Environment*</h3>
+       <p>At foodie, we provide condusive and natural view environment that aids sweet savor and quick digestion for our customers
+        environment far away from home, best for relaxation, for meetings and hangouts. Eat with us today and enjoy the best moment with best environment
+       </p>
+       <div class="img img-2 w-100 mr-md-2" style="background-image:url(images/person_2.jpg);"></div>
+       <p><a href="index" class="btn btn-primary">Learn more</a></p>
+     </div>
+   </div>
+ </div>
+ </div>
+ </section>
 
 
 <section class="ftco-section ftco-no-pt ftco-no-pb ftco-intro bg-danger">

@@ -22,28 +22,33 @@
         <h2 class="h4 font-weight-bold">Contact Information</h2>
       </div>
       <div class="w-100"></div>
-      <div class="col-md-3 d-flex">
-       <div class="dbox">
+      <div class="col-md-2 d-flex">
+       <div class="bg-danger text-white text-center">
          <p><span>Address:</span> Rd 8 Ogunsulure Street,G.R.A Ondo,Ondo state</p>
        </div>
      </div>
-     <div class="col-md-3 d-flex">
-       <div class="dbox">
-         <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-         <p><span>Phone:</span> <a href="tel://1234567920">+ 234 2355 9800</a></p>
-         <p><span>Phone:</span> <a href="tel://1234567920">+ 234 9800 2355 </a></p>
+     <div class="col-md-4 d-flex">
+       <div class="bg-danger text-white text-center">
+         <
+         p>Phone: +1235 2355 98</>
+         <p>Phone: +234 2355 9800</p>
+         <p>Phone: +234 9800 2355 </p>
        </div>
      </div>
-     <div class="col-md-3 d-flex">
-       <div class="dbox">
-         <p><span>Email:</span> <a href="mailto:info@yoursite.com">foodie@yahoo.com</a></p>
-         <p><span>Email:</span> <a href="mailto:info@yoursite.com">foodie@google.com</a></p>
+
+     <div class="col-md-4 d-flex">
+       <div class="bg-danger text-white text-center">
+         <p><span>Email:</span> foodie@yahoo.com</a></p>
+         <p><span>Email:</span> foodie@google.com</a></p>
        </div>
      </div>
     
    </div>
  </div>
 </section>
+
+
+
 <section class="ftco-section ftco-no-pt contact-section " >
  <div class="container">
   <div class="row d-flex no-gutters align-items-end justify-content-center">
