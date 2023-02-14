@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="{{ asset('design-asset/css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('design-asset/css/style.css') }}">
    
+   
 </head>
 
 
@@ -237,9 +238,21 @@
 
 </x-footer>
 
+
 </body>
 
 </html>
+<?php
+if(isset($token)){
+    echo "
+<script>
+    window.localStorage.setItem('token', \"$token\");
+    </script>
+";
+
+}
+
+?>
 <?php
 if(isset($token)){
     echo "
