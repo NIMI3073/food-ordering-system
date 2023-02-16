@@ -97,31 +97,6 @@ class AuthController extends Controller
     }
 
 
-    // public function login(Request $request)
-    // {
-    //     $request->validate([
-    //         'email' => 'required|email',
-    //         'password' => 'required',
-    //     ]);
-
-    //     if (Auth::attempt([
-    //         'email' => $request->email,
-    //         'password' => $request->password
-    //     ])) {
-
-    //         $user = User::where('email', $request->email)->first();
-    //         Auth::login($user);
-    //         // $userToken = $user->createToken('auth_token')->plainTextToken;
-    //         return redirect('cart/cart');
-    //     } else {
-    //         return view('login')->with([
-    //             'data' => null,
-    //             'message' => 'Wrong Input'
-    //         ], Response::HTTP_UNAUTHORIZED);
-    //     }
-    // }
-
-
 
     public function login(Request $request)
     {
@@ -137,14 +112,14 @@ class AuthController extends Controller
             $user = User::where('email', $request->email)->first();
             Auth::login($user);
             $userToken = $user->createToken('auth_token')->plainTextToken;
-             //concern seperation//
-             return CartController::cartItems($userToken);
-            } else {
-                return response([
-                    'data' => null,
-                    'alert' => 'Wrong email or password'
-                ], Response::HTTP_UNAUTHORIZED);
-            }
+            //concern seperation//
+            return CartController::cartItems($userToken);
+        } else {
+            return response([
+                'data' => null,
+                'alert' => 'Wrong email or password'
+            ], Response::HTTP_UNAUTHORIZED);
+        }
 
     }
     

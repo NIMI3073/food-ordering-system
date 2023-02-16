@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
-            $table->integer('phone_number');
-            $table->time('check_in_time');
-            $table->time('check_out_time');
-            $table->date('check_in_date');
+            $table->string('phone_number');
+            $table->date('check_in');
+            $table->time('time');
+            $table->enum('guest',['5','10','15','20','25']);
             $table->timestamps();
         });
     }

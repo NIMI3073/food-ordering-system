@@ -23,7 +23,7 @@
      id="myForm">
      <div class="container">
          <div class="row no-gutters">
-             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-warning">
+             <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-dark">
                  <form action="/register" class="appointment-form" method="POST" id="registrationForm">
                      @csrf
                      <h3 class="mb-3 text-center">Sign Up Now!</h3>
@@ -76,7 +76,7 @@
 
                      <div class="row justify-content-center">
 
-                         <button type="submit" id="btn" class="btn btn-primary py-3 px-4">Submit</button>
+                         <button type="submit" id="btn" class="btn btn-success py-3 px-4">Submit</button>
 
                      </div>
              </div>

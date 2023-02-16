@@ -7,6 +7,8 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\BlogController;
+use App\Models\Blog;
 use App\Models\User;
 
 /*
@@ -27,12 +29,16 @@ use App\Models\User;
     Route::get('/order', [OrderController::class, 'index']);
     Route::get('/menu', [MenuController::class, 'menuList']);
     Route::post('/add-menu',[MenuController::class,'store']);
+    Route::post('add-blog', [BlogController::class, 'store']);
+    Route::post('blog-single', [BlogController::class, 'postBlogComment']);
+    Route::put('edit-content',[BlogController::class,'editContent']);
     Route::middleware(['auth:sanctum'])->group(function(){
-        Route::post('carts', [CartController::class, 'store'])->name('cart.store');
-    });
-
-    
+    // Route::post('menu-gallery',[MenuController::class,'postCart'])->name('post-cart');
+    Route::post('carts', [CartController::class, 'store'])->name('cart.store');
+  
    
+    });
+    
    
     
 

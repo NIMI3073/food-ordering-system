@@ -19,7 +19,11 @@
 </section>
 
 
-<section class="ftco-section" id="menuSection">
+
+<x-menu>
+    
+</x-menu>
+{{-- <section class="ftco-section" id="menuSection">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-7 text-center heading-section ftco-animate">
@@ -35,27 +39,26 @@
                         </p>
                     </div>
                     @foreach ($breakfast as $menu)
-                        <div class="menus d-flex ftco-animate" id="breakfastDiv">
-                            <div class="menu-img img" style="background-image: url({{ $menu->file }});" id="bfImg"></div>
+                        <div class="menus d-flex ftco-animate" >
+                            <div class="menu-img img" style="background-image: url({{ $menu->file }}); background-size:contain"></div>
                             <div class="text">
                                 <div class="d-flex">
                                     <div class="one-half">
-                                        <h3 id="bfName">{{ $menu->name_of_menu }}</h3>
+                                        <h3>{{ $menu->name_of_menu }}</h3>
                                     </div>
                                     <div class="one-forth">
-                                        <span class="price" id="bfPrice">#{{ $menu->price }}</span>
+                                        <span class="price" >#{{ $menu->price }}</span>
                                     </div>
                                 </div>
-                                <p id="bfDescription">{{ $menu->description }}<span></span><span>
+                                <p>{{ $menu->description }}<span></span><span>
                                     </span></p>
                                 <button type="button" class="btn btn-sm btn-danger" style="font-family: cursive"
                                     onclick="window.location.href='order'" id="btn">Order now</button>
-                                    {{-- <form action="{{route('add-cart')}}" method="post">
-                                        @csrf --}}
-                                            <input type="hidden" name=" menu_id" value="">
+                                  
+                                            
                                 <button type="button" class="btn btn-sm btn-warning" style="font-family: cursive"
                                     onclick="addToCart('{{ $menu->id }}')" id="btn"> Add to Cart</button>
-                                    {{-- </form> --}}
+                                  
                             </div>
                         </div>
                     @endforeach
@@ -71,7 +74,7 @@
                     </div>
                     @foreach ($lunch as $menus)
                     <div class="menus d-flex ftco-animate">
-                        <div class="menu-img img" style="background-image: url({{ $menus->file }});"></div>
+                        <div class="menu-img img" style="background-image: url({{ $menus->file }});  background-size:cover"></div>
                         <div class="text">
                             <div class="d-flex">
                                 <div class="one-half">
@@ -85,7 +88,7 @@
                             <button type="button" class="btn btn-sm btn-danger" style="font-family: cursive"
                             onclick="window.location.href='order'">Order now</button>
                         <button type="button" class="btn btn-sm btn-warning" style="font-family: cursive"
-                     onclick="addToCart('{{ $menu->id }}')" id="btn"> Add to Cart</button>
+                     onclick="addToCart('{{ $menus->id }}')" id="btn"> Add to Cart</button>
                         </div>
                     </div>
                     @endforeach
@@ -102,7 +105,7 @@
                     </div>
                     @foreach ($dinner as $menu)
                     <div class="menus d-flex ftco-animate">
-                        <div class="menu-img img" style="background-image: url({{ $menu->file }});"></div>
+                        <div class="menu-img img" style="background-image: url({{ $menu->file }}); background-size:cover"></div>
                         <div class="text">
                             <div class="d-flex">
                                 <div class="one-half">
@@ -126,9 +129,9 @@
             </div>
         </div>
     </div>
-</section>
-<!--    -->
-<section class="ftco-section">
+</section> --}}
+
+{{-- <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center mb-2 pb-2">
             <div class="col-md-3 text-center heading-section ftco-animate">
@@ -145,7 +148,7 @@
                     </div>
                     @foreach ($snack as $snacks)
                     <div class="menus d-flex ftco-animate">
-                        <div class="menu-img img" style="background-image: url({{ $snacks->file }});"></div>
+                        <div class="menu-img img" style="background-image: url({{ $snacks->file }}); background-size:cover"></div>
                         <div class="text">
                             <div class="d-flex">
                                 <div class="one-half">
@@ -175,7 +178,7 @@
                     </div>
                     @foreach ($wine as $wines)
                     <div class="menus d-flex ftco-animate">
-                        <div class="menu-img img" style="background-image: ur({{ $wines->file }}));"></div>
+                        <div class="menu-img img" style="background-image: ur({{ $wines->file }})); background-size:cover"></div>
                         <div class="text">
                             <div class="d-flex">
                                 <div class="one-half">
@@ -205,21 +208,21 @@
                     </div>
                     @foreach ($drink as $drinks )
                     <div class="menus d-flex ftco-animate">
-                        <div class="menu-img img" style="background-image: url({{ $drink->file }});"></div>
+                        <div class="menu-img img" style="background-image: url({{ $drinks->file }}); background-size:cover"></div>
                         <div class="text">
                             <div class="d-flex">
                                 <div class="one-half">
-                                    <h3>{{ $drink->name_of_menu }}</h3>
+                                    <h3>{{ $drinks->name_of_menu }}</h3>
                                 </div>
                                 <div class="one-forth">
-                                    <span class="price">#{{ $drink->price }}</span>
+                                    <span class="price">#{{ $drinks->price }}</span>
                                 </div>
                             </div>
                             <p>{{ $menu->description }}<span></span> <span></p>
                                 <button type="button" class="btn btn-sm btn-danger" style="font-family: cursive"
                             onclick="window.location.href='order'">Order now</button>
                         <button type="button" class="btn btn-sm btn-warning" style="font-family: cursive"
-                           onclick="addtocart('{{ $drink->id }}')"> Add to Cart</button>
+                           onclick="addtocart('{{ $drinks->id }}')"> Add to Cart</button>
                         </div>
                     </div>
                     @endforeach
@@ -230,7 +233,7 @@
         </div>
     </div>
 
-</section>
+</section> --}}
 
 
 

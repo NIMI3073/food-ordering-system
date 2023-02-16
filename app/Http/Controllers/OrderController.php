@@ -21,9 +21,9 @@ class OrderController extends Controller
         ]);
        
         $order = Order::all();
-        return response([
+        return view('super-admin.order-list')->with([
                     'index'=> 1,
-                    'order'=> $order,
+                    'orders'=> $order,
                     
                  ]);
         
@@ -58,6 +58,7 @@ class OrderController extends Controller
 
         ]);
         Order::create($validated);
+        
        return response ([
             'message' => 'successful',
             'status' => 'submitted',
